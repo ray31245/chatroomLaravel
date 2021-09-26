@@ -1,0 +1,36 @@
+-
+  var footer = [
+    {
+      name: 'Change i',
+      href: 'about.html'
+    },{
+      name: 'News Room',
+      href: 'news.html'
+    },{
+      name: 'Products',
+      href: 'product.html'
+    },{
+      name: 'contact',
+      href: 'contact.html'
+    }
+  ]
+  var social = ['icon-fb', 'icon-ig', 'icon-line', 'icon-twitter', 'icon-wechat', 'icon-youtube']
+
+footer.footer
+  .footer-contact
+    p 台中市西屯區環中路二段1506號<br>No. 1506, Section 2, Huanzhong Road, Xitun District, Taichung City
+    div
+      p CHANGE i
+      a.nocg(href="tel:+04-24520306") 04-24520306
+    ul
+      each cls in social
+        li
+          a.nocg(href="javascript:void(0)" class=cls)
+    div.gotop()
+      span.icon-top
+  .footer-navbar
+    ul
+      each page in footer
+        li
+          a(href=page.href)= page.name
+    p Copyright © change i. All rights reserved

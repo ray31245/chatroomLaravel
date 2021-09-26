@@ -1,0 +1,389 @@
+.adblock
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  padding: 20px 60px
+  &-wrap
+    position: relative
+    margin-bottom: 20px
+    width: 100%
+    &:last-child
+      margin-bottom: 0 
+    .photo
+      width: 100%
+      height: 100%
+      picture
+        display: block
+        width: 100%
+        height: 0
+    .content
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      padding: 0 25px
+      &-wrap
+        .title
+          margin-bottom: 10px
+          font-size: px(35)
+          line-height: px(45)
+          letter-spacing: 1.23px
+          +wordrows(3)
+        .subtitle
+          margin-bottom: 20px
+          font-size: px(24)
+          line-height: px(32)
+          letter-spacing: 0.84px
+        .text
+          font-size: px(14)
+          line-height: px(25)
+          letter-spacing: 0.49px
+          +wordrows(3)
+        .btn-group
+          margin-top: 30px
+          .czbtn:not(:first-child)
+            margin-left: 20px
+            // margin: 0 10px
+    &[data-color="white"]
+      color: #fff
+      .subtitle
+        color: $yellow
+      .text
+        color: rgba(#fff, 0.6)
+      .czbtn
+        color: #fff
+        border: 1px solid rgba(#fff, 0.2)
+    &[data-color="black"]
+      color: #000
+
+    &[data-type="two_samll"]
+      max-width: calc(50% - 10px)
+      text-align: center
+      .photo
+        picture
+          padding-bottom: 72.4719%
+          overflow: hidden
+      .content
+        &-wrap
+          margin: 0 auto
+          padding: 55px 0
+          max-width: 440px
+          width: 100%
+      &:nth-child(odd)
+        &.waypoint
+          transform: translateX(-50px)
+          opacity: 0
+        &.show
+          transform: translateX(0)
+          opacity: 1
+          transition: 1s
+      &:nth-child(even)
+        &.waypoint
+          transform: translateX(50px)
+          opacity: 0
+        &.show
+          transform: translateX(0)
+          opacity: 1
+          transition: 1s .3s
+    &[data-type="one_big"]
+      .photo
+        picture
+          padding-bottom: 38.8889%
+          overflow: hidden
+      .content
+        position: absolute
+        top: 0
+        left: auto
+        max-width: 50%
+        padding: 35px 25px
+        +flex(flex, center, center)
+        &-wrap
+          max-width: 410px
+          width: 100%
+      // float
+      &[data-float="left"]
+        +flex(flex, flex-start, center)
+        .content
+          +ie11hack
+            left: 0
+      &[data-float="center"]
+        +flex(flex, center, center)
+        .content
+          +ie11hack
+            left: 50%
+            transform: translateX(-50%)
+      &[data-float="right"]
+        +flex(flex, flex-end, center)
+        .content
+          +ie11hack
+            left: auto
+            right: 0
+      &.waypoint
+        transform: translateY(50px)
+        opacity: 0
+      &.show
+        transform: translateY(0)
+        opacity: 1
+        transition: 1s .2s
+    &[data-type="half_big"]
+      display: flex
+      .photo
+        max-width: 50%
+        picture
+          padding-bottom: 71.6667%
+          overflow: hidden
+      .content
+        position: absolute
+        top: 0
+        left: auto
+        max-width: 50%
+        +flex(flex, center, center)
+        &-wrap
+          max-width: 400px
+          width: 100%
+          .title
+            +wordrows(2)
+      // float
+      &[data-float="left"]
+        +flex(flex, flex-start, center)
+        .content
+          +ie11hack
+            left: 0
+      &[data-float="center"]
+        +flex(flex, center, center)
+        .content
+          +ie11hack
+            left: 50%
+            transform: translateX(-50%)
+      &[data-float="right"]
+        +flex(flex, flex-end, center)
+        .content
+          +ie11hack
+            left: auto
+            right: 0
+      &.waypoint
+        .photo:nth-child(1)
+          transform: translateX(50px)
+          opacity: 0
+        .photo:nth-child(2)
+          transform: translateX(-50px)
+          opacity: 0
+      &.show
+        .photo:nth-child(1),.photo:nth-child(2)
+          transform: translateX(0)
+          opacity: 1
+          transition: 1s .2s
+
+    &[data-type="one_big"], &[data-type="half_big"]
+      // text-align
+      &[data-text-align="left"]
+        .content
+          &-wrap
+            text-align: left
+            .btn-group
+              +flex(flex, left, center)
+      &[data-text-align="center"]
+        .content
+          &-wrap
+            text-align: center
+            .btn-group
+              +flex(flex, center, center)
+      &[data-text-align="right"]
+        .content
+          &-wrap
+            text-align: right
+            .btn-group
+              +flex(flex, flex-end, center)
+  +rwdmax(1260)
+    &-wrap
+      &[data-type="two_samll"]
+        .photo
+          picture
+            padding-bottom: 133.3333%
+        .content
+          &-wrap
+            padding: 25px 0
+      &[data-type="one_big"]
+        .content
+          max-width: 70%
+  +rwdmax(1024)
+    padding: 20px
+    &-wrap
+      &[data-type="two_samll"], &[data-type="one_big"], &[data-type="half_big"]
+        .content-wrap
+          .title
+            font-size: px(30)
+          .subtitle
+            font-size: px(20)
+      &[data-type="half_big"]
+        .photo
+          picture
+            padding-bottom: 80%
+  +rwdmax(768)
+    &-wrap
+      &[data-type="two_samll"]
+        max-width: none
+      &[data-type="one_big"]
+        &[data-float="center"]
+          +flex(flex, flex-start, center)
+        &[data-float="right"]
+          +flex(flex, flex-start, center)
+        .photo
+          picture
+            padding-bottom: 133.3333%
+        .content
+          top: 165px
+          align-items: flex-start
+          max-width: none
+          &-wrap
+            max-width: none
+            width: 100%
+      &[data-type="half_big"]
+        flex-wrap: wrap
+        // float
+        &[data-float="left"]
+          +flex(flex, flex-start, center)
+          .content
+            max-width: none
+            padding-bottom: 80%
+        &[data-float="center"]
+          +flex(flex, center, center)
+          .content
+            max-width: none
+            padding-bottom: 80%
+        &[data-float="right"]
+          +flex(flex, flex-end, center)
+          .content
+            max-width: none
+            padding-top: 80%
+        .photo
+          max-width: none
+          height: auto
+          picture
+            padding-bottom: 80%
+  +rwdmax(767)
+    &-wrap
+      &[data-type="one_big"]
+        .content
+          top: 0
+  +rwdmax(575)
+    padding: 10px 0px
+    &-wrap
+      margin-bottom: 10px
+
+
+///// 圖片文字位置
+.ct_pic
+  margin-top: 55px
+  position: relative
+  +rwdmax(768)
+    margin-top: 30px
+  .ct_word
+    padding: 100px
+    position: absolute
+    +rwdmax(1200)
+      padding: 50px
+    +rwdmax(767)
+      padding: 80px 30px
+  .word_title
+    font-family: $rwt
+    font-size: px(85)
+    color: #ffffff
+    opacity: 0.7
+    line-height: 1.18
+    letter-spacing: 2.13px
+    & + .word_p
+      margin-top: 60px
+      +rwdmax(1200)
+        margin-top: 30px
+      +rwdmax(767)
+        margin-top: 10px
+    & + .word_subtitle
+      margin-top: 60px
+      +rwdmax(1200)
+        margin-top: 30px
+      +rwdmax(767)
+        margin-top: 10px
+    & + .word_btn
+      margin-top: 25px
+    +rwdmax(1200)
+      font-size: px(60)
+    +rwdmax(767)
+      font-size: px(45)
+  .word_subtitle
+    font-size: px(65)
+    font-family: $rwt
+    color: #ffffff
+    opacity: 0.7
+    line-height: 1.15
+    letter-spacing: 1.13px
+    & + .word_p
+      margin-top: 60px
+      +rwdmax(1200)
+        margin-top: 30px
+      +rwdmax(767)
+        margin-top: 10px
+    & + .word_btn
+      margin-top: 25px
+    +rwdmax(1200)
+      font-size: px(40)
+    +rwdmax(767)
+      font-size: px(32)
+  .word_p
+    font-size: px(45)
+    color: #ffffff
+    opacity: 0.7
+    line-height: 1.44
+    letter-spacing: 1.13px
+    & + .word_btn
+      margin-top: 25px
+    +rwdmax(1200)
+      font-size: px(35)
+    +rwdmax(767)
+      font-size: px(28)
+
+  .word_btn
+    .czbtn
+      padding: 0 35px
+      color: #fff
+      border: 1px solid rgba(255, 255, 255, 0.2)
+      &:not(:last-child)
+        margin-right: 20px
+
+  &[word-loc="left_top"]
+    .ct_word
+      top: 0
+      left: 0
+  &[word-loc="left_center"]
+    .ct_word
+      top: 50%
+      left: 0
+      transform: translate(0,-50%)
+  &[word-loc="left_bottom"]
+    .ct_word
+      bottom: 0
+      left: 0
+  &[word-loc="right_top"]
+    .ct_word
+      top: 0 
+      right: 0
+      text-align: right
+  &[word-loc="right_center"]
+    .ct_word
+      top: 50%
+      right: 0
+      transform: translate(0,-50%)
+      text-align: right
+  &[word-loc="right_bottom"]
+    .ct_word
+      bottom: 0 
+      right: 0
+      text-align: right
+  &.waypoint
+    opacity: 0
+    transform: translateY(30px)
+  &.show
+    opacity: 1
+    transform: none
+    transition: .8s

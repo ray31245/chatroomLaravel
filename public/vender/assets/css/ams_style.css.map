@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/ams_style.scss"
+    ],
+    "names": [],
+    "file": "ams_style.css"
+}

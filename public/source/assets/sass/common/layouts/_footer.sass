@@ -1,0 +1,118 @@
+footer
+  background-color: #191919
+  .footer
+    &-contact
+      position: relative
+      padding: 100px 25px 150px
+      border-bottom: 1px solid #333
+      text-align: center
+      p
+        margin: 0 auto
+        max-width: 832px
+        width: 100%
+        color: rgba(#fff, 0.6)
+        font-size: px(14)
+        line-height: px(25)
+      div:not(.gotop)
+        margin: 50px 0 55px
+        p
+          color: rgba(#fff, 0.5)
+          font-size: px(20)
+          line-height: px(25)
+        a
+          display: inline-block
+          margin-top: 30px
+          color: $yellow
+          font-size: px(35)
+          font-family: $rwl
+          letter-spacing: 1.23px
+      ul
+        +flex(flex, center, center)
+        li
+          a
+            display: block
+            margin: 0 10px
+            color: rgba(#fff, 0.3)
+            font-size: px(20)
+            transition: .5s
+            &:hover
+              color: #fff
+      .gotop
+        position: absolute
+        bottom: 25px
+        left: 50%
+        transform: translateX(-50%)
+        text-align: center
+        cursor: pointer
+        span
+          display: inline-block
+          color: #fff
+          font-size: px(32)
+    &-navbar
+      display: flex
+      justify-content: space-between
+      margin: 0 auto
+      padding: 45px 24px
+      max-width: 1250px
+      width: 100%
+      ul
+        +flex(flex,center,center)
+        li
+          padding: 0 30px
+          a
+            
+            color: #fff
+            font-size: px(14)
+            text-transform: uppercase
+            transition: .5s
+            &:hover
+              color: $yellow
+      p
+        color: #999
+        font-size: px(12)
+    +rwdmax(860)
+      &-navbar
+        flex-wrap: wrap
+        ul
+          li
+            margin-right: 60px
+            padding: 0
+            &:last-child
+              margin: 0
+            a
+              padding: 0
+        p
+          margin-top: 55px
+          width: 100%
+    +rwdmax(767)
+      &-navbar
+        margin-bottom: 50px
+        padding: 45px 24px
+    +rwdmax(575)
+      &-contact
+        padding: 85px 25px 35px
+        text-align: left
+        p
+        div:not(.gotop)
+          a
+            margin-top: 20px
+        ul
+          justify-content: flex-start
+          li:first-child
+            a
+              margin: 0 10px 0 0
+        .gotop
+          left: auto
+          right: 25px
+      &-navbar
+        ul
+          justify-content: flex-start
+          flex-wrap: wrap
+          li
+            margin: 0 0 20px
+            max-width: 110px
+            width: 100%
+            &:last-child
+              margin: 0 0 20px
+        p
+          margin-top: 35px

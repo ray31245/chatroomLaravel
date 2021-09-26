@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/member.css")
+  // 各頁面 CSS 分開
+  body.member(data-page="member_signup")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.mb_common.js_fixed.waypoint
+        .mb_left
+          .mb_left_wrap
+            .mb_head
+              .mb_maintitle Wellcome : )<br>join now
+              .mb_p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            .mb_bt
+              p I already have an account, Sign in now
+              .mb_btn
+                a.czbtn(href="member.html" data-text="sign in") sign in
+        .mb_right
+          .mb_right_wrap
+            .mb_head
+              h1.mb_title Sign up now !<br>Offers exclusive for you.
+            .mb_block.block
+              .form_line
+                .form_list.must
+                  .form_input
+                    input(type="text" placeholder="Phone Number")
+              .form_line
+                .form_list.must
+                  .form_input
+                    input(type="text" placeholder="Name")
+              .form_line
+                .form_list
+                  .form_input
+                    .formdd
+                      .formdd_click
+                        .formdd_title(data-reset="Gender") Gender
+                        .icon-arrow_right
+                      .formdd_select
+                        .formdd_opt.scroll.scrollbar-inner.theme-black
+                          ul
+                            li Men
+                            li Women
+              .form_line
+                .form_list.must.add
+                  .form_input
+                    .formdd
+                      .formdd_click
+                        .formdd_title(data-reset="Taiwan") Taiwan
+                        .icon-arrow_right
+                      .formdd_select
+                        .formdd_opt.scroll.scrollbar-inner.theme-black
+                          ul
+                            li Taipei
+                            li Yilan
+                            li Taoyuan
+                            li Hsinchu
+                            li Miaoli
+                            li Taichung
+                            li Changhua
+                            li Nantou
+                            li Yunlin
+                            li Chiayi
+                            li Tainan
+                            li Kaohsiung
+                            li Pingtung
+                            li Taitung
+                            li Hualien
+                    input(type="text" placeholder="address")
+              .form_line
+                .form_list.must
+                  .form_input
+                    input(type="text" placeholder="Birthday     Ex : 2020-01-01")
+              .form_line
+                .form_list
+                  .form_input
+                    input(type="text" placeholder="E-mail")
+              .form_line
+                .form_list.must
+                  .form_input
+                    input(type="text" placeholder="Verification code")
+                    img(src="../../../uploads/service/code.jpg", alt="")
+            .mb_btn
+              .agree_btn
+                span.icon-checked
+                p I have read and agree the <a href="javascript:;" class="line">privacy term</a>
+              a.czbtn(href="javascript:;" data-text="Sign up" open-page="member_signup" onclick="member.open_lb($(this))") Sign up
+
+      section.lb_step(page="member_signup")
+        .lb_step_wrap
+          .mb_common.step
+            .lb_close.btn_close
+              span
+            .mb_left
+              .mb_left_wrap
+                .mb_head
+                  .mb_maintitle Join us by<br>follow step : )
+                  .mb_p Simple way to become iMember.
+                .mb_process
+                  .step_li
+                    span 1
+                    p Fill in the information.
+                  .step_li.active
+                    span 2
+                    p Enter confirmation code
+                  .step_li
+                    span 3
+                    p Setting your password
+
+            .mb_right
+              .mb_right_wrap(data-page="1")
+                .mb_head
+                  .mb_title Step 2 :<br>We need to verify your identity.
+                .mb_block.block
+                  .form_line
+                    .form_list
+                      .form_input
+                        input(type="text" placeholder="6-bits Verification code")
+                .mb_bt
+                  .reverify_btn
+                    span.icon-return
+                    .reverify_word
+                      p Enter the verification code within <span class="countdown" data-seconds="10">10 sec</span>
+                      p Don't receive ? <a href="javascript:;" class='send_again'>Send again.</a>
+                  .mb_btn
+                    a.czbtn.lb_close(href="javascript:;" data-text="Back") Back
+                    a.czbtn(href="javascript:;" data-text="Next step" onclick="member.signup($(this))") Next step
+
+              .mb_right_wrap(data-page="2")
+                .mb_head
+                  .mb_title Step 3 :<br>Setting your password.
+                .mb_block.block
+                  .form_line
+                    .form_list
+                      .form_input
+                        input(type="text" placeholder="password")
+                  .form_line
+                    .form_list
+                      .form_input
+                        input(type="text" placeholder="Enter again")
+                .mb_btn
+                  a.czbtn(href="javascript:;" data-text="Submit"
+                    data-ajax-route="ajax_member_signup4.html" 
+                    data-ajax-container=".lightbox" 
+                    data-ajax-callback="lightbox" 
+                    data-ajax) Submit
+                    
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

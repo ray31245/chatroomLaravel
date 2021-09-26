@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/member.css")
+  // 各頁面 CSS 分開
+  body.member(data-page="member_profile")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.mb_overview_hd.short.waypoint
+        .common_wrap
+          .mb_hd_top
+            .mb_hd_pic
+              img(src="../../../uploads/member/user_pic.jpg", alt="")
+            .mb_hd_ct
+              .hd_title 
+                p Emma, 
+                p Wellcome
+              .hd_p Manage your information, privacy and security and use your own services
+          .mb_hd_btn
+            a.czbtn(href="member.html" data-text="login out") login out
+            a.czbtn(href="member_home.html" data-text="home") home
+      
+      section.mb_ct
+        .common_wrap
+          .mb_ul
+            a.active(href="member_profile.html") profile
+            a(href="member_account.html") account
+            a(href="member_maintenance.html") maintenance
+          .profile_ct.waypoint
+            .block
+              .block_title
+                .num
+                  span.icon-member
+                h1.block_name Profile management
+              .form_ct
+                .form_line
+                  .form_list
+                    .form_title Photo
+                    .form_input
+                      p.pic_name Change your photo
+                      span.icon.icon-camera
+                      input#upload(type="file" accept="image/gif, image/jpeg, image/png")
+                  .form_list
+                    .form_title Name
+                    .form_input
+                      input(type="text" placeholder="name")
+                .form_line
+                  .form_list
+                    .form_title Gender
+                    .form_input
+                      .formdd
+                        .formdd_click
+                          .formdd_title(data-reset="Gender") Gender
+                          .icon-arrow_right
+                        .formdd_select
+                          .formdd_opt.scroll.scrollbar-inner.theme-black
+                            ul
+                              li Men
+                              li Women
+                  .form_list.add
+                    .form_input
+                      .formdd
+                        .formdd_click
+                          .formdd_title(data-reset="Taiwan") Taiwan
+                          .icon-arrow_right
+                        .formdd_select
+                          .formdd_opt.scroll.scrollbar-inner.theme-black
+                            ul
+                              li Taipei
+                              li Yilan
+                              li Taoyuan
+                              li Hsinchu
+                              li Miaoli
+                              li Taichung
+                              li Changhua
+                              li Nantou
+                              li Yunlin
+                              li Chiayi
+                              li Tainan
+                              li Kaohsiung
+                              li Pingtung
+                              li Taitung
+                              li Hualien
+                      input(type="text" placeholder="address")
+                .form_line
+                  .form_list
+                    .form_title Birthday
+                    .form_input
+                      input(type="text" placeholder="XXXX XX XX")
+                  .form_list
+                    .form_title E-mail
+                    .form_input
+                      input(type="text" placeholder="changei@sample.com")
+              .form_btn
+                a.czbtn.clear(href="javascript:;" data-text="Save") Save
+
+
+
+
+
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

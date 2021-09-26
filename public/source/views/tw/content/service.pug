@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/service.css")
+  // 各頁面 CSS 分開
+  body.service(data-page="service")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.service_hd
+        // 電腦 1920*980 // 平板 1200*700 // 手機 600*825 // 換圖結構在下面
+        .service_bg(style="background-image: url(../../../uploads/service/service_bn.jpg)")
+          //- picture
+          //-   source(media="(max-width: 575px)" srcset="https://via.placeholder.com/600x1000")
+          //-   source(media="(max-width: 1200px)" srcset="https://via.placeholder.com/1200x900")
+          //-   img(src="../../../uploads/service/service_bn.jpg" alt="")
+          .hd_wrap.waypoint
+            .bn_title
+              .title_head REPAIR & WARRANTY
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ul.hd_feature
+              li
+                .bg
+                span 3
+                p step to make a reservation
+              li
+                .bg
+                span 12
+                p hours guaranteed repairs
+              li
+                .bg
+                span 180+
+                p days<br>warranty
+              li
+                .bg
+                span 10+
+                p years of service experience
+            .hd_btn
+              a.czbtn(href="javascript:;" data-text="Online Service") Online Service
+              a.czbtn(href="service_form.html" data-text="Repair now") Repair now
+        .hd_rwd.waypoint
+          ul.hd_feature
+            li
+              .bg
+              span 3
+              p step to make a reservation
+            li
+              .bg
+              span 12
+              p hours guaranteed repairs
+            li
+              .bg
+              span 180+
+              p days<br>warranty
+            li
+              .bg
+              span 10+
+              p years of service experience
+          .hd_btn
+            a.czbtn(href="javascript:;" data-text="Online Service") Online Service
+            a.czbtn(href="service_form.html" data-text="Repair now") Repair now
+      section.service_ct
+        .common_wrap
+          .ct_title.waypoint
+            .title_head iUber House Service
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+          .ct_pic.waypoint(word-loc="right_bottom")
+            picture
+              source(media="(max-width: 767px)" srcset="../../../uploads/service/ct_phone_01.jpg")
+              img(src="../../../uploads/service/ct_01.jpg", alt="")
+            .ct_word
+              .word_title Warranty<br>and Repair
+          .feature_ul
+            .feature_li.waypoint
+              .feature_icon
+                .bg
+                span 3
+                p step to make a reservation
+              .feature_word
+                .feature_title Easy maintenance experience
+                p With just a few simple steps, you can easily make appointments for repairs<br>The first step is to fill in the customer information, the second step is to fill in the maintenance requirements, and the person will contact you after filling out and submitting.
+            .feature_li.waypoint
+              .feature_icon
+                .bg
+                span 12
+                p hours guaranteed repairs
+              .feature_word
+                .feature_title Guaranteed repairs within 12 hours
+                p After a successful maintenance appointment, a person will contact you by phone to make an appointment for the maintenance period and learn about the maintenance details. You do not need to wait long.
+            .feature_li.waypoint
+              .feature_icon
+                .bg
+                span 180+
+                p days warranty
+              .feature_word
+                .feature_title more than 180 days warranty free replacement
+                p After purchasing our products, don't forget to register the serial number of the product warranty card. That is to say, you can enjoy free replacement of mobile phone screen protector or technical repair service during the warranty period.
+            .feature_li.waypoint
+              .feature_icon
+                .bg
+                span 10+
+                p years of service experience
+              .feature_word
+                .feature_title More than ten years of repair service experience
+                p The company has more than ten years of service experience and cultivates good service quality and technology. After inspecting your goods, the maintenance staff will confirm the total cost of repair or replacement with you.
+          .ad_pic.waypoint
+            picture
+              source(media="(max-width: 767px)" srcset="../../../uploads/service/ct_phone_02.jpg")
+              source(media="(max-width: 1200px)" srcset="../../../uploads/service/ct_pad_02.jpg")
+              img(src="../../../uploads/service/ct_02.jpg", alt="")
+            .ad_word
+              .word_subtitle Have a<br>Reservation Now
+              .word_btn
+                a.czbtn(href="javascript:;" data-text="Online Service") Online Service
+                a.czbtn(href="service_form.html" data-text="Repair now") Repair now
+
+
+    style(type="text/css").
+      @media only screen and (max-width: 1200px){
+        .service_bg{
+          background-image: url('../../../uploads/service/service_bn_pad.jpg') !important
+        }
+      }
+      @media only screen and (max-width: 767px){
+        .service_bg{
+          background-image: url('../../../uploads/service/service_bn_phone.jpg') !important
+        }
+      }
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

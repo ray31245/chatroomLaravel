@@ -1,0 +1,432 @@
+-
+  var nav = [
+    {
+      name: 'Change i',
+      href: 'about.html'
+    },{
+      name: 'News Room',
+      href: 'news.html'
+    },{
+      name: 'Products',
+      href: 'javascript:void(0)'
+    },{
+      name: 'contact',
+      href: 'contact.html'
+    }
+  ]
+  var nav_list = [
+    {
+      img: '../../../uploads/home/nav_1.png',
+      p: 'screen Protections',
+    },
+    {
+      img: '../../../uploads/home/nav_2.png',
+      p: 'Phone case',
+    },
+    {
+      img: '../../../uploads/home/nav_3.png',
+      p: 'patent design®',
+    },
+    {
+      img: '../../../uploads/home/nav_4.png',
+      p: 'Protections',
+    },
+    {
+      img: '../../../uploads/home/nav_5.png',
+      p: 'Chargers',
+    },
+    {
+      img: '../../../uploads/home/nav_6.png',
+      p: 'Apple refurbished',
+    },
+    {
+      img: '../../../uploads/home/nav_1.png',
+      p: 'screen Protections',
+    },
+    {
+      img: '../../../uploads/home/nav_2.png',
+      p: 'Phone case',
+    },
+    {
+      img: '../../../uploads/home/nav_3.png',
+      p: 'patent design®',
+    },
+    {
+      img: '../../../uploads/home/nav_4.png',
+      p: 'Protections',
+    },
+    {
+      img: '../../../uploads/home/nav_5.png',
+      p: 'Chargers',
+    },
+    {
+      img: '../../../uploads/home/nav_6.png',
+      p: 'Apple refurbished',
+    },
+  ]
+  var menu_list_1 = [
+    {
+      en: 'Products',
+      tw: '產品列表',
+      href: 'product.html'
+    },
+    {
+      en: 'CHANGEi',
+      tw: '關於橙艾',
+      href: 'about.html'
+    },
+    {
+      en: 'News Room',
+      tw: '最新消息',
+      href: 'news.html'
+    },
+    {
+      en: 'reservation',
+      tw: '預約維修',
+      href: 'service.html'
+    }
+  ]
+  var menu_list_2 = [
+    {
+      en: 'Contact',
+      tw: '聯絡我們',
+      href: 'contact.html'
+    },
+    {
+      en: 'iMember',
+      tw: '會員中心',
+      href: 'member.html'
+    },
+    {
+      en: 'Recruit',
+      tw: '人才招募',
+      href: 'javascript:void(0)'
+    },
+    {
+      en: 'Privacy',
+      tw: '隱私聲明',
+      href: 'privacy.html'
+    }
+  ]
+
+nav.navbar.show
+  .container
+    .logo
+      a(href="./index.html") CHANGE i
+    ul.list
+      each page in nav
+        li(class=page.name=='Products'?'fast':'')
+          a(href=page.href)=page.name
+    .right
+      a(href="javascript:void(0)").btn_filter
+        span.icon-search
+      ul.control
+        // 購物車請先隱藏
+        li
+          a(href="javascript:void(0)")
+            span.icon-cart
+        li
+          a(href="member.html")
+            span.icon-member
+        li
+          a(href="service.html").repair Repair now
+      .hamburger
+        span
+        span
+        span
+  .fastest
+    .wrap
+      .wrap-title
+        p.title product
+        p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        a.czbtn(href="product.html" data-text="view all") view all
+      .wrap-content
+        .scroll.scrollbar-inner.theme-yellow
+          each nav in nav_list
+            .block
+              a(href="javascript:void(0)").block-wrap
+                // 圖片尺寸 120*120(px), png
+                .photo
+                  img(src=nav.img, alt="")
+                p=nav.p
+      .wrap-ad
+        .fastest-swiper.swiper-container.swiper4(data-swiper-id="" data-swiper-num="1" data-swiper-arrow="off" data-swiper-nav="off" data-swiper-autoplay="on" data-swiper-breakpoints="{320: {autoplay: {delay: 5000,}, speed: 1000}}")
+          // 圖片尺寸 475*665(px)
+          .swiper-wrapper
+            .swiper-slide
+              .photo
+                img(src="../../../uploads/home/menu_ad.jpg", alt="")
+              a(href="javascript:void(0)").info
+                p Let’s get free phone case! From now on
+                span.icon-right
+            .swiper-slide
+              .photo
+                img(src="../../../uploads/home/menu_ad.jpg", alt="")
+              a(href="javascript:void(0)").info
+                p Let’s get free phone case! From now on
+                span.icon-right
+  
+  <svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px">
+    <clipPath id="btn" clipPathUnits="objectBoundingBox">
+      <path transform="scale(0.0071428, 0.02)" d="M22.102,50.008L22.102,50.008c-0.229,0-5.591-0.035-11.02-3.115C6.049,44.036,0.049,37.938,0.049,25.109	c0-24.792,21.832-25.078,22.052-25.078l95.656,0.016c0.001,0,0.001,0,0.002,0c0.249,0,5.648,0.039,11.115,3.132	c5.079,2.874,11.133,9.011,11.133,21.931c0,24.607-22.027,24.891-22.25,24.891L22.102,50.008L22.102,50.008z M22.102,2.031 C21.284,2.033,2.049,2.34,2.049,25.109c0,22.592,19.234,22.897,20.053,22.899L117.758,48c0.826-0.002,20.25-0.304,20.25-22.891 c0-22.764-19.424-23.061-20.251-23.063L22.102,2.031z"/>
+    </clipPath>
+  </svg>
+
+
+section.bottom_btn
+  ul.control
+    // 購物車請先隱藏
+    li
+      a(href="javascript:void(0)")
+        span.icon-cart
+    li
+      a(href="member.html")
+        span.icon-member
+    li
+      a(href="service.html").repair Repair now
+      
+
+section.menu
+  .menu-scroll
+    .square-close
+      span
+      span
+    .menu-wrap
+      .container
+        .list
+          ul
+            each li in menu_list_1
+              li
+                a(href=li.href)
+                  span
+                  p(data-text=li.tw)=li.en
+          ul
+            each li in menu_list_2
+              li
+                a(href=li.href)
+                  span
+                  p(data-text=li.tw)=li.en
+        //- data-swiper-nav="on: 自己建構 nav 結構, off: 隱藏, 不宣告將自動產生結構" data-swiper-nav-name=".navClassName"
+        .menu-swiper
+          .swiper-container.swiper4(data-swiper-id="menu-swiper-container" data-swiper-num="1" data-swiper-arrow="off" data-swiper-autoplay="off" data-swiper-nav="on" data-swiper-nav-name=".menu-swiper-pagination")
+            .swiper-wrapper
+              // data-color 字體顏色黑白兩色 white black
+              .swiper-slide
+                .menu-adblock
+                  .photo
+                    img(src="../../../uploads/home/menu_1.jpg", alt="")
+                  //- .content(data-color="white")
+                  //-   h2
+                  //-     a(href="javascript:void(0)") CHANGE YOUR IMAGINATION
+                  //-   p
+                  //-     a(href="javascript:void(0)") New Release
+              .swiper-slide
+                .menu-adblock
+                  .photo
+                    img(src="../../../uploads/home/menu_1.jpg", alt="")
+                  //- .content(data-color="white")
+                  //-   h2
+                  //-     a(href="javascript:void(0)") CHANGE YOUR IMAGINATION
+                  //-   p
+                  //-     a(href="javascript:void(0)") New Release
+              .swiper-slide
+                .menu-adblock
+                  .photo
+                    img(src="../../../uploads/home/menu_1.jpg", alt="")
+                  //- .content(data-color="white")
+                  //-   h2
+                  //-     a(href="javascript:void(0)") CHANGE YOUR IMAGINATION
+                  //-   p
+                  //-     a(href="javascript:void(0)") New Release
+          .menu-swiper-pagination.menu-swiper-container
+            .menu-swiper-pagination-bullet
+      .infobar
+        ul
+          // 購物車請先隱藏
+          li
+            a(href="javascript:void(0)").icon-cart
+            a(href="javascript:void(0)") Cart
+          li
+            a(href="member.html").icon-member
+            a(href="javascript:void(0)") Hello,Emma
+          li
+            a(href="javascript:void(0)").logout Log out
+
+section.pdfilter_lb
+  .lb_wrap
+    a.lb_close.btn_close(href="javascript:;") CLOSE
+    .ct_title.waypoint
+      .title_head Filter
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    .lb_select.scroll.scrollbar-inner.theme-black
+      .type_select.one_select.circle
+        .type_list
+          .type_title Type
+          span
+        ul.type_item
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/search1.jpg", alt="")
+              .type_name 手機殼 Aqua Case
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/search2.jpg", alt="")
+              .type_name 充電線 Cable
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/search3.jpg", alt="")
+              //-   .circle(data-bgcolor="#cccccc")
+              .type_name 保護貼 PG
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/search4.jpg", alt="")
+              //-   .circle(data-bgcolor="#0030ff")
+              .type_name 充電座 Charge
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/search3.jpg", alt="")
+              //-   .circle(data-bgcolor="#676767")
+              .type_name 保護貼 PG
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/search4.jpg", alt="")
+              //-   .circle(data-bgcolor="#676767")
+              .type_name 車用 Wireless
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/search1.jpg", alt="")
+              //-   .circle(data-bgcolor="#676767")
+              .type_name 手機殼 Aqua Case
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/search2.jpg", alt="")
+              //-   .circle(data-bgcolor="#676767")
+              .type_name 充電線 Cable
+        .type_icon
+          span
+      .type_select.one_select.circle
+        .type_list
+          .type_title Item
+          span
+        ul.type_item
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/search5.jpg", alt="")
+                //- .circle(data-bgcolor="#676767")
+              .type_name iPG A (頂規防塵）
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/search5.jpg", alt="")
+                //- .circle(data-color="#676767")
+              .type_name iPG S (頂規通用）
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/search5.jpg", alt="")
+                //- .circle(data-color="#676767")
+              .type_name iPG N (客制滿版）
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/search5.jpg", alt="")
+                //- .circle(data-color="#676767")
+              .type_name iPG Ag (客制滿版）
+        .type_icon
+          span
+      
+      .type_select.one_select.brand
+        .type_list
+          .type_title Brand
+          span
+        ul.type_item
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/brand_01.png", alt="")
+              .type_name APPLE
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/brand_02.png", alt="")
+              .type_name SUMSUNG
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/brand_03.png", alt="")
+              .type_name SONY
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/brand_04.png", alt="")
+              .type_name OPPO
+        .type_icon
+          span
+      .type_select.more_select
+        .type_list
+          .type_title Suitable For
+          .select_num
+            p.num 0
+            p selected
+          span
+        ul.type_item
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/icon_01.png", alt="")
+              .type_name iPhone 11 Pro
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/icon_02.png", alt="")
+              .type_name iPhone 11
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/icon_02.png", alt="")
+              .type_name iPhone XR
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/icon_01.png", alt="")
+              .type_name iPhone X
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/icon_02.png", alt="")
+              .type_name iPhone 11
+          li
+            .type_li
+              .type_pic
+                img(src="../../../uploads/product/icon_01.png", alt="")
+              .type_name iPhone 11 Pro
+        .type_icon
+          span
+      
+    .lb_btn
+      a.czbtn.reset(href="javascript:;" data-text="reset") reset
+      a.czbtn.btn_close(href="product_search_list.html" data-text="Done") Done
+    .lb_btn_rwd
+      a.btn.reset(href="javascript:;") RESET
+      a.btn.btn_close(href="product_search_list.html") DONE
+
+section.lightbox_trans.step
+  .lightbox_wrap
+    .svg
+      svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve")
+        g
+          path.a(fill="none" stroke="#fff" stroke-width="8" stroke-miterlimit="10" d="M53.834,31.333h37.833v57.833H53.834 M45.5,31.333 H26.833V50.5H45.5")
+          path.a(fill="none" stroke="#fff" stroke-width="8" stroke-miterlimit="10" d="M45.5,69.667H8V11.333h37.5 M53.834,69.667h18.999 V50.5H53.834")
+        g
+          path(fill="none" stroke="#fff" stroke-width="1" stroke-miterlimit="10" d="M45.5,73.667H3.833V7.833H45.5v8H11.833v49.834H45.5V73.667z M45.5,54.5H22.667V27.333   H45.5v8H30.667V46.5H45.5V54.5z M95.5,93.168H53.834v-8H87.5V35.333H53.834v-8H95.5V93.168z M76.667,73.668H53.834v-8h14.833 V54.502H53.834v-8h22.833V73.668z")
+
+

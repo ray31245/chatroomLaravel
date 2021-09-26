@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/product.css")
+  // 各頁面 CSS 分開
+  body.product(data-page="product_list")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.productlist_hd
+        // 電腦 1920*750 // 平板 1200*700 // 手機 600*825 // 換圖結構在下面
+        .productlist_bg(style="background-image: url('../../../uploads/product/pdlist_bn.jpg')")
+        //- picture
+        //-   source(media="(max-width: 575px)" srcset="../../../uploads/product/pd_bn_phone.jpg")
+        //-   source(media="(max-width: 1200px)" srcset="../../../uploads/product/pd_bn_pad.jpg")
+        //-   img(src="../../../uploads/product/pd_bn.jpg" alt="")
+        .bn_title.waypoint
+          h1.title_head IPG N
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      section.productlist_ct
+        .common_wrap
+          .ct_title.waypoint
+            .title_head Overview
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+          
+          .pdlist_model
+            a(href="javascript:;").btn_model
+              span.icon-search
+              p Select phone model
+          .pd_list
+            .pd_item.waypoint
+              a(href="product_detail.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_01.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint
+              a(href="product_detail.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_02.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint
+              a(href="product_detail.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_03.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint
+              a(href="product_detail.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_04.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint
+              a(href="product_detail.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_05.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint
+              a(href="product_detail.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_06.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint
+              a(href="product_detail.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_07.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint
+              a(href="product_detail.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_08.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint
+              a(href="product_detail.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_09.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint
+              a(href="product_detail.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_09.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint
+              a(href="product_detail.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_09.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint
+              a(href="product_detail.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_09.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+          .page
+            a(href="javascript:;").page_icon.icon-arrow_left
+            .page_ul
+              a(href="javascript:;").page_li.active
+              a(href="javascript:;").page_li
+              a(href="javascript:;").page_li
+              a(href="javascript:;").page_li
+              a(href="javascript:;").page_li
+            a(href="javascript:;").page_icon.icon-arrow_right
+
+      .lb_model
+        .lb_wrap
+          a.lb_close.btn_close(href="javascript:;") CLOSE
+          .ct_title.waypoint
+            .title_head Phone model
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          .lb_main.scroll.scrollbar-inner.theme-black
+            // 品牌圖片 130*130
+            .type_select.one_select.brand
+              ul.type_item
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/brand_01.png", alt="")
+                      img(src="../../../uploads/product/brand_011.png", alt="")
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/brand_02.png", alt="")
+                      img(src="../../../uploads/product/brand_021.png", alt="")
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/brand_03.png", alt="")
+                      img(src="../../../uploads/product/brand_031.png", alt="")
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/brand_04.png", alt="")
+                      img(src="../../../uploads/product/brand_041.png", alt="")
+            .type_select.more_select
+
+              ul.type_item
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/icon_03.png", alt="")
+                    .type_name iPhone 11 Pro
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/icon_04.png", alt="")
+                    .type_name iPhone 11
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/icon_04.png", alt="")
+                    .type_name iPhone XR
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/icon_03.png", alt="")
+                    .type_name iPhone X
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/icon_03.png", alt="")
+                    .type_name iPhone 11 Pro
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/icon_04.png", alt="")
+                    .type_name iPhone 11
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/icon_04.png", alt="")
+                    .type_name iPhone XR
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/icon_03.png", alt="")
+                    .type_name iPhone X
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/icon_03.png", alt="")
+                    .type_name iPhone 11 Pro
+                li
+                  .type_li
+                    .type_pic
+                      img(src="../../../uploads/product/icon_04.png", alt="")
+                    .type_name iPhone 11
+
+          .lb_btn
+            a.czbtn.reset(href="javascript:;" data-text="reset") reset
+            a.czbtn(href="javascript:;" data-text="Done") Done
+          .lb_btn_rwd
+            a.btn.reset(href="javascript:;") RESET
+            a.btn(href="javascript:;") DONE
+
+
+    style(type="text/css").
+      @media only screen and (max-width: 1200px){
+        .productlist_bg{
+          background-image: url('../../../uploads/product/pdlist_bn_pad.jpg') !important
+        }
+      }
+      @media only screen and (max-width: 767px){
+        .productlist_bg{
+          background-image: url('../../../uploads/product/pdlist_bn_phone.jpg') !important
+        }
+      }
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

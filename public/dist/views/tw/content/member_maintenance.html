@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head標籤 & 網站設定-->
+  <head itemscope="itemscope" itemtype="http://schema.org/WebSite">
+    <!--共用設定-->
+    <!-- 網站語系及語言宣告-->
+    <meta http-equiv="content-language" content="zh-TW"/>
+    <meta charset="UTF-8"/>
+    <!-- RWD設定-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <!-- 瀏覽器設定-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <!-- 網站關鍵字-->
+    <meta name="keywords" content="網站關鍵字"/>
+    <!-- 網頁內容描述-->
+    <meta name="description" content="網頁內容描述，中文 80 個字元、英文 160 個字元"/>
+    <!-- 禁止搜尋引擎建立該網頁的索引，請於專案尚未上正式上架前保留這個設定，也請後端工程師把此設定放進後端管理中-->
+    <meta name="robots" content="noindex"/>
+    <!-- 禁止 Google 該網頁建立索引，請於專案尚未上正式上架前保留這個設定，也請後端工程師把此設定放進後端管理中-->
+    <meta name="googlebot" content="noindex"/>
+    <!-- Open Graph Protocol for facebook-->
+    <meta property="og:title" content="網頁Title"/>
+    <meta property="og:description" content="網頁內容描述"/>
+    <meta property="og:url" content="主要網址"/>
+    <meta property="og:locale" content="zh_TW"/>
+    <meta property="og:image" content="分享的影像位址，大小8m以內，長方形尺寸:600px * 315px，正方形尺寸:600px * 600px"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="網頁內容描述"/>
+    <!-- Open Graph Protocol for google plus-->
+    <meta itemprop="name" content="網站名稱或標題"/>
+    <meta itemprop="image" content="分享的影像位址"/>
+    <meta itemprop="description" content="網頁描述"/>
+    <!-- Twitter Card data-->
+    <meta name="twitter:card" content="分享的影像位址"/>
+    <meta name="twitter:site" content="網站名稱"/>
+    <meta name="twitter:title" content="網頁標題"/>
+    <meta name="twitter:description" content="網頁描述 200 個字元以內"/>
+    <meta name="twitter:creator" content="客戶公司或品牌名稱"/>
+    <!-- Twitter summary card with large image must be at least 280x150px-->
+    <meta name="twitter:image:src" content=" http://www.example.com/image.html"/>
+    <title>CHANGE i</title>
+    <!-- 重複網址的導向設定 : 被認定為主要網址的宣告，如不須禁止則全部刪除，請後端工程師把此設定放進後端管理中-->
+    <link rel="canonical" href="主要網址" itemprop="url"/>
+    <link rel="shortcut icon" href="../../../assets/img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../../../assets/css/style.css"/>
+    <!-- Google Tag Manager-->
+    <!-- 以下script 後端自行打開-->
+    <!-- script.-->
+    <!--   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':-->
+    <!--   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],-->
+    <!--   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=-->
+    <!--   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);-->
+    <!--   })(window,document,'script','dataLayer','GTM編號');-->
+    <!--獨立CSS-->
+    <link rel="stylesheet" href="../../../assets/css/member.css"/>
+  </head>
+  <!-- 各頁面 CSS 分開-->
+  <body class="member" data-page="member_maintenance">
+    <!-- 導覽列-->
+    <nav class="navbar show">
+      <div class="container">
+        <div class="logo"><a href="./index.html">CHANGE i</a></div>
+        <ul class="list">
+          <li><a href="about.html">Change i</a></li>
+          <li><a href="news.html">News Room</a></li>
+          <li class="fast"><a href="javascript:void(0)">Products</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+        <div class="right"><a class="btn_filter" href="javascript:void(0)"><span class="icon-search"></span></a>
+          <ul class="control">
+            <!-- 購物車請先隱藏-->
+            <li><a href="javascript:void(0)"><span class="icon-cart"></span></a></li>
+            <li><a href="member.html"><span class="icon-member"></span></a></li>
+            <li><a class="repair" href="service.html">Repair now</a></li>
+          </ul>
+          <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="fastest">
+        <div class="wrap">
+          <div class="wrap-title">
+            <p class="title">product</p>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p><a class="czbtn" href="product.html" data-text="view all">view all</a>
+          </div>
+          <div class="wrap-content">
+            <div class="scroll scrollbar-inner theme-yellow">
+              <div class="block"><a class="block-wrap" href="javascript:void(0)">
+                  <!-- 圖片尺寸 120*120(px), png-->
+                  <div class="photo"><img src="../../../uploads/home/nav_1.png" alt=""/></div>
+                  <p>screen Protections</p></a></div>
+              <div class="block"><a class="block-wrap" href="javascript:void(0)">
+                  <!-- 圖片尺寸 120*120(px), png-->
+                  <div class="photo"><img src="../../../uploads/home/nav_2.png" alt=""/></div>
+                  <p>Phone case</p></a></div>
+              <div class="block"><a class="block-wrap" href="javascript:void(0)">
+                  <!-- 圖片尺寸 120*120(px), png-->
+                  <div class="photo"><img src="../../../uploads/home/nav_3.png" alt=""/></div>
+                  <p>patent design®</p></a></div>
+              <div class="block"><a class="block-wrap" href="javascript:void(0)">
+                  <!-- 圖片尺寸 120*120(px), png-->
+                  <div class="photo"><img src="../../../uploads/home/nav_4.png" alt=""/></div>
+                  <p>Protections</p></a></div>
+              <div class="block"><a class="block-wrap" href="javascript:void(0)">
+                  <!-- 圖片尺寸 120*120(px), png-->
+                  <div class="photo"><img src="../../../uploads/home/nav_5.png" alt=""/></div>
+                  <p>Chargers</p></a></div>
+              <div class="block"><a class="block-wrap" href="javascript:void(0)">
+                  <!-- 圖片尺寸 120*120(px), png-->
+                  <div class="photo"><img src="../../../uploads/home/nav_6.png" alt=""/></div>
+                  <p>Apple refurbished</p></a></div>
+              <div class="block"><a class="block-wrap" href="javascript:void(0)">
+                  <!-- 圖片尺寸 120*120(px), png-->
+                  <div class="photo"><img src="../../../uploads/home/nav_1.png" alt=""/></div>
+                  <p>screen Protections</p></a></div>
+              <div class="block"><a class="block-wrap" href="javascript:void(0)">
+                  <!-- 圖片尺寸 120*120(px), png-->
+                  <div class="photo"><img src="../../../uploads/home/nav_2.png" alt=""/></div>
+                  <p>Phone case</p></a></div>
+              <div class="block"><a class="block-wrap" href="javascript:void(0)">
+                  <!-- 圖片尺寸 120*120(px), png-->
+                  <div class="photo"><img src="../../../uploads/home/nav_3.png" alt=""/></div>
+                  <p>patent design®</p></a></div>
+              <div class="block"><a class="block-wrap" href="javascript:void(0)">
+                  <!-- 圖片尺寸 120*120(px), png-->
+                  <div class="photo"><img src="../../../uploads/home/nav_4.png" alt=""/></div>
+                  <p>Protections</p></a></div>
+              <div class="block"><a class="block-wrap" href="javascript:void(0)">
+                  <!-- 圖片尺寸 120*120(px), png-->
+                  <div class="photo"><img src="../../../uploads/home/nav_5.png" alt=""/></div>
+                  <p>Chargers</p></a></div>
+              <div class="block"><a class="block-wrap" href="javascript:void(0)">
+                  <!-- 圖片尺寸 120*120(px), png-->
+                  <div class="photo"><img src="../../../uploads/home/nav_6.png" alt=""/></div>
+                  <p>Apple refurbished</p></a></div>
+            </div>
+          </div>
+          <div class="wrap-ad">
+            <div class="fastest-swiper swiper-container swiper4" data-swiper-id="" data-swiper-num="1" data-swiper-arrow="off" data-swiper-nav="off" data-swiper-autoplay="on" data-swiper-breakpoints="{320: {autoplay: {delay: 5000,}, speed: 1000}}">
+              <!-- 圖片尺寸 475*665(px)-->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="photo"><img src="../../../uploads/home/menu_ad.jpg" alt=""/></div><a class="info" href="javascript:void(0)">
+                    <p>Let’s get free phone case! From now on</p><span class="icon-right"></span></a>
+                </div>
+                <div class="swiper-slide">
+                  <div class="photo"><img src="../../../uploads/home/menu_ad.jpg" alt=""/></div><a class="info" href="javascript:void(0)">
+                    <p>Let’s get free phone case! From now on</p><span class="icon-right"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px">
+<clipPath id="btn" clipPathUnits="objectBoundingBox">
+<path transform="scale(0.0071428, 0.02)" d="M22.102,50.008L22.102,50.008c-0.229,0-5.591-0.035-11.02-3.115C6.049,44.036,0.049,37.938,0.049,25.109	c0-24.792,21.832-25.078,22.052-25.078l95.656,0.016c0.001,0,0.001,0,0.002,0c0.249,0,5.648,0.039,11.115,3.132	c5.079,2.874,11.133,9.011,11.133,21.931c0,24.607-22.027,24.891-22.25,24.891L22.102,50.008L22.102,50.008z M22.102,2.031 C21.284,2.033,2.049,2.34,2.049,25.109c0,22.592,19.234,22.897,20.053,22.899L117.758,48c0.826-0.002,20.25-0.304,20.25-22.891 c0-22.764-19.424-23.061-20.251-23.063L22.102,2.031z"/>
+</clipPath>
+</svg>
+    </nav>
+    <section class="bottom_btn">
+      <ul class="control">
+        <!-- 購物車請先隱藏-->
+        <li><a href="javascript:void(0)"><span class="icon-cart"></span></a></li>
+        <li><a href="member.html"><span class="icon-member"></span></a></li>
+        <li><a class="repair" href="service.html">Repair now</a></li>
+      </ul>
+    </section>
+    <section class="menu">
+      <div class="menu-scroll">
+        <div class="square-close"><span></span><span></span></div>
+        <div class="menu-wrap">
+          <div class="container">
+            <div class="list">
+              <ul>
+                <li><a href="product.html"><span></span>
+                    <p data-text="產品列表">Products</p></a></li>
+                <li><a href="about.html"><span></span>
+                    <p data-text="關於橙艾">CHANGEi</p></a></li>
+                <li><a href="news.html"><span></span>
+                    <p data-text="最新消息">News Room</p></a></li>
+                <li><a href="service.html"><span></span>
+                    <p data-text="預約維修">reservation</p></a></li>
+              </ul>
+              <ul>
+                <li><a href="contact.html"><span></span>
+                    <p data-text="聯絡我們">Contact</p></a></li>
+                <li><a href="member.html"><span></span>
+                    <p data-text="會員中心">iMember</p></a></li>
+                <li><a href="javascript:void(0)"><span></span>
+                    <p data-text="人才招募">Recruit</p></a></li>
+                <li><a href="privacy.html"><span></span>
+                    <p data-text="隱私聲明">Privacy</p></a></li>
+              </ul>
+            </div>
+            <div class="menu-swiper">
+              <div class="swiper-container swiper4" data-swiper-id="menu-swiper-container" data-swiper-num="1" data-swiper-arrow="off" data-swiper-autoplay="off" data-swiper-nav="on" data-swiper-nav-name=".menu-swiper-pagination">
+                <div class="swiper-wrapper">
+                  <!-- data-color 字體顏色黑白兩色 white black-->
+                  <div class="swiper-slide">
+                    <div class="menu-adblock">
+                      <div class="photo"><img src="../../../uploads/home/menu_1.jpg" alt=""/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="menu-adblock">
+                      <div class="photo"><img src="../../../uploads/home/menu_1.jpg" alt=""/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="menu-adblock">
+                      <div class="photo"><img src="../../../uploads/home/menu_1.jpg" alt=""/></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-swiper-pagination menu-swiper-container">
+                <div class="menu-swiper-pagination-bullet"></div>
+              </div>
+            </div>
+          </div>
+          <div class="infobar">
+            <ul>
+              <!-- 購物車請先隱藏-->
+              <li><a class="icon-cart" href="javascript:void(0)"></a><a href="javascript:void(0)">Cart</a></li>
+              <li><a class="icon-member" href="member.html"></a><a href="javascript:void(0)">Hello,Emma</a></li>
+              <li><a class="logout" href="javascript:void(0)">Log out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pdfilter_lb">
+      <div class="lb_wrap"><a class="lb_close btn_close" href="javascript:;">CLOSE</a>
+        <div class="ct_title waypoint">
+          <div class="title_head">Filter</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        </div>
+        <div class="lb_select scroll scrollbar-inner theme-black">
+          <div class="type_select one_select circle">
+            <div class="type_list">
+              <div class="type_title">Type</div><span></span>
+            </div>
+            <ul class="type_item">
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/search1.jpg" alt=""/></div>
+                  <div class="type_name">手機殼 Aqua Case</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/search2.jpg" alt=""/></div>
+                  <div class="type_name">充電線 Cable</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/search3.jpg" alt=""/></div>
+                  <div class="type_name">保護貼 PG</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/search4.jpg" alt=""/></div>
+                  <div class="type_name">充電座 Charge</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/search3.jpg" alt=""/></div>
+                  <div class="type_name">保護貼 PG</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/search4.jpg" alt=""/></div>
+                  <div class="type_name">車用 Wireless</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/search1.jpg" alt=""/></div>
+                  <div class="type_name">手機殼 Aqua Case</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/search2.jpg" alt=""/></div>
+                  <div class="type_name">充電線 Cable</div>
+                </div>
+              </li>
+            </ul>
+            <div class="type_icon"><span></span></div>
+          </div>
+          <div class="type_select one_select circle">
+            <div class="type_list">
+              <div class="type_title">Item</div><span></span>
+            </div>
+            <ul class="type_item">
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/search5.jpg" alt=""/></div>
+                  <div class="type_name">iPG A (頂規防塵）</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/search5.jpg" alt=""/></div>
+                  <div class="type_name">iPG S (頂規通用）</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/search5.jpg" alt=""/></div>
+                  <div class="type_name">iPG N (客制滿版）</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/search5.jpg" alt=""/></div>
+                  <div class="type_name">iPG Ag (客制滿版）</div>
+                </div>
+              </li>
+            </ul>
+            <div class="type_icon"><span></span></div>
+          </div>
+          <div class="type_select one_select brand">
+            <div class="type_list">
+              <div class="type_title">Brand</div><span></span>
+            </div>
+            <ul class="type_item">
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/brand_01.png" alt=""/></div>
+                  <div class="type_name">APPLE</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/brand_02.png" alt=""/></div>
+                  <div class="type_name">SUMSUNG</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/brand_03.png" alt=""/></div>
+                  <div class="type_name">SONY</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/brand_04.png" alt=""/></div>
+                  <div class="type_name">OPPO</div>
+                </div>
+              </li>
+            </ul>
+            <div class="type_icon"><span></span></div>
+          </div>
+          <div class="type_select more_select">
+            <div class="type_list">
+              <div class="type_title">Suitable For</div>
+              <div class="select_num">
+                <p class="num">0</p>
+                <p>selected</p>
+              </div><span></span>
+            </div>
+            <ul class="type_item">
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/icon_01.png" alt=""/></div>
+                  <div class="type_name">iPhone 11 Pro</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/icon_02.png" alt=""/></div>
+                  <div class="type_name">iPhone 11</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/icon_02.png" alt=""/></div>
+                  <div class="type_name">iPhone XR</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/icon_01.png" alt=""/></div>
+                  <div class="type_name">iPhone X</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/icon_02.png" alt=""/></div>
+                  <div class="type_name">iPhone 11</div>
+                </div>
+              </li>
+              <li>
+                <div class="type_li">
+                  <div class="type_pic"><img src="../../../uploads/product/icon_01.png" alt=""/></div>
+                  <div class="type_name">iPhone 11 Pro</div>
+                </div>
+              </li>
+            </ul>
+            <div class="type_icon"><span></span></div>
+          </div>
+        </div>
+        <div class="lb_btn"><a class="czbtn reset" href="javascript:;" data-text="reset">reset</a><a class="czbtn btn_close" href="product_search_list.html" data-text="Done">Done</a></div>
+        <div class="lb_btn_rwd"><a class="btn reset" href="javascript:;">RESET</a><a class="btn btn_close" href="product_search_list.html">DONE</a></div>
+      </div>
+    </section>
+    <section class="lightbox_trans step">
+      <div class="lightbox_wrap">
+        <div class="svg">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+            <g>
+              <path class="a" fill="none" stroke="#fff" stroke-width="8" stroke-miterlimit="10" d="M53.834,31.333h37.833v57.833H53.834 M45.5,31.333 H26.833V50.5H45.5"></path>
+              <path class="a" fill="none" stroke="#fff" stroke-width="8" stroke-miterlimit="10" d="M45.5,69.667H8V11.333h37.5 M53.834,69.667h18.999 V50.5H53.834"></path>
+            </g>
+            <g>
+              <path fill="none" stroke="#fff" stroke-width="1" stroke-miterlimit="10" d="M45.5,73.667H3.833V7.833H45.5v8H11.833v49.834H45.5V73.667z M45.5,54.5H22.667V27.333   H45.5v8H30.667V46.5H45.5V54.5z M95.5,93.168H53.834v-8H87.5V35.333H53.834v-8H95.5V93.168z M76.667,73.668H53.834v-8h14.833 V54.502H53.834v-8h22.833V73.668z"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- 主要內容-->
+    <main>
+      <section class="mb_overview_hd short waypoint">
+        <div class="common_wrap">
+          <div class="mb_hd_top">
+            <div class="mb_hd_pic"><img src="../../../uploads/member/user_pic.jpg" alt=""/></div>
+            <div class="mb_hd_ct">
+              <div class="hd_title"> 
+                <p>Emma</p>
+                <p>,Wellcome</p>
+              </div>
+              <div class="hd_p">Manage your information, privacy and security and use your own services</div>
+            </div>
+          </div>
+          <div class="mb_hd_btn"><a class="czbtn" href="member.html" data-text="login out">login out</a><a class="czbtn" href="member_home.html" data-text="home">home</a></div>
+        </div>
+      </section>
+      <section class="mb_ct">
+        <div class="common_wrap">
+          <div class="mb_ul"><a href="member_profile.html">profile</a><a href="member_account.html">account</a><a class="active" href="member_maintenance.html">maintenance</a></div>
+          <div class="maintenance_ct waypoint">
+            <div class="block">
+              <div class="block_title">
+                <div class="num"><span class="icon-repair"></span></div>
+                <h1 class="block_name">Maintenance Inquiry</h1>
+              </div>
+              <div class="maintenance_table">
+                <div class="mt_tablehd">
+                  <div class="mt_id"> 
+                    <p>csae ID number.</p>
+                  </div>
+                  <div class="mt_detail"></div>
+                  <div class="mt_date">
+                    <div class="dropdown member">
+                      <div class="dropdown_click">
+                        <div class="dropdown_title">Select year</div>
+                        <div class="icon-arrow_right"></div>
+                      </div>
+                      <div class="dropdown_select">
+                        <div class="dropdown_opt scroll scrollbar-inner theme-yellow">
+                          <ul>
+                            <li>ALL</li>
+                            <li>2020</li>
+                            <li>2019</li>
+                            <li>2018</li>
+                            <li>2017</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt_status">
+                    <div class="dropdown member">
+                      <div class="dropdown_click">
+                        <div class="dropdown_title">Select status</div>
+                        <div class="icon-arrow_right"></div>
+                      </div>
+                      <div class="dropdown_select">
+                        <div class="dropdown_opt scroll scrollbar-inner theme-yellow">
+                          <ul>
+                            <li>ALL</li>
+                            <li>Processing</li>
+                            <li>Completed</li>
+                            <li>Cancelled</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt_tablect">
+                  <div class="mt_list">
+                    <div class="mt_id"><a class="mt_btn" href="javascript:;">20201023XXD</a></div>
+                    <div class="mt_detail">
+                      <div class="dt_list">
+                        <div class="dt_title">Product :</div>
+                        <div class="dt_p">iPhone X</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_title">Maintenance Type :</div>
+                        <div class="dt_p">Boot or power</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_p">When charging it shows that the power is connected.But after a while, it is not charging.</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_title">Contact Time :</div>
+                        <div class="dt_p">12:00 - 13:30</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_title">Warranty Card No. :</div>
+                        <div class="dt_p">afgghsdjk</div>
+                      </div>
+                    </div>
+                    <div class="mt_date">
+                      <p>2020 - 10 - 23  </p>
+                    </div>
+                    <div class="mt_status">
+                      <p>Processing</p>
+                    </div>
+                  </div>
+                  <div class="mt_list">
+                    <div class="mt_id"><a class="mt_btn" href="javascript:;">20200923XXD</a></div>
+                    <div class="mt_detail">
+                      <div class="dt_list">
+                        <div class="dt_title">Product :</div>
+                        <div class="dt_p">iPhone XR</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_title">Maintenance Type :</div>
+                        <div class="dt_p">Maintenance and physical damage</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_p">When charging it shows that the power is connected.But after a while, it is not charging.</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_title">Contact Time :</div>
+                        <div class="dt_p">12:00 - 13:30</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_title">Warranty Card No. :</div>
+                        <div class="dt_p">afgghsdjk</div>
+                      </div>
+                    </div>
+                    <div class="mt_date">
+                      <p>2020 - 09 - 03</p>
+                    </div>
+                    <div class="mt_status">
+                      <p>Completed</p>
+                    </div>
+                  </div>
+                  <div class="mt_list cancel">
+                    <div class="mt_id"><a class="mt_btn" href="javascript:;">20200823XXD</a></div>
+                    <div class="mt_detail">
+                      <div class="dt_list">
+                        <div class="dt_title">Product :</div>
+                        <div class="dt_p">iPhone 11</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_title">Maintenance Type :</div>
+                        <div class="dt_p">Battery and charging</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_p">When charging it shows that the power is connected.But after a while, it is not charging.</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_title">Contact Time :</div>
+                        <div class="dt_p">12:00 - 13:30</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_title">Warranty Card No. :</div>
+                        <div class="dt_p">afgghsdjk</div>
+                      </div>
+                    </div>
+                    <div class="mt_date">
+                      <p>2020 - 08 - 23</p>
+                    </div>
+                    <div class="mt_status">
+                      <p>Cancelled</p>
+                    </div>
+                  </div>
+                  <div class="mt_list">
+                    <div class="mt_id"><a class="mt_btn" href="javascript:;">20200703XXD</a></div>
+                    <div class="mt_detail">
+                      <div class="dt_list">
+                        <div class="dt_title">Product :</div>
+                        <div class="dt_p">iPhone X</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_title">Maintenance Type :</div>
+                        <div class="dt_p">Boot or power</div>
+                      </div>
+                    </div>
+                    <div class="mt_date">
+                      <p>2020 - 07 - 03</p>
+                    </div>
+                    <div class="mt_status">
+                      <p>Completed</p>
+                    </div>
+                  </div>
+                  <div class="mt_list">
+                    <div class="mt_id"><a class="mt_btn" href="javascript:;">20200623XXD</a></div>
+                    <div class="mt_detail">
+                      <div class="dt_list">
+                        <div class="dt_title">Product :</div>
+                        <div class="dt_p">iPhone XR</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_title">Maintenance Type :</div>
+                        <div class="dt_p">Maintenance and physical damage</div>
+                      </div>
+                    </div>
+                    <div class="mt_date">
+                      <p>2020 - 06 - 23</p>
+                    </div>
+                    <div class="mt_status">
+                      <p>Completed</p>
+                    </div>
+                  </div>
+                  <div class="mt_list cancel">
+                    <div class="mt_id"><a class="mt_btn" href="javascript:;">20200503XXD</a></div>
+                    <div class="mt_detail">
+                      <div class="dt_list">
+                        <div class="dt_title">Product :</div>
+                        <div class="dt_p">iPhone 11</div>
+                      </div>
+                      <div class="dt_list">
+                        <div class="dt_title">Maintenance Type :</div>
+                        <div class="dt_p">Battery and charging</div>
+                      </div>
+                    </div>
+                    <div class="mt_date">
+                      <p>2020 - 05 - 03</p>
+                    </div>
+                    <div class="mt_status">
+                      <p>Cancelled</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- 頁尾-->
+    <footer class="footer">
+      <div class="footer-contact">
+        <p>台中市西屯區環中路二段1506號<br>No. 1506, Section 2, Huanzhong Road, Xitun District, Taichung City</p>
+        <div>
+          <p>CHANGE i</p><a class="nocg" href="tel:+04-24520306">04-24520306</a>
+        </div>
+        <ul>
+          <li><a class="nocg icon-fb" href="javascript:void(0)"></a></li>
+          <li><a class="nocg icon-ig" href="javascript:void(0)"></a></li>
+          <li><a class="nocg icon-line" href="javascript:void(0)"></a></li>
+          <li><a class="nocg icon-twitter" href="javascript:void(0)"></a></li>
+          <li><a class="nocg icon-wechat" href="javascript:void(0)"></a></li>
+          <li><a class="nocg icon-youtube" href="javascript:void(0)"></a></li>
+        </ul>
+        <div class="gotop"><span class="icon-top"></span></div>
+      </div>
+      <div class="footer-navbar">
+        <ul>
+          <li><a href="about.html">Change i</a></li>
+          <li><a href="news.html">News Room</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+        <p>Copyright © change i. All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+  <!--引入的script-->
+  <script src="../../../assets/js/plugins-dist.js"></script>
+  <script src="../../../assets/js/fesdDB.1.0-dist.js"></script>
+  <script src="../../../assets/js/fesd.1.1-dist.js"></script>
+  <script src="../../../assets/js/methods-dist.js"></script>
+  <script src="../../../assets/js/main-dist.js"></script><!-- microdata : professional service -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://www.schema.org",
+      "@type": "ProfessionalService",
+      "name": "網站名子",
+      "email": "mailto:email",
+      "url": "本站網址",
+      "image": "favicon logo路徑",
+      "priceRange":"商品價格區間",
+      "telephone": "電話",
+      "logo": "logo路徑",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "地址",
+        "addressLocality": "區",
+        "addressRegion": "成市",
+        "postalCode": "郵遞區號",
+        "addressCountry": "中華民國 (台灣)"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "22.619435",
+        "longitude": "120.296034"
+      },
+      "hasMap": "https://www.google.com.tw/maps/place/據點地圖",
+      "openingHours": [
+        "Mo-Th 11:00-22:00",
+        "Fr 11:00-22:30",
+        "Sa 10:30-22:30",
+        "Su 10:30-22:00"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+886-00-12345678"
+      },
+      "sameAs": [ "https://www.facebook.com/xxxxxxxx" ]
+    }
+    
+    
+  </script><!-- microdata : breadcrumbList 必須隨著不同頁面要有不同的階層產生-->
+  <script type="application/ld+json">
+    {
+      "@context": "http://www.schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement":
+      [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item":
+          {
+            "@id": "https://example.com/dresses",
+            "name": "Dresses"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item":
+          {
+            "@id": "https://example.com/dresses/real",
+            "name": "Real Dresses"
+          }
+        }
+      ]
+    }
+  </script>
+</html>

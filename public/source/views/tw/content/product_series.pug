@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/product.css")
+  // 各頁面 CSS 分開
+  body.product(data-page="product_series")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.productseries_hd
+        // 電腦 1920*750 // 平板 1200*700 // 手機 600*825 // 換圖結構在下面
+        .productseries_bg(style="background-image: url('../../../uploads/product/pdseries_bn.jpg')")
+        //- picture
+        //-   source(media="(max-width: 575px)" srcset="../../../uploads/product/pdseries_bn_phone.jpg")
+        //-   source(media="(max-width: 1200px)" srcset="../../../uploads/product/pdseries_bn_pad.jpg")
+        //-   img(src="../../../uploads/product/pdseries_bn.jpg" alt="")
+        .bn_title.waypoint
+          h1.title_head PROTECT YOUR DEVICE
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      section.productseries_ct
+        .common_wrap
+          .ct_title.waypoint
+            .title_head Protections
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+          //- .pd_filter
+          //-   a(href="javascript:;").btn_filter
+          //-     span.icon-search
+          //-     p Products Filter
+          //-   ul.pd_select
+              li
+                p Glass Protection
+                span.icon-cross
+              li
+                p Phone Case
+                span.icon-cross
+              li
+                p iPhone 11
+                span.icon-cross
+              li
+                p iPhone 11 Pro
+                span.icon-cross
+          .pd_list
+            .pd_item.waypoint(data-size="big")
+              a(href="product_list.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_01.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint(data-size="small")
+              a(href="product_list.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_02.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Functionality for
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint(data-size="small")
+              a(href="product_list.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_03.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Functionality for
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint(data-size="small")
+              a(href="product_list.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_04.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Functionality for
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint(data-size="small")
+              a(href="product_list.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_05.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Functionality for
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint(data-size="small")
+              a(href="product_list.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_06.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Functionality for
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint(data-size="big")
+              a(href="product_list.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_07.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Functionality for the New iPhone 11, iPhone 11 Pro and
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint(data-size="big")
+              a(href="product_list.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_08.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Functionality for the New iPhone 11, iPhone 11 Pro and
+                .item_btn
+                  .czbtn(data-text="view") view
+            .pd_item.waypoint(data-size="small")
+              a(href="product_list.html").item
+                .item_pic
+                  img(src="../../../uploads/product/pd_09.jpg", alt="")
+                .item_sort GLASS PROTECTION
+                h2.item_title CHANGEi Ushers in Effortless Functionality for
+                .item_btn
+                  .czbtn(data-text="view") view
+          .page
+            a(href="javascript:;").page_icon.icon-arrow_left
+            .page_ul
+              a(href="javascript:;").page_li.active
+              a(href="javascript:;").page_li
+              a(href="javascript:;").page_li
+              a(href="javascript:;").page_li
+              a(href="javascript:;").page_li
+            a(href="javascript:;").page_icon.icon-arrow_right
+
+      //- .pdfilter_lb
+      //-   .lb_wrap
+      //-     a.lb_close(href="javascript:;") CLOSE
+      //-     .ct_title.waypoint
+      //-       .title_head Filter
+      //-       p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      //-     .lb_select.scroll.scrollbar-inner.theme-black
+      //-       .type_select.one_select
+      //-         .type_list
+      //-           .type_title Suitable For
+      //-           span
+      //-         ul.type_item
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 img(src="../../../uploads/product/icon_01.png", alt="")
+      //-               .type_name iPhone 11 Pro
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 img(src="../../../uploads/product/icon_02.png", alt="")
+      //-               .type_name iPhone 11
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 img(src="../../../uploads/product/icon_02.png", alt="")
+      //-               .type_name iPhone XR
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 img(src="../../../uploads/product/icon_01.png", alt="")
+      //-               .type_name iPhone X
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 img(src="../../../uploads/product/icon_02.png", alt="")
+      //-               .type_name iPhone 11
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 img(src="../../../uploads/product/icon_01.png", alt="")
+      //-               .type_name iPhone 11 Pro
+      //-         .type_icon
+      //-           span
+      //-       .type_select.one_select
+      //-         .type_list
+      //-           .type_title Color
+      //-           span
+      //-         ul.type_item
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-bgcolor="#676767")
+      //-               .type_name Black Clear
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-bgcolor="#1c1c1c")
+      //-               .type_name Black Glossy
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-bgcolor="#cccccc")
+      //-               .type_name Clear
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-bgcolor="#0030ff")
+      //-               .type_name Blue Glossy
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-bgcolor="#676767")
+      //-               .type_name Black Clear
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-bgcolor="#1c1c1c")
+      //-               .type_name Black Glossy
+      //-         .type_icon
+      //-           span
+      //-       .type_select.more_select
+      //-         .type_list
+      //-           .type_title Brand
+      //-           .select_num
+      //-             p.num 0
+      //-             p selected
+      //-           span
+      //-         ul.type_item
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-bgcolor="#676767")
+      //-               .type_name Black Clear
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-bgcolor="#676767")
+      //-               .type_name Black Clear
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-bgcolor="#676767")
+      //-               .type_name Black Clear
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-bgcolor="#676767")
+      //-               .type_name Black Clear
+      //-         .type_icon
+      //-           span
+      //-       .type_select.more_select
+      //-         .type_list
+      //-           .type_title Type
+      //-           .select_num
+      //-             p.num 0
+      //-             p selected
+      //-           span
+      //-         ul.type_item
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-bgcolor="#676767")
+      //-               .type_name Black Clear
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-color="#676767")
+      //-               .type_name Black Clear
+      //-           li
+      //-             .type_li
+      //-               .type_pic
+      //-                 .circle(data-color="#676767")
+      //-               .type_name Black Clear
+      //-         .type_icon
+      //-           span
+
+      //-     .lb_btn
+      //-       a.czbtn.reset(href="javascript:;" data-text="reset") reset
+      //-       a.czbtn(href="javascript:;" data-text="Done") Done
+      //-     .lb_btn_rwd
+      //-       a.btn.reset(href="javascript:;") RESET
+      //-       a.btn(href="javascript:;") DONE
+
+
+    style(type="text/css").
+      @media only screen and (max-width: 1200px){
+        .productseries_bg{
+          background-image: url('../../../uploads/product/pdseries_bn_pad.jpg') !important
+        }
+      }
+      @media only screen and (max-width: 767px){
+        .productseries_bg{
+          background-image: url('../../../uploads/product/pdseries_bn_phone.jpg') !important
+        }
+      }
+
+
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

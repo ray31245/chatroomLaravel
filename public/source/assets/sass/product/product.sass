@@ -1,0 +1,850 @@
+@import ../common/base/_variable
+@import ../common/base/_mixin
+
+.product
+  main
+    min-height: 100vh
+    background: #f2f2f2
+
+  .product_hd
+    position: relative
+    .product_bg
+      height: 750px
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      +rwdmax(1200)
+        height: 600px
+      +rwdmax(575)
+        height: 520px
+    .bn_title
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+
+  .product_ct
+    padding-bottom: 80px
+    .ct_head
+      padding-top: 100px
+      padding-bottom: 25px
+      +rwdmax(768)
+        padding-top: 60px
+        padding-bottom: 35px
+
+  ////////// 產品系列
+  .productseries_hd
+    position: relative
+    .productseries_bg
+      height: 750px
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      +rwdmax(1200)
+        height: 600px
+      +rwdmax(575)
+        height: 520px
+    .bn_title
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+
+  .productseries_ct
+    padding-bottom: 100px
+    padding-top: 100px
+    +rwdmax(767)
+      padding-top: 60px
+      padding-bottom: 80px
+    // .pd_filter
+    //   display: flex
+    //   align-items: flex-start
+    //   flex-wrap: wrap
+    //   padding-top: 45px
+    //   +rwdmax(767)
+    //     justify-content: center
+    //   .btn_filter
+    //     display: flex
+    //     position: relative
+    //     padding: 12px 0
+    //     margin: 0 20px 10px
+    //     +rwdmax(1200)
+    //       margin: 0 10px 10px
+    //     &:after
+    //       position: absolute
+    //       content: ""
+    //       width: 1px
+    //       height: 20px
+    //       background: #cccccc
+    //       right: -20px
+    //       top: 50%
+    //       transform: translateY(-50%)
+    //       +rwdmax(1200)
+    //         right: -10px
+    //       +rwdmax(767)
+    //         width: 180px
+    //         height: 1px
+    //         top: 0
+    //         left: 50%
+    //         transform: translateX(-50%)
+    //     span
+    //       font-size: px(16)
+    //     p
+    //       font-size: px(16)
+    //       margin-left: 10px
+    //       white-space: nowrap
+    //   .pd_select
+    //     display: flex
+    //     flex-wrap: wrap
+    //     li
+    //       position: relative
+    //       padding: 13px 30px
+    //       color: #ffffff
+    //       background: #b3b3b3
+    //       margin-left: 20px
+    //       border-radius: 20px
+    //       margin-bottom: 10px
+    //       transition: .5s
+    //       +rwdmax(1200)
+    //         margin-left: 10px
+    //         padding: 13px 25px
+    //       span
+    //         position: absolute
+    //         content: ""
+    //         top: 50%
+    //         right: 0
+    //         transform: translate(0%,-50%)
+    //         background: #666666
+    //         +circle(20)
+    //         font-size: px(10)
+    //         +flex(flex,center,center)
+    //         cursor: pointer
+    //         transition: .5s
+    //         &:before
+    //           padding-left: 1px
+    //         &:hover
+    //           background: #000000
+    //           color: #ffffff
+    //           transform: translate(0%,-50%) rotate(90deg)
+    //           transition: .5s
+    //       &:hover
+    //         background: $yellow
+    //         color: #000000
+    //         transition: .5s
+    //         span
+    //           color: #ffffff
+    
+    .pd_list
+      display: flex
+      flex-wrap: wrap
+      padding-top: 45px
+
+
+  ////////// 產品列表
+  .productlist_hd
+    position: relative
+    .productlist_bg
+      height: 750px
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      +rwdmax(1200)
+        height: 600px
+      +rwdmax(575)
+        height: 520px
+    .bn_title
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      text-align: center
+      .title_head
+        margin: 0 auto
+      p
+        margin: 15px auto 0
+
+  .productlist_ct
+    padding-bottom: 100px
+    padding-top: 100px
+    +rwdmax(767)
+      padding-top: 60px
+      padding-bottom: 80px
+    .pd_list
+      display: flex
+      flex-wrap: wrap
+      padding-top: 45px
+    .pd_item
+      width: calc(25% - 10px)
+      +rwdmax(1366)
+        width: calc(33.3% - 10px)
+      +rwdmax(992)
+        width: calc(50% - 10px)
+      +rwdmax(767)
+        width: 100%
+    .pdlist_model
+      padding-top: 35px
+      display: flex
+      justify-content: center
+      .btn_model
+        padding: 17px 40px
+        background: #959595
+        border-radius: 25px
+        display: flex
+        color: #ffffff
+        font-size: px(16)
+        transition: .5s
+        span
+          opacity: 0.6
+          margin-right: 15px
+        &:hover
+          background: #000000
+          transition: .5s
+
+  .lb_model
+    position: fixed
+    top: 0
+    left: 0
+    background: rgba(0,0,0,0)
+    width: 100%
+    height: 100%
+    z-index: 10
+    transform: translateX(-100%)
+    transition: .5s .3s
+    &.open
+      // width: 100%
+      transform: translateX(0)
+      background: rgba(0,0,0,.6)
+      transition: .5s
+      .lb_wrap
+        transform: translateX(0)
+        transition: .8s .3s
+    .lb_wrap
+      transform: translateX(-100%)
+      max-width: 960px
+      width: 100%
+      height: 100vh
+      height: calc(var(--vh, 1vh) * 100)
+      margin-right: auto
+      background: #ffffff
+      padding: 60px
+      transition: .8s
+      +rwdmax(767)
+        padding: 60px 25px
+    .lb_close
+      position: absolute
+      top: 60px
+      right: 60px
+      z-index: 5
+      +rwdmax(767)
+        top: 70px
+        right: 25px
+    .ct_title
+      text-align: left
+      margin: 0
+      max-width: 400px
+      margin-bottom: 20px
+      +rwdmax(575)
+        width: 100%
+    .lb_main
+      color: #ffffff
+      padding-right: 10px
+      height: calc(100vh - 345px)
+      height: calc(var(--vh, 1vh) * 100 - 345px)
+      +rwdmax(767)
+        height: calc(100vh - 260px)
+        height: calc(var(--vh, 1vh) * 100 - 260px)
+      .scroll-x
+        display: none
+    .brand
+      .type_item .type_li
+        padding: 0
+        &:hover
+          +rwdmin(1025)
+            background: none
+            .type_pic img:last-child
+              opacity: 1
+              transition: .5s
+      .type_item
+        li.select
+          .type_li
+            background: none
+          .type_pic img:last-child
+            opacity: 1
+      .type_pic
+        position: relative
+        max-width: 130px
+        img:last-child
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%,-50%)
+          opacity: 0
+          transition: .5s
+    .type_item 
+      .type_li:hover
+        +rwdmin(1025)
+          background: #eeeeee
+      .type_name
+        color: #000000
+      li
+        width: 16.6%
+        +rwdmax(992)
+          width: 25%
+        +rwdmax(575)
+          width: 50%
+        &.select
+          .type_li
+            background: #eeeeee
+    .lb_btn
+      display: flex
+      justify-content: center
+      margin-top: 60px
+      +rwdmax(767)
+        display: none
+      .czbtn
+        border-color: rgba(0, 0, 0, 0.2)
+        color: #000000
+        &:not(:first-child)
+          margin-left: 20px
+    .lb_btn_rwd
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 60px
+      background: $yellow
+      display: none
+      +rwdmax(767)
+        display: flex
+
+      .btn
+        position: relative
+        height: 100%
+        width: 50%
+        +flex(flex,center,center)
+        &:not(:last-child):after
+          position: absolute
+          content: ""
+          top: 50%
+          right: 0
+          transform: translateY(-50%)
+          width: 1px
+          height: 20px
+          background: #000
+          opacity: .3
+
+
+
+
+  ////////// 詳細頁
+  .productdt_bn
+    position: relative
+    padding-bottom: 56.25%
+    +rwdmax(767)
+      padding-bottom: 119%
+    .swiper-container
+      position: absolute
+      top: 50%
+      left: 50%
+      width: calc(100% + 1px)
+      transform: translate(-50%,-50%)
+      background: #000000
+      margin-left: -1px
+    .swiper-slide
+      
+    .swiper-pagination
+      right: auto
+      left: 60px
+      +rwdmax(1024)
+        display: flex
+        justify-content: center
+        top: auto
+        left: 50%
+        bottom: 0px
+        transform: translateX(-50%)          
+      .swiper-pagination-bullet
+        position: relative
+        margin: 30px 0
+        width: 3px
+        height: 3px
+        background-color: #fff
+        transition: .3s
+        +rwdmax(1024)
+          margin: 15px
+        &:after
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          width: 25px
+          height: 25px
+          border-radius: 25px
+          border: 1px solid rgba(#fff, 0)
+          transition: .3s
+          content: ''
+        &-active
+          position: relative
+          &:after
+            border: 1px solid rgba(#fff, 0.3)
+        +rwdmin(1024)
+          &:hover
+            opacity: 1
+            &:after
+              border: 1px solid rgba(#fff, 0.3)
+
+  .productdt_name
+    background: #000000
+    padding-top: 100px
+    padding-bottom: 100px
+    +rwdmax(1200)
+      padding-top: 50px
+    +rwdmax(767)
+      padding-top: 30px
+      padding-bottom: 80px
+    &.waypoint
+      .left
+        transform: translateY(50px)
+        opacity: 0
+      .right
+        transform: translateY(50px)
+        opacity: 0
+    &.show
+      .left
+        transform: translateY(0)
+        opacity: 1
+        transition: 1s
+      .right
+        transform: translateY(0)
+        opacity: 1
+        transition: 1s .3s
+
+    .common_wrap
+      display: flex
+      align-items: center
+      +rwdmax(1023)
+        flex-direction: column
+        text-align: center
+        .left
+          width: 100%
+        .right
+          width: 100%
+          text-align: center
+          margin-top: 50px
+    .left
+      width: 50%
+    .right
+      width: 50%
+      text-align: right
+    .pd_name
+      font-family: $rwl
+      color: $yellow
+      font-size: px(35)
+      letter-spacing: 1.23px
+      line-height: 1.5
+      +rwdmax(768)
+        font-size: px(28)
+    .pd_p
+      color: #ffffff
+      opacity: 0.6
+      margin-top: 10px
+      line-height: 1.8
+    .pd_price
+      font-size: px(45)
+      color: #ffffff
+      letter-spacing: 1.13px
+      &:before
+        content: "NTD"
+        color: #ffffff
+        font-size: px(14)
+        margin-right: 15px
+    .pd_color
+      margin-left: auto
+      position: relative
+      height: 50px
+      margin-top: 30px
+      .dropdown_in
+        position: absolute
+        top: 0
+        right: -1px
+        width: 322px
+        z-index: 5
+        +rwdmax(1023)
+          right: 50%
+          transform: translateX(50%)
+        +rwdmax(768)
+          width: 312px
+        +rwdmax(360)
+          width: 100%
+    .pd_btn
+      margin-top: 20px
+      display: flex
+      justify-content: flex-end
+      +rwdmax(1023)
+        justify-content: center
+
+  .productdt_type
+    background: #000000
+    color: #ffffff
+    padding-top: 55px
+    padding-bottom: 100px
+    +rwdmax(1023)
+      padding-top: 30px
+      padding-bottom: 80px
+
+  .productdt_ct
+    background: #f2f2f2
+    padding-top: 100px
+    padding-bottom: 100px
+    +rwdmax(768)
+      padding-top: 60px
+      padding-bottom: 80px
+    ._articleBlock
+      margin-top: 55px
+
+  .productdt_spec
+    background: #191919
+    padding-top: 100px
+    padding-bottom: 100px
+    +rwdmax(768)
+      padding-top: 60px
+      padding-bottom: 80px
+    .ct_title
+      color: #ffffff
+      > p
+        opacity: 0.6
+    .spec_block
+      max-width: 1005px
+      width: 85%
+      margin: 0 auto
+      margin-top: 15px
+      &.waypoint
+        opacity: 0
+        transform: translateY(-50px)
+      &.show
+        opacity: 1
+        transform: translateY(0)
+        transition: 1s .5s
+    .spec_list
+      display: flex
+      color: #ffffff
+      letter-spacing: 0.35px
+      line-height: 1.79
+      +rwdmax(767)
+        flex-direction: column
+        text-align: center
+      .spec_title
+        padding: 17px 30px
+        flex: 1% 1 0
+        border-bottom: 1px solid $yellow
+        margin-right: 5px
+        display: flex
+        +rwdmax(767)
+          border-bottom: none
+          padding: 17px 15px 0 15px
+        p
+          margin: auto 0
+          +rwdmax(767)
+            margin: auto
+      .spec_p
+        font-family: $rwt
+        padding: 17px 30px
+        flex: 3% 3 0
+        border-bottom: 1px solid $yellow
+        +rwdmax(767)
+          padding: 17px 15px
+
+  .productdt_relate
+    background: #f2f2f2
+    padding-top: 100px
+    padding-bottom: 100px
+    +rwdmax(768)
+      padding-bottom: 80px
+      padding-top: 60px
+    &.waypoint
+      .swiper-container
+        opacity: 0
+        transform: translateY(-50px)
+    &.show
+      .swiper-container
+        opacity: 1
+        transform: translateY(0)
+        transition: 1s .5s
+
+    .swiper-container
+      padding-bottom: 70px
+      padding-top: 45px
+      padding-left: 10px
+      padding-right: 10px
+      +rwdmax(767)
+        padding-left: 5px
+        padding-right: 5px
+    .swiper-slide
+      display: flex
+      height: auto
+      // margin: 0 5px
+      // +rwdmax(1024)
+      //   padding: 0 5px
+      //   margin: 0
+      // +rwdmax(767)
+      //   margin: 0
+      // &[data-size="big"]
+      //   width: 65.6%
+      //   +rwdmax(1024)
+      //     width: 50%
+      //   +rwdmax(767)
+      //     width: 100%
+      //   .item_btn
+      //     display: none
+      //     +rwdmax(1024)
+      //       display: block
+      // &[data-size="small"]
+      //   width: 32.8%
+      //   +rwdmax(1024)
+      //     width: 50%
+      //   +rwdmax(767)
+      //     width: 100%
+    .swiper-pagination
+      position: absolute
+      bottom: 0px
+      width: 100%
+      text-align: center
+      // +rwdmax(768)
+      //   bottom: 0px
+    .swiper-pagination-bullet
+      position: relative
+      margin: 12px 15px
+      width: 3px
+      height: 3px
+      background-color: #000
+      transition: .3s
+      &:after
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 25px
+        height: 25px
+        border-radius: 50%
+        border: 1px solid rgba(#000, 0)
+        transition: .3s
+        content: ''
+      &-active
+        position: relative
+        &:after
+          border: 1px solid rgba(#000, 0.3)
+      +rwdmin(1024)
+        &:hover
+          opacity: 1
+          &:after
+            border: 1px solid rgba(#000, 0.3)
+    
+
+
+  ////////// 搜尋列表
+  .productsearch_hd
+    padding-top: 250px
+    +rwdmax(767)
+      padding-top: 150px
+    .bn_title
+      color: #000000
+      text-align: center
+      .title_head,p
+        margin: 0 auto
+    .pdlist_model
+      padding-top: 35px
+      display: flex
+      flex-direction: column
+      align-items: center
+    .top
+      display: flex
+      +rwdmax(575)
+        // display: flex
+        flex-direction: column
+        .dropdown:first-child
+          margin-bottom: 15px
+          margin-right: 0
+    .dropdown
+      height: 50px
+      border: 1px solid rgba(0,0,0,0)
+      +rwdmax(1023)
+        width: 250px
+      &:not(:last-child)
+        margin-right: 10px
+      .dropdown_click
+        height: 50px
+        background: #004986
+        color: #ffffff
+        padding: 17px 0 17px 50px
+        border-radius: 25px
+        &.border
+          border-bottom-left-radius: 0px
+          border-bottom-right-radius: 0px
+        &:hover
+          background: #000000
+          color: #ffffff
+          .icon-arrow_right
+            color: #ffffff
+      .dropdown_title
+        position: relative
+        &:after
+          position: absolute
+          content: ""
+          right: 0
+          top: 50%
+          transform: translateY(-50%)
+          width: 1px
+          height: 40px
+          background: rgba(255, 255, 255, 0.2)
+      .icon-arrow_right
+        padding: 0 18px
+      .dropdown_opt
+        border-bottom-left-radius: 25px
+        border-bottom-right-radius: 25px
+      .dropdown_select ul
+        background: none
+        max-height: 200px
+      .dropdown_opt li
+        background: #004986
+        padding: 14.5px 20px
+        color: #ffffff
+        
+        &:hover
+          background: #000000
+          color: #ffffff
+    .bottom
+      margin-top: 15px
+    .btn_model
+      padding: 16px 40px
+      border: 1px solid rgba(0,0,0,.2)
+      background: none
+      border-radius: 25px
+      display: flex
+      justify-content: center
+      color: #000
+      font-size: px(16)
+      transition: .5s
+      +rwdmax(575)
+        width: 250px
+      span
+        // opacity: 0.6
+        margin-right: 15px
+      &:hover
+        background: #000000
+        color: #ffffff
+        transition: .5s
+  .productsearch_ct
+    padding-bottom: 100px
+    padding-top: 70px
+    +rwdmax(767)
+      padding-top: 30px
+      padding-bottom: 80px
+    .pd_list
+      display: flex
+      flex-wrap: wrap
+      padding-top: 45px
+    .pd_item
+      width: calc(25% - 10px)
+      +rwdmax(1366)
+        width: calc(33.3% - 10px)
+      +rwdmax(992)
+        width: calc(50% - 10px)
+      +rwdmax(767)
+        width: 100%
+    
+
+
+  ///// 浮動按鈕-購買/分享
+  .fixed_btn
+    position: fixed
+    top: 0
+    left: 0
+    height: 60px
+    width: 100%
+    background-image: linear-gradient(to right, #e2249d, #fb1616, #f8b500) 
+    z-index: 5
+    transform: translateY(-100%)
+    display: flex
+    align-items: center
+    transition: .5s
+    // display: none
+    +rwdmax(767)
+      // display: flex
+      // top: 60px
+    &.show
+      transform: translateY(0)
+      transition: .5s
+    .common_wrap
+      display: flex
+      align-items: center
+      height: 100%
+      +rwdmax(1023)
+        width: 100%
+    ul
+      display: flex
+      margin-right: auto
+      height: 100%
+      +rwdmax(1023)
+        display: none
+      li
+        height: 100%
+        color: #ffffff
+        margin-right: 60px
+        a
+          position: relative
+          height: 100%
+          display: flex
+          align-items: center
+          &:after
+            position: absolute
+            content: ""
+            left: 50%
+            bottom: 0
+            transform: translateX(-50%)
+            width: 0
+            height: 2px
+            background: $yellow
+            transition: .5s
+          &:hover:after
+            width: 100%
+            transition: .5s
+        &.active
+          a:after
+            width: 100%
+            transition: .5s
+
+    .btn_box
+      display: flex
+      +rwdmax(1023)
+        width: 100%
+        height: 100%
+    .btn
+      position: relative
+      +flex(flex,center,center)
+      width: 50%
+      color: #ffffff
+      +rwdmax(1023)
+        &:not(:last-child):after
+          position: absolute
+          content: ""
+          top: 50%
+          right: 0
+          transform: translateY(-50%)
+          width: 1px
+          height: 20px
+          background: #ffffff
+          opacity: .3
+      +rwdmin(1024)
+        height: 100%
+        margin-left: 10px
+        background: #000000
+        padding: 12px 30px
+        border-radius: 25px
+      // +rwdmax(1023)
+      //   width: 50%
+      p
+        white-space: nowrap
+      span
+        margin-left: 10px
+        font-size: px(16)
+  
+

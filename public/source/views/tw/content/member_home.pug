@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/member.css")
+  // 各頁面 CSS 分開
+  body.member(data-page="member_home")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.mb_overview_hd.waypoint
+        .common_wrap
+          .mb_hd_pic
+            img(src="../../../uploads/member/user_pic.jpg", alt="")
+          .mb_hd_ct
+            .hd_title 
+              p Emma
+              p ,Wellcome
+            .hd_p Manage your information, privacy and security and use your own services
+          .mb_hd_btn
+            a.czbtn(href="member.html" data-text="login out") login out
+            a.czbtn(href="member_home.html" data-text="home") home
+      section.mb_overview_ct
+        .common_wrap
+          ul.overview_ul
+            li.waypoint
+              .li_top
+                .li_hd
+                  .hd_icon
+                    span.icon-member
+                  .hd_title Profile Management
+                .li_ct
+                  p You are using the relevant member services of this official website, the basic member information used, such as name, contact information and photos. After you log in, these information will be automatically brought into any of the form information fields you fill in the official website, you do not need to repeat it.
+              .li_bt
+                a.czbtn(href="member_profile.html" data-text="setting") setting
+            li.waypoint
+              .li_top
+                .li_hd
+                  .hd_icon
+                    span.icon-lock
+                  .hd_title Account Settings
+                .li_ct
+                  p Account login password and related privacy settings. For example, you can modify the password here, disable, delete, and back up this member account.
+              .li_bt
+                a.czbtn(href="member_account.html" data-text="setting") setting
+            li.waypoint
+              .li_top
+                .li_hd
+                  .hd_icon
+                    span.icon-repair
+                  .hd_title My maintenances
+                .li_ct
+                  .input_p Enter case ID to query maintenance records.
+                  .input
+                    input(type="text" placeholder="Maintenances ID")
+                    a(href="javascript:;").icon-search
+              .li_bt
+                a.czbtn(href="member_maintenance.html" data-text="more") more
+
+
+
+
+
+
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

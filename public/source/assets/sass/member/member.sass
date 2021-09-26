@@ -1,0 +1,994 @@
+@import ../common/base/_variable
+@import ../common/base/_mixin
+
+.member
+  main
+    position: relative
+    min-height: 50vh
+    background: #000000
+    padding-top: 100px
+    +rwdmax(767)
+      padding-top: 60px
+
+  ////////// 會員中心專區
+  .mb_overview_hd
+    background: #292929
+    padding: 45px 0
+    .common_wrap
+      display: flex
+      align-items: center
+      +rwdmax(767)
+        flex-direction: column
+    .mb_hd_top
+      display: flex
+      align-items: center
+      flex: 1% 1 0
+      +rwdmax(767)
+        flex-direction: column
+    .mb_hd_pic
+      position: relative
+      // min-width: 100px
+      width: 100px
+      height: 100px
+      border-radius: 50%
+      overflow: hidden
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        height: 100%
+        width: auto
+        object-fit: cover
+    .mb_hd_ct
+      margin-left: 40px
+      flex: 1% 1 0
+      margin-right: 20px
+      +rwdmax(767)
+        margin: 20px 0 0 0
+        
+    .hd_title 
+      display: flex
+      font-size: px(35)
+      color: #ffffff
+      +rwdmax(767)
+        font-size: px(27)
+        justify-content: center
+    .hd_p
+      color: #ffffff
+      opacity: 0.6
+      margin-top: 15px
+      line-height: 1.79
+      +rwdmax(767)
+        text-align: center
+    .mb_hd_btn
+      display: flex
+      flex-direction: column
+      .czbtn
+        border-color: rgba(255, 255, 255, 0.2)
+        color: #ffffff
+        &:not(:last-child)
+          margin-bottom: 10px
+      +rwdmax(767)
+        margin-top: 20px
+    &.waypoint
+      .mb_hd_pic
+        +rwdmin(768)
+          transform: translateX(50px)
+        +rwdmax(767)
+          transform: translateY(50px)
+      .hd_title
+        transform: translateX(-30px)
+        opacity: 0
+      .hd_p
+        transform: translateX(-30px)
+        opacity: 0
+      .mb_hd_btn
+        transform: translateY(30px)
+        opacity: 0
+    &.short
+      .mb_hd_pic
+        +rwdmax(767)
+          transform: translateX(50px)
+    &.show
+      .mb_hd_pic
+        +rwdmin(768)
+          transform: translateX(0)
+        +rwdmax(767)
+          transform: translate(0)
+        transition: .8s .2s
+      .hd_title
+        transform: translateX(0)
+        opacity: 1
+        transition: .8s .6s
+      .hd_p
+        transform: translateX(0)
+        opacity: 1
+        transition: .8s .8s
+      .mb_hd_btn
+        transform: translateY(0)
+        opacity: 1
+        transition: .8s 1.1s
+        
+    &.short
+      +rwdmax(767)
+        padding: 35px 0 20px
+        .mb_hd_top
+          flex-direction: row
+        .mb_hd_pic
+          width: 80px
+          height: 80px
+        .hd_title 
+          justify-content: flex-start
+          font-size: px(24)
+        .hd_p
+          text-align: left
+          margin-top: 10px
+        .mb_hd_ct
+          justify-content: flex-start
+          margin-top: 0
+          margin-left: 20px
+        .mb_hd_btn
+          flex-direction: row
+        .czbtn
+          padding: 0 40px
+          &:not(:last-child)
+            margin-right: 10px
+
+  .mb_overview_ct
+    padding-top: 80px
+    padding-bottom: 100px
+    +rwdmax(768)
+      padding-top: 60px
+      padding-bottom: 80px
+    +rwdmax(575)
+      padding-top: 30px
+    .overview_ul
+    li
+      display: flex
+      align-items: flex-start
+      padding: 85px 0
+      border-bottom: 1px solid #292929
+      &:hover
+        .hd_icon:before
+          transform: translate(-50%,-50%) rotate(360deg)
+          width: 100%
+          height: 100%
+          transition: .6s ease-out
+      +rwdmax(1200)
+        align-items: center
+        padding: 50px 0
+      +rwdmax(767)
+        flex-direction: column
+        align-items: center
+      &.waypoint
+        transform: translateY(50px)
+        opacity: 0
+      &.show
+        transform: translateY(0)
+        opacity: 1
+        transition: .8s
+
+    .li_top
+      display: flex
+      align-items: flex-start
+      flex: 1% 1 0
+      +rwdmax(1200)
+        flex-direction: column
+      +rwdmax(767)
+        align-items: center
+      
+    .li_hd
+      display: flex
+      align-items: center
+      flex: 1% 1 0
+      +rwdmax(767)
+        flex-direction: column
+    .hd_icon
+      position: relative
+      +flex(flex,center,center)
+      +circle(80)
+      background: #292929
+      color: #ffffff
+      overflow: hidden
+      &:after
+        position: absolute
+        content: ""
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        +circle(76)
+        background: #000000
+        z-index: 2
+      &:before
+        position: absolute
+        content: ""
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        // +circle(80)
+        // width: 80px
+        // height: 80px
+        width: 0
+        height: 100%
+        background: linear-gradient(to left, #e2249d, #fb1616, #f8b500)
+        z-index: 1
+        transition: .6s ease-in
+      span
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        font-size: px(32)
+        z-index: 3
+      +rwdmax(1200)
+        min-width: 60px
+        width: 60px
+        height: 60px
+        &:after
+          width: 57px
+          height: 57px
+        &:before
+          width: 60px
+          height: 60px
+        span
+          font-size: px(26)
+    .hd_title
+      font-size: px(35)
+      color: #ffffff
+      margin-left: 40px
+      line-height: 1.5
+      +rwdmax(1200)
+        margin-left: 20px
+      +rwdmax(767)
+        font-size: px(27)
+        margin-left: 0
+        margin-top: 10px
+    .li_ct
+      flex: 1% 1 0
+      +rwdmax(1200)
+        margin-top: 20px
+        margin-left: 80px
+      +rwdmax(767)
+        text-align: center
+        margin-left: 0
+      p 
+        line-height: 1.79
+        color: #ffffff
+        opacity: 0.6
+      .input_p
+        color: #ffffff
+      .input
+        display: flex
+        align-items: center
+        margin-top: 20px
+      input
+        flex: 1% 1 0
+        border: none
+        background: none
+        border-bottom: 1px solid #292929
+        padding: 15px 0
+        letter-spacing: 1px
+        font-size: px(14)
+        color: #ffffff
+        &::placeholder
+          color: #ffffff
+          opacity: 0.5
+      .icon-search
+        color: #ffffff
+        opacity: 0.6
+        padding: 5px
+        transition: .5s
+        &:hover
+          opacity: 1
+          transition: .5s
+    .li_bt
+      text-align: right
+      min-width: 200px
+      +rwdmax(767)
+        text-align: center
+        margin-top: 30px
+      .czbtn
+        border-color: rgba(255, 255, 255, 0.2)
+        color: #ffffff
+
+  .mb_ct
+    padding-bottom: 100px
+    .num
+      span
+        font-size: px(24)
+        color: #ffffff
+        z-index: 1
+        +rwdmax(767)
+          font-size: px(18)
+    // .form_title
+    //   flex: 1% 1 0
+    // .form_input
+    //   flex: 3% 3 0
+    .add input
+      padding-left: 10px
+    .form_btn
+      justify-content: flex-end
+    input[type=file]
+      cursor: pointer !important
+      position: absolute
+      right: 13px
+      top: 50%
+      transform: translateY(-50%)
+      opacity: 0
+      padding: 0
+      width: 25px
+      height: 25px
+    .form_title
+      +rwdmax(767)
+        min-width: 100px
+
+  
+  .account_ct
+    .account_block
+      background: #0c0c0c
+      margin-top: 45px
+      padding-top: 25px
+      padding-bottom: 75px
+      +rwdmax(768)
+        padding-top: 10px
+        padding-bottom: 40px
+        margin-top: 30px
+    .form_line
+      max-width: 615px
+      width: 90%
+      margin: 0 auto
+    /// 刪除帳號區塊
+    .account_del
+      display: flex
+      align-items: center
+      margin-top: 45px
+      padding: 55px 0
+      border-bottom: 1px solid rgba(255,255,255,.2)
+      +rwdmax(767)
+        flex-direction: column
+        padding: 30px 0
+        margin-top: 30px
+      .account_top
+        display: flex
+        align-items: center
+        width: 100%
+        +rwdmax(1023)
+          flex-direction: column
+          align-items: flex-start
+        +rwdmax(767)
+          text-align: center
+          align-items: center
+      .account_name
+        color: #ffffff
+        font-size: px(20)
+        flex: 1% 1 0
+      .account_p
+        flex: 3% 3 0
+        +rwdmax(1023)
+          margin-top: 20px
+        p
+          max-width: 580px
+          width: 90%
+          color: #ffffff
+          opacity: 0.6
+          letter-spacing: 0.35px
+          line-height: 1.5
+          +rwdmax(767)
+            margin: 0 auto
+      .account_btn
+        min-width: 200px
+        display: flex
+        justify-content: flex-end
+        +rwdmax(767)
+          margin-top: 25px
+          justify-content: center
+        .czbtn
+          border-color: rgba(255, 255, 255, 0.2)
+          color: #ffffff
+          &.delete
+            border-color: $yellow
+            color: $yellow
+
+  .maintenance_ct
+    min-height: 45vh
+    .maintenance_table
+      padding-top: 20px
+      +rwdmax(767)
+        padding-top: 30px
+    .mt_tablehd
+      color: #ffffff
+      display: flex
+      align-items: center
+      border-bottom: 1px solid rgba(255,255,255,.2)
+      padding: 0 0 0 15px
+      +rwdmax(1023)
+        padding: 0 0 0 5px
+        .mt_detail
+          display: none
+      +rwdmax(767)
+        border-bottom: 0
+        .mt_id
+          display: none
+        .mt_date
+          margin-right: 10px
+
+    .mt_tablect
+      // color: #ffffff
+      +rwdmax(1023)
+        .mt_list
+          flex-direction: column
+        .mt_date
+          position: absolute
+          right: 5px
+          top: 35px
+        .mt_status
+          position: absolute
+          right: 5px
+          top: 65px
+        .mt_detail
+          margin-top: 25px
+      +rwdmax(767)
+        .mt_list
+          padding: 50px 0 30px
+        .mt_date
+          top: 55px
+        .mt_status
+          top: 85px
+
+
+    .mt_list
+      position: relative
+      display: flex
+      padding: 40px 0px 40px 15px
+      border-bottom: 1px solid rgba(255,255,255,.2)
+      max-height: 145px
+      overflow: hidden
+      transition: .5s
+      +rwdmax(1023)
+        padding: 30px 5px
+        max-height: 180px
+      +rwdmax(767)
+        max-height: 200px
+      &.cancel
+        .mt_status
+          color: #999999
+      &.open
+        overflow: visible
+        max-height: 500px
+        border-color: $yellow
+        transition: .6s
+        .mt_btn
+          background: $yellow
+          color: #000000
+        .mt_status
+          color: $yellow
+
+    .mt_id
+      flex: 1.3% 1.3 0
+      display: flex
+      align-items: flex-start
+      p
+        font-size: px(20)
+      .mt_btn
+        padding: 17px 30px
+        border-radius: 25px
+        border: 1px solid rgba(255,255,255,.2)
+        color: #ffffff
+        transition: .5s
+        &:hover
+          background: $yellow
+          color: #000000
+          transition: .5s
+    
+    .mt_detail
+      flex: 3% 3 0
+      color: #ffffff
+      line-height: 2.29
+      .dt_list
+        display: flex
+        align-items: flex-start
+
+      .dt_title
+        margin-right: 8px
+        white-space: nowrap
+      .dt_p
+        color: #666666
+    
+    .mt_date
+      flex: 1% 1 0
+      display: flex
+      justify-content: center
+      color: #ffffff
+      p
+        font-size: px(16)
+    
+    .mt_status
+      flex: 1% 1 0
+      display: flex
+      justify-content: center
+      color: #ffffff
+      p
+        font-size: px(20)
+      .dropdown .dropdown_select .scroll-content
+        max-height: 200px !important
+  ///// waypoint
+  .profile_ct
+    &.waypoint
+      .block_title
+        transform: translateY(50px)
+        opacity: 0
+      .form_ct
+        transform: translateY(50px)
+        opacity: 0
+      .form_btn
+        transform: translateY(50px)
+        opacity: 0
+    &.show
+      .block_title
+        transform: translateY(0)
+        opacity: 1
+        transition: .8s
+      .form_ct
+        transform: translateY(0)
+        opacity: 1
+        transition: .8s .3s
+      .form_btn
+        transform: translateY(0)
+        opacity: 1
+        transition: .8s .3s
+  .account_ct
+    &.waypoint
+      .block_title
+        transform: translateY(50px)
+        opacity: 0
+      .account_block
+        transform: translateY(50px)
+        opacity: 0
+      .account_del
+        transform: translateY(50px)
+        opacity: 0
+    &.show
+      .block_title
+        transform: translateY(0)
+        opacity: 1
+        transition: .8s
+      .account_block
+        transform: translateY(0)
+        opacity: 1
+        transition: .8s .3s
+      .account_del
+        transform: translateY(0)
+        opacity: 1
+        transition: .8s .3s
+  .maintenance_ct
+    &.waypoint
+      .block_title
+        transform: translateY(50px)
+        opacity: 0
+      .maintenance_table
+        transform: translateY(50px)
+        opacity: 0
+    &.show
+      .block_title
+        transform: translateY(0)
+        opacity: 1
+        transition: .8s
+      .maintenance_table
+        transform: translateY(0)
+        opacity: 1
+        transition: .8s .3s
+
+
+  ////////// 會員中心共用 TAB換頁 UL
+  .mb_ul
+    display: flex
+    margin-left: 115px
+    +rwdmax(767)
+      margin-left: 0px
+      justify-content: center
+    a
+      position: relative
+      color: #ffffff
+      padding: 25px 0
+      margin: 0 25px
+      +rwdmax(767)
+        padding: 20px 0
+      +rwdmax(374)
+        margin: 0 20px
+      +rwdmax(359)
+        margin: 0 15px
+      
+      &:after
+        position: absolute
+        content: ""
+        left: 50%
+        top: -2px
+        height: 2px
+        width: 0
+        transform: translateX(-50%)
+        background: $yellow
+        transition: .5s
+      &:hover
+        &:after
+          width: 100%
+          transition: .5s
+      &.active
+        &:after
+          width: 100%
+
+  ////////// 註冊
+  .mb_common
+    max-width: 1450px
+    width: 90%
+    margin: 0 auto
+    display: flex
+    padding: 200px 0
+    +rwdmax(1440)
+      padding: 100px 0 150px
+    +rwdmax(1200)
+      padding: 100px 0
+    +rwdmax(1023)
+      display: flex
+      flex-direction: column-reverse
+      padding: 65px 0 100px
+    &.js_fixed
+      padding-top: 100px
+      +rwdmax(1023)
+        padding-top: 50px
+      .mb_left
+        position: fixed
+        top: 50%
+        transform: translateY(-50%)
+        +rwdmax(1023)
+          position: relative
+          top: auto
+          transform: none
+      .mb_bt
+        margin-top: 100px
+        +rwdmax(1200)
+          margin-top: 50px
+
+      .mb_right
+        margin-left: 40%
+        +rwdmax(1023)
+          margin-left: 0
+    &.tran
+      .mb_left
+        transform: translateY(-200px)
+        +rwdmax(1440)
+          transform: translateY(-150px)
+        +rwdmax(1200)
+          transform: translateY(-100px)
+    &.step
+      +rwdmax(1023)
+        flex-direction: column
+        padding-bottom: 50px
+        .mb_left
+          padding-top: 0
+          &:after
+            content: none
+        .mb_right
+          padding-top: 50px
+    //   position: fixed
+    //   z-index: 10
+    //   top: 0
+    //   left: 50%
+    //   transform: translateX(-50%)
+    &.waypoint
+      .mb_left_wrap
+        opacity: 0
+        +rwdmin(1024)
+          transform: translateX(50px)
+        +rwdmax(1023)
+          transform: translateY(-50px)
+      .mb_left:after
+        +rwdmin(1024)
+          height: 0
+      .mb_right
+        opacity: 0
+        +rwdmin(1024)
+          transform: translateX(-50px)
+        +rwdmax(1023)
+          transform: translateY(-50px)
+    &.show
+      .mb_left_wrap
+        transform: none
+        opacity: 1
+        transition: .8s .2s
+      .mb_left:after
+        +rwdmin(1024)
+          height: 100%
+          transition: 1s .5s
+      .mb_right
+        transform: none
+        opacity: 1
+        transition: .8s .2s
+
+
+    .mb_left
+      width: 40%
+      position: relative
+      +rwdmax(1023)
+        width: 100%
+        padding-top: 50px
+      &:after
+        position: absolute
+        content: ""
+        top: 0
+        right: 0
+        height: 100%
+        width: 1px
+        background: rgba(255,255,255,.2)
+        +rwdmax(1023)
+          width: 100%
+          height: 1px
+      &_wrap
+        width: 90%
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+        +rwdmax(575)
+          width: 95%
+
+    .mb_right
+      width: 60%
+      // &[data-page="3"]
+      //   display: none
+      opacity: 1
+      transition: .5s
+      +rwdmax(1023)
+        width: 100%
+        padding-bottom: 50px
+      &.transform
+        opacity: 0
+        transition: .3s
+      &_wrap
+        max-width: 635px
+        width: 85%
+        margin: 0 auto
+        +rwdmax(1023)
+          width: 90%
+        +rwdmax(575)
+          width: 95%
+      .mb_block
+        margin-top: 50px
+        +rwdmax(1023)
+          margin-top: 20px
+      .form_title
+        min-width: 180px
+        +rwdmax(575)
+          min-width: 130px
+
+    .mb_head
+      .mb_maintitle
+        font-family: $rwt
+        font-size: px(65)
+        color: #ffffff
+        line-height: 1.3
+        +rwdmax(1200)
+          font-size: px(50)
+        +rwdmax(767)
+          font-size: px(40)
+      .mb_title
+        font-size: px(35)
+        color: #ffffff
+        line-height: 1.5
+        letter-spacing: 1.23px
+        +rwdmax(1200)
+          font-size: px(28)
+      .mb_p
+        color: #ffffff
+        opacity: 0.6
+        line-height: 1.8
+        margin-top: 30px
+        width: 90%
+        +rwdmax(767)
+          width: 100%
+          margin-top: 15px
+    .mb_bt
+      margin-top: 60px
+      p
+        color: #ffffff
+        & + .mb_btn
+          margin-top: 25px
+    .mb_btn
+      display: flex
+      margin-top: 50px
+      +rwdmax(575)
+        display: block
+    .forget_btn
+      display: flex
+      align-items: center
+      margin-right: auto
+      +rwdmax(575)
+        margin-bottom: 20px
+      span
+        background: $yellow
+        color: #000000
+        +allflex
+        +circle(20)
+        margin-right: 10px
+      p
+        color: #ffffff
+        font-size: px(12)
+    .agree_btn
+      display: flex
+      align-items: center
+      margin-right: auto
+      span
+        color: #ffffff
+        +allflex
+        +circle(20)
+        border: 1px solid #ffffff
+        opacity: 0.5
+        margin-right: 10px
+        cursor: pointer
+        transition: .5s
+        &:hover
+          +rwdmin(1025)
+            border-color: $yellow
+            color: $yellow
+            opacity: 1
+            transition: .5s
+      p
+        color: $yellow
+      .line
+        border-bottom: 1px solid $yellow
+      & + .czbtn
+        +rwdmax(575)
+          margin-top: 20px
+      &.click
+        span
+          border-color: $yellow
+          color: $yellow
+          opacity: 1
+      
+    .reverify_btn
+      display: flex
+      align-items: center
+      .icon-return
+        background: $yellow
+        color: #000000
+        +circle(35)
+        +allflex()
+        font-size: px(16)
+      .reverify_word
+        line-height: 1.8
+        margin-left: 10px
+      p
+        color: #999999
+        font-size: px(12)
+      .countdown
+        color: #ff0000
+      .send_again
+        position: relative
+        color: $yellow
+        pointer-events: none
+        &:after
+          position: absolute
+          content: ""
+          bottom: 0
+          left: 50%
+          transform: translateX(-50%)
+          height: 1px
+          width: 0
+          background: $yellow
+          transition: .5s
+        &.active
+          pointer-events: auto
+          &:after
+            width: 100%
+            transition: .5s
+
+    .czbtn
+      border: 1px solid rgba(255,255,255,.2)
+      color: #ffffff
+      width: 150px
+      padding: 0
+      &:not(:last-child)
+        margin-right: 10px
+      &.w185
+        width: 185px
+
+
+    .mb_process
+      margin-top: 55px
+      +rwdmax(1023)
+        display: none
+      .step_li
+        display: flex
+        align-items: center
+        &:not(:first-child)
+          margin-top: 35px
+        span
+          background: #333333
+          color: #ffffff
+          +circle(35)
+          +allflex()
+          font-size: px(16)
+          padding-bottom: 2px
+          transition: .5s
+        p
+          color: rgba(255,255,255,.6)
+          margin-left: 10px
+        &.active
+          span
+            background: $yellow
+            color: #000
+            transition: .5s
+  .lb_step
+    position: fixed
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,0)
+    z-index: 10
+    top: 0
+    left: 0
+    transform: translateY(-100%)
+    transition: .8s .3s
+    &_wrap
+      height: 100%
+    &.open
+      transform: translateY(0)
+      background: rgba(0,0,0,1)
+      transition: .5s
+      .mb_common
+        opacity: 1
+        transform: scale3d(1,1,1)
+        transition: 1s .5s
+        justify-content: flex-start
+    .btn_close
+      position: absolute
+      top: 100px
+      right: 0
+      width: 40px
+      height: 40px
+      +allflex()
+      cursor: pointer
+      z-index: 10
+      transition: .5s
+      +rwdmax(1023)
+        top: 40px
+        
+      &:hover
+        transform: rotate(180deg)
+        transition: .5s
+      span
+        width: 40px
+        height: 1px
+        background: #ffffff
+        position: relative
+        transform: rotate(45deg)
+        &:after
+          position: absolute
+          content: ""
+          top: 50%
+          left: 50%
+          transform: translate(-50%,-50%)
+          width: 1px
+          height: 40px
+          background: #ffffff
+    .mb_common
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      transform: scale3d(.9,.9,.9)
+      opacity: 0
+      transition: .8s
+    .mb_right
+      &.fade
+        opacity: 1 
+    .mb_right_wrap
+      display: none
+      &[data-page="1"]
+        display: block
+    .mb_btn
+      +rwdmax(575)
+        display: flex
+    
+
+

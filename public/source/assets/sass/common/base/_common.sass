@@ -1,0 +1,859 @@
+//共用
+*
+  outline: none
+
+body
+  position: relative
+  font-family: $rwr
+  //'Raleway Regular', '微軟正黑體', '微軟正黑體修正', 'Microsoft JhengHei', Arial, sans-serif
+  font-weight: normal
+  letter-spacing: 0.49px
+  font-size: px(14)
+  overflow-x: hidden
+  &.fixed
+    overflow-y: hidden
+
+main
+  // padding-top: 100px
+  // +rwdmax(767)
+  //   padding-top: 60px
+
+input[type='number']
+  -moz-appearance: textfield
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+  -webkit-appearance: none
+input
+  &::-ms-clear,&::-ms-reveal
+    display: none
+
+textarea
+  overflow-y: auto
+
+.swiper-container
+  width: 100%
+  height: 100%
+
+//複製連結成功提示
+.notice-wrapper
+  position: fixed
+  bottom: 80px
+  left: 50%
+  transform: translate(-50%,0)
+  z-index: 99999999
+  .text
+    display: none
+    font-size: px(14)
+    padding: 10px
+    color: white
+    background-color: #006fcc
+  #clipboard
+    position: absolute
+    width: 100%
+    min-width: 200px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: -10
+    opacity: 0
+    cursor: default
+
+////////// BANNER 標題 副標
+.bn_title
+  max-width: 1250px
+  width: 90%
+  margin: 0 auto
+  text-align: left
+  color: #ffffff
+  +rwdmax(575)
+    text-align: center
+  .title_head
+    max-width: 650px
+    font-size: px(65)
+    line-height: 1.2
+    letter-spacing: 1.63px
+    font-family: $rwt
+    +rwdmax(1023)
+      font-size: px(50)
+    +rwdmax(767)
+      font-size: px(40)
+  p
+    max-width: 650px
+    line-height: 1.8
+    margin-top: 15px
+    opacity: 0.6
+  &.waypoint
+    margin-top: -50px
+    opacity: 0
+  &.show
+    margin-top: 0px
+    opacity: 1
+    transition: 1s
+
+////////// 內文標題 副標
+.ct_title
+  max-width: 600px
+  width: 90%
+  margin: 0 auto
+  text-align: center
+  .title_head
+    font-size: px(35)
+    letter-spacing: 1.23px
+    +rwdmax(767)
+      font-size: px(27)
+  p
+    line-height: 1.6
+    margin-top: 15px
+    opacity: .6
+  &.waypoint
+    transform: translateY(50px)
+    opacity: 0
+  &.show
+    transform: translateY(0)
+    opacity: 1
+    transition: .8s .1s
+
+
+////////// 段落編輯
+._article
+  &SL,&SR,&U,&UL,&UR,&D,&DL,&DR,&L,&LR,&R,&RR,&
+    &.waypoint
+      transform: translateY(30px)
+      opacity: 0
+    &.show
+      transform: translateY(0)
+      opacity: 1
+      transition: 1s
+
+.common_wrap
+  max-width: 1250px
+  width: 88%
+  margin: 0 auto
+
+////////// 產品列表
+.pd_item
+  margin: 5px
+  &[data-size="big"]
+    width: 64.8%
+    +rwdmax(1024)
+      width: calc(50% - 10px)
+    +rwdmax(767)
+      width: 100%
+    .item_btn
+      display: none
+      +rwdmax(1024)
+        display: block
+  &[data-size="small"]
+    width: 32%
+    +rwdmax(1024)
+      width: calc(50% - 10px)
+    +rwdmax(767)
+      width: 100%
+  // &[data-size="mini"]
+  //   width: 32%
+  //   +rwdmax(1024)
+  //     width: calc(50% - 10px)
+  //   +rwdmax(767)
+  //     width: 100%
+  &.waypoint
+    transform: translateY(50px)
+    opacity: 0
+  &.show
+    transform: translateY(0px)
+    opacity: 1
+    transition: 1s .2s
+.item
+  width: 100%
+  height: 100%
+  // margin: 0 5px
+  padding: 50px 25px
+  background: #ffffff
+  text-align: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  transition: .5s
+  +rwdmax(1200)
+    padding: 45px 20px
+  +rwdmax(768)
+    padding: 35px 20px
+  &:hover
+    +rwdmin(1025)
+      box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.15)
+      transition: .5s
+    .item_pic
+      transform: translateY(-10px)
+      transition: .5s
+  .item_pic
+    max-width: 380px
+    width: 90%
+    height: 100%
+    margin: 0 auto
+    margin-bottom: 40px
+    transition: .5s
+    +rwdmax(1024)
+      width: 80%
+  .item_sort
+    color: $yellow
+  .item_title
+    font-size: px(24)
+    font-family: $rwl
+    line-height: 1.5
+    max-width: 500px
+    width: 100%
+    margin: 0 auto
+    margin-top: 15px
+    +rwdmax(1200)
+      font-size: 20px
+  .item_btn
+    margin-top: 35px
+
+////////// 頁碼
+.page
+  display: flex
+  justify-content: center
+  padding-top: 60px
+  .page_icon
+    display: block
+    +circle(35)
+    font-size: px(12)
+    color: #000000
+    +allflex
+    background: $yellow
+    transition: .5s
+    &:hover
+      color: #ffffff
+      background: #000000
+      transition: .5s
+  .page_ul
+    display: flex
+    counter-reset: num
+    padding: 0 15px
+    +rwdmax(767)
+      padding: 0 10px
+    .page_li
+      position: relative
+      display: block
+      +circle(35)
+      border: 1px solid #b5b5b5
+      margin: 0 5px
+      transition: .5s
+      +rwdmax(767)
+        margin: 0 3px
+      &:after
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        content: counter(num)
+        counter-increment: num
+      &:hover
+        background: #000000
+        color: #ffffff
+        border-color: #000000
+        transition: .5s
+      &.active
+        background: #000000
+        color: #ffffff
+        border-color: #000000
+
+////////// 產品類型選擇
+.type_select
+  padding-bottom: 10px
+  padding-top: 35px
+  border-bottom: 1px solid $yellow
+  +rwdmax(768)
+    padding-top: 20px
+  &.close
+    .type_list span:after
+      transform: translate(-50%,-50%)
+      transition: .5s
+    .type_icon span:after
+      transform: translate(-50%,-50%)
+      transition: .5s
+  &.circle
+    .type_item
+      +rwdmax(575)
+        max-width: 280px
+      li
+        width: 25%
+        +rwdmax(575)
+          width: 50%
+          max-width: 140px
+    .type_li
+      max-width: 170px
+      +rwdmax(992)
+        max-width: 150px
+      +rwdmax(575)
+        max-width: 135px
+      // max-width: 170px
+
+      .type_pic
+        max-width: 130px
+        border-radius: 50%
+        overflow: hidden
+        +rwdmax(992)
+          max-width: 110px
+
+  &.waypoint
+    transform: translateY(50px)
+    opacity: 0
+  &.show
+    transform: translateY(0)
+    opacity: 1
+    transition: 1s
+  .type_list
+    margin: 0 25px
+    padding-top: 10px
+    padding-bottom: 10px
+    display: flex
+    align-items: center
+    cursor: pointer
+    .type_title
+      font-size: px(24)
+      font-family: $rwt
+      flex: 1% 1 0
+      color: #ffffff
+      +rwdmax(767)
+        font-size: px(22)
+        text-align: center
+    span
+      position: relative
+      display: block
+      width: 20px
+      height: 2px
+      background: #ffffff
+      &:after
+        position: absolute
+        content: ""
+        background: #ffffff
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%) rotate(90deg)
+        width: 2px
+        height: 20px
+        transition: .5s
+      +rwdmax(767)
+        display: none
+  .type_item
+    display: flex
+    flex-wrap: wrap
+    margin-top: 15px
+    margin-bottom: 15px
+    +rwdmax(575)
+      justify-content: flex-start
+      max-width: 270px
+      margin: auto
+      margin-top: 10px
+    li
+      width: 12.5%
+      +rwdmax(1365)
+        width: 16.6%
+      +rwdmax(992)
+        width: 25%
+      +rwdmax(575)
+        width: 50%
+        max-width: 135px
+      &.select
+        .type_li
+          background: #232323
+  .type_li
+    text-align: center
+    max-width: 130px
+    padding: 25px 0 25px 0
+    width: 100%
+    margin: 2.5px auto
+    cursor: pointer
+    transition: .5s
+    +rwdmin(1025)
+      &:hover
+        background: #232323
+        transition: .5s
+    .type_pic
+      max-width: 65px
+      margin: auto
+      margin-bottom: 15px
+      p
+        font-size: px(16)
+    .circle
+      +circle(45)
+      background: #ffffff
+      margin: 0 auto
+    .type_name
+      
+      color: #ffffff
+      // p
+      //   font-size: px(16)
+      // span
+      //   font-size: px(18)
+      //   margin-top: 10px
+      //   display: block
+  .type_icon
+    display: none
+    cursor: pointer
+    padding: 15px 0
+    +rwdmax(767)
+      display: block
+    span
+      position: relative
+      display: block
+      width: 20px
+      height: 2px
+      background: #ffffff
+      margin: 00 auto
+      &:after
+        position: absolute
+        content: ""
+        background: #ffffff
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%) rotate(90deg)
+        width: 2px
+        height: 20px
+        transition: .5s
+  .select_num
+    display: flex
+    align-items: baseline
+    margin: 0 40px
+    .num
+      margin-right: 8px
+      font-size: px(18)
+  &.brand
+    .type_li
+      padding: 0 0 20px
+    .type_pic
+      position: relative
+      max-width: 100px
+
+////////// 下拉
+.dropdown
+  position: relative
+  text-align: center
+  width: 300px
+  height: 65px
+  &.member
+    width: 100%
+    +rwdmax(767)
+      height: 40px
+    .dropdown_click
+      color: #999999
+      padding: 0 10px
+      font-size: px(18)
+      +rwdmax(767)
+        border-bottom: 1px solid rgba(255,255,255,.2)
+        font-size: px(14)
+        height: 40px
+      .dropdown_title
+        padding-right: 10px
+      .icon-arrow_right
+        color: #999
+        font-size: px(14)
+      &:hover
+        background: #000000
+        color: #ffffff
+        .icon-arrow_right
+          color: #ffffff
+        
+    .dropdown_select
+      top: calc(100% + 1px)
+      ul
+        background: #333333
+      li
+        color: #ffffff
+        padding: 15px 10px
+        font-size: px(18)
+        +rwdmax(767)
+          font-size: px(14)
+
+  .dropdown_click
+    display: flex
+    align-items: center
+    cursor: pointer
+    padding: 0 20px
+    background: #000000
+    color: #ffffff
+    // width: 300px
+    height: 65px
+    transition: .5s
+    .dropdown_title
+      white-space: nowrap
+      flex: 1% 1 0
+      text-align: center
+      padding-right: 10px
+      +wordrows(1)
+    .icon-arrow_right
+      color: #ffffff
+      transform: rotate(90deg)
+      transition: .5s
+      &.open
+        transform: rotate(90deg) scaleX(-1)
+        transition: .5s
+    &:hover
+      background: $yellow
+      color: #000000
+      transition: .5s
+      .icon-arrow_right
+        color: #000000
+  .dropdown_select
+    display: none
+    position: absolute
+    width: 100%
+    top: 100%
+    left: 50%
+    transform: translate(-50%,-1px)
+    z-index: 5
+    .scroll-content
+      max-height: 300px!important
+    ul
+      background: #000000
+      height: 100%
+      text-align: center
+      transition: .1s
+      li
+        color: #ffffff
+        padding: 17px 20px
+        word-break: break-word
+        line-height: 1.5
+        // min-width: 120px
+        cursor: pointer
+        // margin-top: -1px
+        transition: .5s
+        &:hover
+          background: $yellow
+          color: #000000
+          transition: .5s
+
+////////// 表單下拉
+.formdd
+  position: relative
+  width: 100%
+  .formdd_click
+    display: flex
+    align-items: center
+    cursor: pointer
+    padding: 13px 15px 13px 0
+    background: none
+    color: #808080
+    width: 100%
+    transition: .5s
+    .formdd_title
+      white-space: nowrap
+      flex: 1% 1 0
+      padding-right: 10px
+    .icon-arrow_right
+      font-size: px(12)
+      color: #808080
+      transform: rotate(90deg)
+      transition: .5s
+      &.open
+        transform: rotate(90deg) scaleX(-1)
+        transition: .5s
+    &.white
+      .formdd_title,.icon-arrow_right
+        color: #ffffff
+    &:hover
+      // background: $yellow
+      color: #ffffff
+      transition: .5s
+      .icon-arrow_right
+        color: #ffffff
+  .formdd_select
+    display: none
+    position: absolute
+    width: 100%
+    top: 100%
+    left: 50%
+    transform: translate(-50%,1px)
+    z-index: 5
+    .scroll-content
+      max-height: 200px!important
+    ul
+      // background: #000000
+      text-align: center
+      transition: .5s
+      li
+        background: #191919
+        color: #808080
+        padding: 15px 30px
+        white-space: nowrap
+        min-width: 120px
+        cursor: pointer
+        transition: .5s
+        &:hover
+          // background: $yellow
+          color: #ffffff
+          transition: .5s
+
+////////// 選項
+.dropdown_in
+  width: 300px
+  border: 1px solid rgba(255, 255, 255, 0.2)
+  border-radius: 25px
+  background: none
+  display: flex
+  flex-direction: column
+  max-height: 50px
+  overflow: hidden
+  transition: .5s
+  .dropdown_click
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 50px
+    padding: 17px 0 17px 50px
+    position: relative
+    cursor: pointer
+    color: #ffffff
+    border-top-left-radius: 25px
+    border-top-right-radius: 25px
+    transition: .5s
+    &.word_b
+      color: #000000
+      .dropdown_title:after
+        background: rgba(0, 0, 0, 0.2)
+
+  .dropdown_title
+    position: relative
+    width: 100%
+    text-align: center
+    &:after
+      position: absolute
+      content: ""
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: 1px
+      height: 40px
+      background: rgba(255, 255, 255, 0.2)
+  .icon-arrow_right
+    transform: rotate(90deg)
+    padding: 0 18px
+  .dropdown_select
+    width: 100%
+    // padding-bottom: 20px
+    opacity: 0
+    overflow: hidden
+    border-bottom-left-radius: 25px
+    border-bottom-right-radius: 25px
+    transition: .5s
+  .dropdown_opt
+    max-height: 158px
+    // overflow: hidden
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+    border-bottom-left-radius: 25px
+    border-bottom-right-radius: 25px
+    li
+      padding: 15.5px 0
+      cursor: pointer
+      text-align: center
+      line-height: 1.4
+      background: #000000
+      
+      transition: .5s
+      // &:hover
+      //   color: #ffffff
+      //   transition: .5s
+      &[word-color='white']
+        color: #ffffff
+      &[word-color='black']
+        color: #000000
+  &.open
+    max-height: 210px
+    overflow: visible
+    transition: .5s
+    .dropdown_select
+      opacity: 1
+      transition: .5s .2s
+
+
+
+// 表單共用
+.block
+  .block_title
+    display: flex
+    align-items: center
+    padding-top: 70px
+    .num
+      position: relative
+      background: linear-gradient(to left, #e2249d, #fb1616, #f8b500)
+      background-size: 200% 200%
+      animation: gradient 5s ease infinite
+      +circle(56)
+      +flex(flex,center,center)
+      +rwdmax(767)
+        min-width: 40px
+        // min-height: 40px
+        width: 40px
+        height: 40px
+      &:after
+        position: absolute
+        content: attr(num)
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        margin-top: -2px
+        color: #ffffff
+        font-size: px(35)
+        +rwdmax(767)
+          font-size: px(24)
+      &:before
+        position: absolute
+        content: ""
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        +circle(52)
+        background: #000000
+        z-index: 0
+        +rwdmax(767)
+          min-width: 36px
+          // min-height: 36px
+          width: 36px
+          height: 36px
+    .block_name
+      font-size: px(35)
+      margin-left: 25px
+      color: #ffffff
+      letter-spacing: 1.23px
+      line-height: 1.3
+      +rwdmax(1023)
+        font-size: px(28)
+      +rwdmax(767)
+        font-size: px(22)
+        margin-left: 15px
+  .form_line
+    display: flex
+    +rwdmax(992)
+      flex-direction: column
+  .form_list
+    width: 100%
+    border-bottom: 1px solid #333333
+    margin-top: 45px
+    display: flex
+    align-items: center
+    +rwdmax(575)
+      margin-top: 35px
+    &:not(:last-child)
+      margin-right: 20px
+    &.must
+      .form_input
+        input,textarea
+          padding-left: 15px
+        .formdd_title
+          padding-left: 15px
+        &:before
+          background: $yellow
+    &.write
+      border-color: $yellow
+    &.add
+      .formdd
+        position: relative
+        flex: 1% 1 0
+        &:after
+          position: absolute
+          content: ""
+          right: 0
+          top: 50%
+          transform: translateY(-50%)
+          width: 1px
+          height: 15px
+          background: #ffffff
+          opacity: .5
+          +rwdmax(575)
+            display: none
+        +rwdmax(575)
+          border-bottom: 1px solid #333333
+          .formdd_click
+            text-align: center
+      input
+        flex: 3% 3 0
+        +rwdmax(575)
+          margin-top: 10px
+          
+      .form_input
+        +rwdmax(575)
+          flex-direction: column
+          input
+            padding-left: 0
+  .form_title
+    color: #ffffff
+    opacity: 0.5
+    min-width: 120px
+    padding: 12px 0
+
+  .form_input
+    position: relative
+    width: 100%
+    display: flex
+    align-items: center
+    &:before
+      position: absolute
+      content: ""
+      top: 18px
+      left: 0
+      +circle(5)
+      background: none
+    input
+      width: 100%
+      background: none
+      color: #ffffff
+      border: none
+      padding: 12px 0
+      font-family: $rwr
+      letter-spacing: 1px
+      font-size: px(14)
+      &::placeholder
+        color: #ffffff
+        opacity: 0.5
+    textarea
+      margin-top: 6px
+      width: 100%
+      height: 250px
+      background: none
+      color: #ffffff
+      border: none
+      font-family: $rwr
+      letter-spacing: 0.35px
+      line-height: 1.79
+      resize: none
+      font-size: px(14)
+      &::placeholder
+        color: #ffffff
+        opacity: 0.5
+      // overflow-y: hidden
+    img
+      max-width: 100%
+      height: auto
+      width: auto
+    p
+      color: #ffffff
+      width: 100%
+    .icon
+      color: #ffffff
+      margin-right: 15px
+      font-size: px(20)
+
+    .coupon
+      +circle(20)
+      background: #666666
+      color: #ffffff
+      +flex(flex,center,center)
+
+.form_btn
+  margin-top: 45px
+  display: flex
+  justify-content: center
+  +rwdmax(575)
+    flex-wrap: wrap
+  .czbtn
+    color: #fff
+    border: 1px solid rgba(255, 255, 255, 0.2)
+    +rwdmax(575)
+      padding: 0 45px
+    &:not(:last-child)
+      margin-right: 20px
+      +rwdmax(575)
+        margin: 0 10px 10px 10px
+        margin-bottom: 10px

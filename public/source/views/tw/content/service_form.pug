@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/service.css")
+  // 各頁面 CSS 分開
+  body.service(data-page="service_form")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      .service_form_bn
+        .common_wrap
+          .bn_title
+            .title_head IUBER SERVICE
+            p After filling in the following repair form, someone will call you to understand the details of your product failure, and we will confirm with you the total cost of repair or replacement and the designated service address.
+      .service_form_ct
+        .common_wrap
+          .block
+            .block_title
+              .num(num="1")
+              .block_name Information
+            .form_ct
+              .form_line
+                .form_list.must
+                  .form_input
+                    input(type="text" placeholder="Phone number     Ex : 0912345678")
+                .form_list.must
+                  .form_input
+                    input(type="text" placeholder="Name")
+              .form_line
+                .form_list
+                  .form_input
+                    .formdd
+                      .formdd_click
+                        .formdd_title(data-reset="Gender") Gender
+                        .icon-arrow_right
+                      .formdd_select
+                        .formdd_opt.scroll.scrollbar-inner.theme-black
+                          ul
+                            li Men
+                            li Women
+                .form_list.must.add
+                  .form_input
+                    .formdd
+                      .formdd_click
+                        .formdd_title(data-reset="Taiwan") Taiwan
+                        .icon-arrow_right
+                      .formdd_select
+                        .formdd_opt.scroll.scrollbar-inner.theme-black
+                          ul
+                            li Taipei
+                            li Yilan
+                            li Taoyuan
+                            li Hsinchu
+                            li Miaoli
+                            li Taichung
+                            li Changhua
+                            li Nantou
+                            li Yunlin
+                            li Chiayi
+                            li Tainan
+                            li Kaohsiung
+                            li Pingtung
+                            li Taitung
+                            li Hualien
+                    input(type="text" placeholder="address")
+              .form_line
+                .form_list.must
+                  .form_input
+                    input(type="text" placeholder="Birthday     Ex : 2020-01-01")
+                .form_list
+                  .form_input
+                    input(type="text" placeholder="E-mail")
+
+          .block
+            .block_title
+              .num(num="2")
+              .block_name What’s problem with product ?
+            .form_ct
+              .form_line
+                .type_select.one_select.brand
+                  .type_list
+                    .type_title BRAND
+                    span
+                  ul.type_item
+                    li
+                      .type_li
+                        .type_pic
+                          img(src="../../../uploads/product/brand_01.png", alt="")
+                        .type_name APPLE
+                    li
+                      .type_li
+                        .type_pic
+                          img(src="../../../uploads/product/brand_02.png", alt="")
+                        .type_name SUMSUNG
+                    li
+                      .type_li
+                        .type_pic
+                          img(src="../../../uploads/product/brand_03.png", alt="")
+                        .type_name SONY
+                    li
+                      .type_li
+                        .type_pic
+                          img(src="../../../uploads/product/brand_04.png", alt="")
+                        .type_name OPPO
+                  
+                  .type_icon
+                    span
+              .form_line
+                .type_select.more_select
+                  .type_list
+                    .type_title PRODUCT
+                    span
+                  ul.type_item
+                    li
+                      .type_li
+                        .type_pic
+                          img(src="../../../uploads/product/icon_01.png", alt="")
+                        .type_name iPhone 11 Pro
+                    li
+                      .type_li
+                        .type_pic
+                          img(src="../../../uploads/product/icon_02.png", alt="")
+                        .type_name iPhone 11
+                    li
+                      .type_li
+                        .type_pic
+                          img(src="../../../uploads/product/icon_02.png", alt="")
+                        .type_name iPhone XR
+                    li
+                      .type_li
+                        .type_pic
+                          img(src="../../../uploads/product/icon_01.png", alt="")
+                        .type_name iPhone X
+                    li
+                      .type_li
+                        .type_pic
+                          img(src="../../../uploads/product/icon_02.png", alt="")
+                        .type_name iPhone 11
+                    li
+                      .type_li
+                        .type_pic
+                          img(src="../../../uploads/product/icon_01.png", alt="")
+                        .type_name iPhone 11 Pro
+                    li
+                      .type_li
+                        .type_pic
+                          img(src="../../../uploads/product/icon_02.png", alt="")
+                        .type_name iPhone XR
+                    li
+                      .type_li
+                        .type_pic
+                          img(src="../../../uploads/product/icon_01.png", alt="")
+                        .type_name iPhone X
+                  .type_icon
+                    span
+              .form_line
+                .form_list.must
+                  .form_input
+                    .formdd
+                      .formdd_click
+                        .formdd_title(data-reset="Select maintanence type") Select maintanence type
+                        .icon-arrow_right
+                      .formdd_select
+                        .formdd_opt.scroll.scrollbar-inner.theme-black
+                          ul
+                            li Battery problem
+                            li Protection sticker problem
+                            li Screen problem
+                            li Camera problem
+                            li Built-in problem
+                            li Others
+              .form_line
+                .form_list.must
+                  .form_input
+                    textarea(placeholder="Please provide a detailed description of the condition of your product failure, which will help the maintenance staff to solve your problem quickly.")
+              .form_line
+                .form_list.must
+                  .form_input
+                    .formdd
+                      .formdd_click
+                        .formdd_title(data-reset="Select The Time") Select The Time
+                        .icon-arrow_right
+                      .formdd_select
+                        .formdd_opt.scroll.scrollbar-inner.theme-black
+                          ul
+                            li ALL
+                            li 08 : 00 ~ 12 : 00
+                            li 13 : 00 ~ 17 : 00
+              .form_line
+                .form_list
+                  .form_input
+                    input(type="text" placeholder="Warranty card number")
+                    a.coupon(href="javascript:;"
+                      data-ajax-route="ajax_service_form_alert2.html" 
+                      data-ajax-container=".lightbox" 
+                      data-ajax-callback="lightbox" 
+                      data-ajax) ?
+                .form_list.must
+                  .form_input
+                    input(type="text" placeholder="Verification code")
+                    img(src="../../../uploads/service/code.jpg", alt="")
+
+          .form_btn
+            a.czbtn.clear(href="javascript:;" data-text="Clear") Clear
+            a.czbtn(href="javascript:;" data-text="Sumbit" 
+                    data-ajax-route="ajax_service_form_alert3.html" 
+                    data-ajax-container=".lightbox" 
+                    data-ajax-callback="lightbox" 
+                    data-ajax) Sumbit
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

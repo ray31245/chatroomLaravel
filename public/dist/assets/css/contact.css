@@ -1,0 +1,310 @@
+.contact main {
+  min-height: 100vh;
+  background: #f2f2f2; }
+
+.contact .contact_bn {
+  position: relative; }
+  .contact .contact_bn .contact_bg {
+    position: relative;
+    display: block;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center; }
+    @media only screen and (max-width: 575px) {
+      .contact .contact_bn .contact_bg {
+        height: 370px; } }
+  .contact .contact_bn .bn_title {
+    position: absolute;
+    max-width: 1250px;
+    width: 85%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.contact .contact_ct {
+  padding-bottom: 100px; }
+  .contact .contact_ct .contact_ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    .contact .contact_ct .contact_ul .contact_li {
+      padding: 42px 35px;
+      background: #000000;
+      color: #ffffff;
+      white-space: nowrap;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+      .contact .contact_ct .contact_ul .contact_li:not(:last-child) {
+        border-right: 1px solid #434343; }
+      .contact .contact_ct .contact_ul .contact_li.active {
+        background: #f8b500;
+        color: #000000; }
+      .contact .contact_ct .contact_ul .contact_li:hover {
+        background: #f8b500;
+        color: #000000;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s; }
+      @media only screen and (max-width: 1200px) {
+        .contact .contact_ct .contact_ul .contact_li {
+          padding: 25.5px 35px; } }
+  .contact .contact_ct .contact_tab {
+    padding-top: 50px; }
+    @media only screen and (max-width: 768px) {
+      .contact .contact_ct .contact_tab {
+        padding-top: 10px; } }
+    .contact .contact_ct .contact_tab .tab_obj {
+      display: none; }
+      .contact .contact_ct .contact_tab .tab_obj:nth-child(1) {
+        display: block; }
+    .contact .contact_ct .contact_tab .infor .contact_swiper {
+      position: relative;
+      max-width: 1390px;
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 45px;
+      margin-bottom: 50px; }
+      @media only screen and (max-width: 575px) {
+        .contact .contact_ct .contact_tab .infor .contact_swiper {
+          width: 100%; } }
+      .contact .contact_ct .contact_tab .infor .contact_swiper.waypoint {
+        -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0; }
+      .contact .contact_ct .contact_tab .infor .contact_swiper.show {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-transition: .8s;
+        -o-transition: .8s;
+        transition: .8s; }
+    .contact .contact_ct .contact_tab .infor .swiper-container {
+      max-width: 1250px;
+      width: 90%;
+      margin: 0 auto; }
+      @media only screen and (max-width: 1200px) {
+        .contact .contact_ct .contact_tab .infor .swiper-container {
+          width: 85%; } }
+      @media only screen and (max-width: 575px) {
+        .contact .contact_ct .contact_tab .infor .swiper-container {
+          width: 100%; } }
+    .contact .contact_ct .contact_tab .infor .contact_sw-Next, .contact .contact_ct .contact_tab .infor .contact_sw-Prev {
+      background: #000000;
+      color: #ffffff;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 5;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+      @media only screen and (max-width: 992px) {
+        .contact .contact_ct .contact_tab .infor .contact_sw-Next, .contact .contact_ct .contact_tab .infor .contact_sw-Prev {
+          width: 35px;
+          height: 35px; } }
+      @media only screen and (min-width: 1025px) {
+        .contact .contact_ct .contact_tab .infor .contact_sw-Next:hover, .contact .contact_ct .contact_tab .infor .contact_sw-Prev:hover {
+          background: #f8b500;
+          color: #000000;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s; } }
+    .contact .contact_ct .contact_tab .infor .contact_sw-Next {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%); }
+      @media only screen and (max-width: 575px) {
+        .contact .contact_ct .contact_tab .infor .contact_sw-Next {
+          top: auto;
+          bottom: -50px;
+          right: calc(50% - 25px);
+          -webkit-transform: translate(50%, 0);
+          -ms-transform: translate(50%, 0);
+          transform: translate(50%, 0); } }
+    .contact .contact_ct .contact_tab .infor .contact_sw-Prev {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%); }
+      @media only screen and (max-width: 575px) {
+        .contact .contact_ct .contact_tab .infor .contact_sw-Prev {
+          top: auto;
+          bottom: -50px;
+          left: calc(50% - 25px);
+          -webkit-transform: translate(-50%, 0);
+          -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0); } }
+    .contact .contact_ct .contact_tab .contact_way {
+      max-width: 1250px;
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 80px; }
+      .contact .contact_ct .contact_tab .contact_way .way_li {
+        position: relative;
+        padding-top: 50px; }
+        @media only screen and (max-width: 575px) {
+          .contact .contact_ct .contact_tab .contact_way .way_li {
+            padding-top: 40px; } }
+        .contact .contact_ct .contact_tab .contact_way .way_li a {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          -webkit-transform: translate(0, -50%) rotate(-45deg);
+          -ms-transform: translate(0, -50%) rotate(-45deg);
+          transform: translate(0, -50%) rotate(-45deg);
+          font-size: 1.5625rem;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          background: #d9d9d9;
+          -webkit-transition: background .5s;
+          -o-transition: background .5s;
+          transition: background .5s; }
+          @media only screen and (max-width: 575px) {
+            .contact .contact_ct .contact_tab .contact_way .way_li a {
+              top: auto;
+              bottom: 10px;
+              left: 15px;
+              -webkit-transform: translate(0, 0) rotate(-45deg);
+              -ms-transform: translate(0, 0) rotate(-45deg);
+              transform: translate(0, 0) rotate(-45deg);
+              font-size: 1.25rem;
+              width: 40px;
+              height: 40px; } }
+          .contact .contact_ct .contact_tab .contact_way .way_li a:hover {
+            background: #f8b500;
+            -webkit-transition: background .5s;
+            -o-transition: background .5s;
+            transition: background .5s; }
+        .contact .contact_ct .contact_tab .contact_way .way_li.waypoint {
+          -webkit-transform: translateY(50px);
+          -ms-transform: translateY(50px);
+          transform: translateY(50px);
+          opacity: 0; }
+        .contact .contact_ct .contact_tab .contact_way .way_li.show {
+          -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 1;
+          -webkit-transition: .8s;
+          -o-transition: .8s;
+          transition: .8s; }
+      .contact .contact_ct .contact_tab .contact_way .way_top {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        @media only screen and (max-width: 575px) {
+          .contact .contact_ct .contact_tab .contact_way .way_top {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center; } }
+        .contact .contact_ct .contact_tab .contact_way .way_top span {
+          font-size: 3.125rem;
+          padding: 8px;
+          min-width: 100px; }
+          @media only screen and (max-width: 992px) {
+            .contact .contact_ct .contact_tab .contact_way .way_top span {
+              font-size: 2.5rem;
+              min-width: 80px; } }
+          @media only screen and (max-width: 575px) {
+            .contact .contact_ct .contact_tab .contact_way .way_top span {
+              font-size: 2.1875rem;
+              min-width: 70px;
+              text-align: center; } }
+        .contact .contact_ct .contact_tab .contact_way .way_top .way_title {
+          font-size: 1.5rem; }
+      .contact .contact_ct .contact_tab .contact_way .way_p {
+        color: #666666;
+        line-height: 2.19;
+        letter-spacing: 0.56px;
+        margin: -20px 0 0 100px;
+        padding-bottom: 25px;
+        padding-right: 50px;
+        border-bottom: 2px solid #f8b500; }
+        @media only screen and (max-width: 992px) {
+          .contact .contact_ct .contact_tab .contact_way .way_p {
+            margin: -20px 0 0 80px; } }
+        @media only screen and (max-width: 575px) {
+          .contact .contact_ct .contact_tab .contact_way .way_p {
+            margin: 0;
+            padding: 10px 15px 60px 15px; } }
+    .contact .contact_ct .contact_tab .form {
+      max-width: 760px;
+      width: 90%;
+      margin: 0 auto; }
+      .contact .contact_ct .contact_tab .form .num:before {
+        background: #f2f2f2; }
+      .contact .contact_ct .contact_tab .form .num:after {
+        color: #000000; }
+      .contact .contact_ct .contact_tab .form .block_name {
+        color: #000000; }
+      .contact .contact_ct .contact_tab .form .form_input input, .contact .contact_ct .contact_tab .form .form_input textarea {
+        color: #000000; }
+        .contact .contact_ct .contact_tab .form .form_input input::-webkit-input-placeholder, .contact .contact_ct .contact_tab .form .form_input textarea::-webkit-input-placeholder {
+          color: #000000; }
+        .contact .contact_ct .contact_tab .form .form_input input:-ms-input-placeholder, .contact .contact_ct .contact_tab .form .form_input textarea:-ms-input-placeholder {
+          color: #000000; }
+        .contact .contact_ct .contact_tab .form .form_input input::-ms-input-placeholder, .contact .contact_ct .contact_tab .form .form_input textarea::-ms-input-placeholder {
+          color: #000000; }
+        .contact .contact_ct .contact_tab .form .form_input input::placeholder, .contact .contact_ct .contact_tab .form .form_input textarea::placeholder {
+          color: #000000; }
+      .contact .contact_ct .contact_tab .form .formdd_click.white .formdd_title, .contact .contact_ct .contact_tab .form .formdd_click.white .icon-arrow_right {
+        color: #000000; }
+      .contact .contact_ct .contact_tab .form .formdd_click:hover {
+        color: #000000;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s; }
+        .contact .contact_ct .contact_tab .form .formdd_click:hover .icon-arrow_right {
+          color: #000000; }
+      .contact .contact_ct .contact_tab .form .add .formdd:after {
+        background: #000000; }
+      .contact .contact_ct .contact_tab .form .form_btn .czbtn {
+        color: #000000;
+        border: 1px solid rgba(0, 0, 0, 0.2); }
+      .contact .contact_ct .contact_tab .form .block.waypoint {
+        margin-top: 50px;
+        opacity: 0; }
+      .contact .contact_ct .contact_tab .form .block.show {
+        margin-top: 0;
+        opacity: 1;
+        -webkit-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s; }

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/member.css")
+  // 各頁面 CSS 分開
+  body.member(data-page="member")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.mb_common.waypoint
+        .mb_left
+          .mb_left_wrap
+            .mb_head
+              .mb_maintitle HELLO : ) IMEMBER
+              .mb_p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            .mb_bt
+              p Not an iMember yet ? Join us now
+              .mb_btn
+                a.czbtn(href="member_signup.html" data-text="sign up") sign up
+        .mb_right
+          .mb_right_wrap
+            .mb_head
+              h1.mb_title Welcome back<br>Sign in to continue.
+            .mb_block.block
+              .form_line
+                .form_list
+                  //- .form_title Phone Number
+                  .form_input
+                    input(type="text" placeholder="Phone Number")
+              .form_line
+                .form_list
+                  //- .form_title Password
+                  .form_input
+                    input(type="text" placeholder="Password")
+              .form_line
+                .form_list
+                  //- .form_title Verification code
+                  .form_input
+                    input(type="text" placeholder="Verification code")
+                    img(src="../../../uploads/service/code.jpg", alt="")
+            .mb_btn
+              a.forget_btn(href="javascript:;" open-page="member_forgetpassword" onclick="member.open_lb($(this))")
+                span ?
+                p Forgot password ?
+              a.czbtn(href="member_home.html" data-text="Sign in") Sign in
+
+      section.lb_step(page="member_forgetpassword")
+        .lb_step_wrap
+          .mb_common.step
+            .lb_close.btn_close
+              span
+            .mb_left
+              .mb_left_wrap
+                .mb_head
+                  .mb_maintitle Forgot my<br>password : (
+                  .mb_p Never mind,We help you, follow the simple steps below.
+                .mb_process
+                  .step_li.active
+                    span 1
+                    p Enter your phone number ( your account ID )
+                  .step_li
+                    span 2
+                    p Enter confirmation code
+                  .step_li
+                    span 3
+                    p Setting your password
+
+            .mb_right
+              .mb_right_wrap(data-page='1')
+                .mb_head
+                  .mb_title Step 1 :<br>Enter the phone number.
+                .mb_block.block
+                  .form_line
+                    .form_list
+                      .form_input
+                        input(type="text" placeholder="Phone number")
+                  .form_line
+                    .form_list
+                      .form_input
+                        input(type="text" placeholder="Verification code")
+                        img(src="../../../uploads/service/code.jpg", alt="")
+                .mb_bt
+                  a.czbtn(href="javascript:;" data-text="Next step" onclick="member.lb_step($(this))") Next step
+
+              .mb_right_wrap(data-page='2')
+                .mb_head
+                  .mb_title Step 2 :<br>We need to verify your identity.
+                .mb_block.block
+                  .form_line
+                    .form_list
+                      .form_input
+                        input(type="text" placeholder="6-bits Verification code")
+                .mb_bt
+                  .reverify_btn
+                    span.icon-return
+                    .reverify_word
+                      p Enter the verification code within <span class="countdown" data-seconds="10">300</span>
+                      p Don't receive ? <a href="javascript:;" class='send_again'>Send again.</a>
+                  .mb_btn
+                    a.czbtn(href="javascript:;" data-text="Back" onclick="member.lb_step($(this),'back')") Back
+                    a.czbtn(href="javascript:;" data-text="Next step" onclick="member.lb_step($(this))") Next step
+
+              .mb_right_wrap(data-page='3')
+                .mb_head
+                  .mb_title Step 3 :<br>Setting your password.
+                .mb_block.block
+                  .form_line
+                    .form_list
+                      .form_input
+                        input(type="text" placeholder="Password")
+                  .form_line
+                    .form_list
+                      .form_input
+                        input(type="text" placeholder="Enter again")
+                .mb_btn
+                  a.czbtn(href="javascript:;"
+                    data-ajax-route="ajax_member_password4.html" 
+                    data-ajax-container=".lightbox" 
+                    data-ajax-callback="lightbox" 
+                    data-ajax
+                    data-text="Next step") Next step
+
+
+
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

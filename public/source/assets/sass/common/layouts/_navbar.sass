@@ -1,0 +1,734 @@
+.navbar
+  position: absolute
+  top: 0
+  width: 100%
+  z-index: 10
+  transform: translateY(-100%)
+  transition: .5s
+  &.show
+    transform: translateY(0)
+    transition: .5s
+  &.fixed
+    position: fixed
+    width: 100%
+  &.black
+    .container
+      background: #000
+      transition: .5s
+  &.dark
+    background: #000000
+  .container
+    padding: 25px 60px
+    width: 100%
+    // background-color: #000
+    +flex(flex,center,center)
+    transition: .5s
+    +ie11hack
+      justify-content: flex-start
+    .logo
+      flex: 1% 1 0
+      
+      a
+        width: 155px
+        height: 28px
+        background-image: url('../img/changei_logo_white.svg')
+        background-size: cover
+        display: block
+        // width: 100%
+        // height: 100%
+        text-indent: 101%
+        white-space: nowrap
+        overflow: hidden
+    .list
+      flex: auto
+      margin: 0 auto
+      +flex(flex,center,center)
+      li
+        position: relative
+        &>a
+          padding: 0 30px
+          color: #fff
+          // font-size: px(14)
+          text-transform: uppercase
+          transition: .5s
+          &:hover
+            color: $yellow
+    
+    .right
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      flex: 1% 1 0
+    .btn_filter
+      font-size: px(22)
+      color: #ffffff
+      margin: 3px 10px 0
+    .control
+      +flex(flex,center,center)
+      li
+        a
+          display: block
+          margin: 0 10px
+          color: #fff
+          font-size: px(12)
+          text-transform: uppercase
+          span
+            font-size: px(22)
+          &.repair
+            display: block
+            position: relative
+            z-index: 2
+            border-radius: 21px
+            overflow: hidden
+            // background-size: 200% 200%
+            // background-image: linear-gradient(to left, #e2249d, #fb1616, #f8b500)
+            width: 140px
+            height: 50px
+            text-align: center
+            line-height: px(50)
+            transition: color .5s
+            // animation: gradient 3s ease infinite
+            &:before
+              position: absolute
+              content: ""
+              top: 50%
+              left: 50%
+              transform: translate(-50%,-50%)
+              width: 100%
+              height: 100%
+              clip-path: url(#btn)
+              background-size: 200% 200%
+              background-image: linear-gradient(to left, #e2249d, #fb1616, #f8b500)
+              animation: gradient 3s ease infinite
+              z-index: -1
+            // &:after
+            //   z-index: -1
+            //   border-radius: 25px
+            //   width: 136px
+            //   height: 46px
+            //   background-color: #000
+            //   content: ''
+            //   +center()
+    .hamburger
+      margin-left: 15px
+      cursor: pointer
+      +flex(flex, center, center)
+      span
+        display: block
+        margin: 0 3.5px
+        background-color: #fff
+        width: 1px
+        &:nth-child(odd)
+          height: 15px
+        &:nth-child(even)
+          height: 25px
+      &:hover
+        span:nth-child(odd)
+          animation: hamburger2 0.9s -0.6s cubic-bezier(0.85, 0.25, 0.37, 0.85)
+          animation-delay: -0.2s
+        span:nth-child(even)
+          animation: hamburger 0.9s -0.6s cubic-bezier(0.85, 0.25, 0.37, 0.85)
+          animation-delay: -0.2s
+    +rwdmax(1280)
+      .logo
+        margin-right: auto
+      .list
+        display: none
+    +rwdmax(767)
+      padding: 16px 25px
+      .control
+        display: none
+
+  .fastest
+    position: absolute
+    top: 100px
+    left: 0
+    background-color: #191919
+    width: 100%
+    max-height: 0
+    z-index: 2
+    transition: .5s
+    overflow: hidden
+    pointer-events: none
+    &.active
+      max-height: 600px
+      pointer-events: auto
+    .wrap
+      display: flex
+      padding: 40px 60px
+      &-title
+        max-width: 275px
+        min-width: 220px
+        width: 100%
+        .title
+          margin-bottom: 32px
+          color: $yellow
+          font-size: px(35)
+          letter-spacing: 1.23px
+          text-transform: uppercase
+        .text
+          margin-bottom: 50px
+          color: rgba(#fff, 0.6)
+          // font-size: px(14)
+          line-height: px(24)
+          letter-spacing: 0.49px
+        .czbtn
+          color: #fff
+          border: 1px solid rgba(#fff, 0.2)
+      &-content
+        // min-width: 700px
+        margin: 0 16px
+        width: 100%
+        .scroll
+          display: flex
+          flex-wrap: wrap
+          padding: 0 25px
+          max-height: 400px
+          .block
+            // margin-bottom: 70px
+            // width: calc(100% / 3)
+            width: 33.3%
+            color: #fff
+            text-align: center
+            &:nth-child(n+4)
+              margin-top: 70px
+            &-wrap
+              display: inline-block
+              margin: 0 auto
+              .photo
+                position: relative
+                z-index: 1
+                margin: 0 auto
+                border-radius: 50%
+                background: rgba(#fff, 0.2)
+                padding: 3px
+                width: 120px
+                height: 120px
+                transition: .5s
+                &:after
+                  z-index: -1
+                  border-radius: 50%
+                  background-color: #191919
+                  width: 117px
+                  height: 117px
+                  +center()
+                  content: ''
+                img
+                  opacity: .2
+                  transition: .3s
+              p
+                display: inline-block
+                margin-top: 15px
+                font-size: px(16)
+                text-transform: uppercase
+                transition: .3s
+              &:hover
+                .photo
+                  background-image: linear-gradient(to left, #e2249d, #fb1616, #f8b500 80%)
+                  img
+                    opacity: 1
+                p
+                  color: $yellow
+      &-ad
+        max-width: 540px
+        min-width: 540px
+        width: 100%
+        color: #fff
+        .photo
+          padding-bottom: 63.8889%
+          height: 0
+        .info
+          position: relative
+          +flex(flex, center, center)
+          background-color: #000
+          padding: 28px 25px
+          font-size: px(24)
+          p
+            flex: 1
+            +wordrows(1)
+    +rwdmax(1580)
+      .wrap
+        &-content
+          min-width: 500px
+          .scroll
+            .block
+              width: calc(100% / 2)
+              &:nth-child(n+4)
+                margin-top: 0
+              &:nth-child(n+3)
+                margin-top: 70px
+        &-ad
+          max-width: 400px
+          min-width: 400px
+    +rwdmax(1280)
+      display: none
+  svg
+    position: absolute
+.bottom_btn
+  display: none
+  +rwdmax(767)
+    display: block
+  .control
+    position: fixed
+    bottom: 0
+    left: 0
+    z-index: 2
+    background-color: #000
+    width: 100%
+    +flex(flex,center,center)
+    li
+      width: auto
+      flex: 1
+      a
+        position: relative
+        +flex(flex, center, center)
+        color: #fff
+        font-size: px(12)
+        text-transform: uppercase
+        span
+          font-size: px(22)
+          line-height: 50px
+        &.repair
+          position: relative
+          z-index: 1
+          background-size: 200% 200%
+          background-image: linear-gradient(to left, #e2249d, #fb1616, #f8b500)
+          width: 100%
+          height: 50px
+          text-align: center
+          line-height: px(50)
+          transition: color .5s
+          width: 100%
+          animation: gradient 6s ease infinite
+      &:not(:first-child):not(:last-child)
+        a:after
+          position: absolute
+          content: ''
+          left: 0
+          background-color: #fff
+          width: 1px
+          height: 50%
+          
+
+.menu
+  position: fixed
+  top: 0
+  // left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100vh // IE
+  height: calc(var(--vh, 1vh) * 100)
+  pointer-events: none
+  opacity: 0
+  z-index: 20
+  transition: .8s .8s
+  &:after
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    width: 0
+    height: 100%
+    background-color: #000
+    content: ''
+    transition: .8s .6s
+  &-scroll
+    position: relative
+    padding: 85px 60px
+    width: 100%
+    height: 100%
+    overflow-y: auto
+    transition: .5s .2s
+    .square-close
+      position: absolute
+      top: 0
+      right: 0
+      opacity: 0
+      transition: .5s
+  &-wrap
+    margin: 115px auto 85px
+    max-width: 1250px
+    width: 100%
+    .container
+      +flex(flex, center, center)
+      .list
+        display: flex
+        // justify-content:
+        margin-right: auto
+        counter-reset: num
+        ul
+          margin-right: 110px
+          &:last-child
+            margin: calc(60px + 38px) 0 0 0
+          li
+            padding: 1px
+            margin-bottom: 60px
+            opacity: 0
+            transform: translate3d(-100px,0,0)
+            transition-property: opacity, transform
+            transition: .5s
+            &:last-child
+              margin-bottom: 0
+            a
+              display: inline-flex
+              color: rgba(#fff, 0.3)
+              font-size: px(36)
+              letter-spacing: 0.88px
+              text-transform: uppercase
+              p
+                position: relative
+                &:before
+                  position: absolute
+                  top: 0
+                  left: 0
+                  width: 0
+                  background-color: #000
+                  color: $yellow
+                  white-space: nowrap
+                  overflow: hidden
+                  transition: .5s
+                  content: attr(data-text)
+              span
+                position: relative
+                &:before
+                  display: block
+                  margin-right: 24px
+                  color: rgba(#fff, 0.3)
+                  font-size: px(16)
+                  counter-increment: num
+                  content: '0' counter(num)
+                  transition: .3s
+                &:after
+                  position: absolute
+                  top: 8px
+                  left: -25%
+                  width: 0
+                  height: 1px
+                  background-color: rgba(#fff, 0.3)
+                  transition: .3s .1s
+                  content: ''
+              &:hover
+                p
+                  &:before
+                    width: 100%
+                span
+                  &:after
+                    width: 100%
+                  &:before
+                    color: #fff
+    .infobar
+      margin-top: 24px
+      color: #fff
+      opacity: 0
+      transform: translate3d(-100px,0,0)
+      transition-property: opacity, transform
+      transition: .5s .3s
+      ul
+        display: flex
+        li
+          margin-right: 25px
+          +flex(flex, center, center)
+          &:last-child
+            margin-right: 0
+          a
+            display: block
+            color: #666
+            // font-size: px(14)
+            transition: .5s
+            &[class^='icon-']
+              margin-right: 10px
+              color: #fff
+              font-size: px(22)
+            &.logout
+              color: #fff
+              text-decoration: underline
+            &:not([class^='icon-'])
+              &:hover
+                color: $yellow
+              
+          p
+            color: #666
+  &-swiper
+    position: relative
+    margin: 0 0 0 50px
+    max-width: 475px
+    width: 100%
+    opacity: 0
+    transform: translate3d(0,100px,0)
+    transition-property: opacity, transform
+    transition: .5s .3s
+    .menu-swiper-pagination
+      position: absolute
+      bottom: -40px
+      width: 100%
+      text-align: center
+      .swiper-pagination-bullet
+        position: relative
+        margin: 0 30px
+        width: 3px
+        height: 3px
+        background-color: #fff
+        transition: .3s
+        &:after
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          width: 25px
+          height: 25px
+          border-radius: 25px
+          border: 1px solid rgba(#fff, 0)
+          transition: .3s
+          content: ''
+        &-active
+          position: relative
+          &:after
+            border: 1px solid rgba(#fff, 0.3)
+        +rwdmin(1024)
+          &:hover
+            opacity: 1
+            &:after
+              border: 1px solid rgba(#fff, 0.3)
+  &-adblock
+    position: relative
+    width: 100%
+    .photo
+      padding-bottom: 140%
+      height: 0
+    .content
+      position: absolute
+      bottom: 0
+      left: 0
+      padding: 45px 20px
+      width: 100%
+      text-align: center
+      h2
+        margin-bottom: 10px
+        font-size: px(35)
+        font-family: $rwt
+        line-height: px(55)
+        letter-spacing: 1.23px
+      p
+      &[data-color="white"]
+        color: #fff
+        p
+          color: rgba(#fff, 0.3)
+      &[data-color="black"]
+        color: #000
+        p
+          color: rgba(#000, 0.3)
+  &.open
+    opacity: 1
+    pointer-events: auto
+    transition: .5s
+    &:after
+      width: 100%
+      transition: .8s
+    .menu-scroll
+      .square-close
+        opacity: 1
+        transition: .5s .6s
+    .menu-wrap
+      .container
+        .list
+          ul
+            li
+              opacity: 1
+              transform: translateZ(0)
+              transition-duration: 1s
+          ul:first-child
+            li
+              @for $i from 0 through 3
+                &:nth-child(#{$i + 1})
+                  transition-delay: ($i + 1) * .2s
+          ul:last-child
+            li
+              @for $i from 0 through 3
+                &:nth-child(#{$i + 1})
+                  transition-delay: (($i + 1) * .2s) + .6s
+      .infobar
+        opacity: 1
+        transform: translateZ(0)
+        transition-duration: 1s
+        transition-delay: .6s
+    .menu-swiper
+      opacity: 1
+      transform: translateZ(0)
+      transition-duration: 1s
+      transition-delay: 1s
+
+  +rwdmax(1300)
+    &-wrap
+      .container
+        .list
+          ul
+            margin-right: 50px
+            li
+  +rwdmax(1240)
+    &-wrap
+      .container
+        .list
+          margin: 0
+      .infobar
+        margin-top: 160px
+        ul
+          justify-content: center
+    &-swiper
+      display: none
+  +rwdmax(767)
+    &-scroll
+      padding: 85px 40px
+    &-wrap
+      margin: 25px auto 0
+      .container
+        .list
+          flex-wrap: wrap
+          ul
+            width: 100%
+            &:last-child
+              margin: 30px 0 0 0
+            li
+              margin-bottom: 30px
+              a
+                font-size: px(24)
+                span
+                  &:before
+                    font-size: px(12)
+
+@keyframes gradient
+  0%
+    background-position: 0% 100%
+  50%
+    background-position: 100% 50%
+  100%
+    background-position: 0% 0%
+
+@keyframes hamburger
+  0%
+    transform: scaley(1)
+  50%
+    transform: scaley(0.4)
+  100%
+    transform: scaley(1)
+
+@keyframes hamburger2
+  0%
+    transform: scaley(1)
+  50%
+    transform: scaley(1.4)
+  100%
+    transform: scaley(1)
+
+
+
+
+///// 篩選
+.pdfilter_lb
+  position: fixed
+  top: 0
+  right: 0
+  background: rgba(0,0,0,0)
+  width: 100%
+  height: 100%
+  transform: translateX(100%)
+  z-index: 10
+  transition: .5s .3s
+  &.open
+    transform: translateX(0)
+    background: rgba(0,0,0,.6)
+    transition: .5s
+    .lb_wrap
+      transform: translateX(0)
+      transition: .8s .3s
+  .lb_wrap
+    transform: translateX(100%)
+    max-width: 960px
+    width: 100%
+    height: 100vh
+    height: calc(var(--vh, 1vh) * 100)
+    margin-left: auto
+    background: #000000
+    padding: 60px
+    transition: .8s
+    +rwdmax(767)
+      padding: 60px 25px
+  .lb_close
+    color: #ffffff
+    position: absolute
+    top: 60px
+    right: 60px
+    z-index: 5
+    +rwdmax(767)
+      top: 70px
+      right: 25px
+  .ct_title
+    color: #ffffff
+    text-align: left
+    margin: 0
+    max-width: 400px
+    margin-bottom: 20px
+    +rwdmax(575)
+      width: 100%
+  .lb_select
+    color: #ffffff
+    padding-right: 10px
+    height: calc(100vh - 350px)
+    height: calc(var(--vh, 1vh) * 100 - 350px)
+    +rwdmax(767)
+      height: calc(100vh - 270px)
+      height: calc(var(--vh, 1vh) * 100 - 270px)
+    .scroll-x
+      display: none
+  .type_list
+    margin: 0
+  .type_item
+    li
+      width: 16.6%
+      +rwdmax(992)
+        width: 25%
+      +rwdmax(575)
+        width: 50%
+  .brand
+    .type_item .type_li
+      padding: 10px 0 20px 0
+    .type_item
+      .type_pic
+        max-width: 100px
+  .lb_btn
+    display: flex
+    justify-content: center
+    margin-top: 60px
+    +rwdmax(767)
+      display: none
+    .czbtn
+      border-color: rgba(255, 255, 255, 0.2)
+      color: #ffffff
+      &:not(:first-child)
+        margin-left: 20px
+  .lb_btn_rwd
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 60px
+    background: $yellow
+    display: none
+    +rwdmax(767)
+      display: flex
+
+    .btn
+      position: relative
+      height: 100%
+      width: 50%
+      +flex(flex,center,center)
+      &:not(:last-child):after
+        position: absolute
+        content: ""
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        width: 1px
+        height: 20px
+        background: #000
+        opacity: .3

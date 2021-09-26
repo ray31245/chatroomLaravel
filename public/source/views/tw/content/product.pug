@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/product.css")
+  // 各頁面 CSS 分開
+  body.product(data-page="product")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.product_hd
+        // 電腦 1920*750 // 平板 1200*700 // 手機 600*825 // 換圖結構在下面
+        .product_bg(style="background-image: url('../../../uploads/product/pd_bn.jpg')")
+        //- picture
+        //-   source(media="(max-width: 575px)" srcset="../../../uploads/product/pd_bn_phone.jpg")
+        //-   source(media="(max-width: 1200px)" srcset="../../../uploads/product/pd_bn_pad.jpg")
+        //-   img(src="../../../uploads/product/pd_bn.jpg" alt="")
+        .bn_title.waypoint
+          h1.title_head DESIGNED FOR UNIQUENESS
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      section.product_ct
+        .ct_head
+          .ct_title.waypoint
+            .title_head Product
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+        .adblock
+          // 廣告區塊樣式
+          // 樣式 data-type：兩小塊 two_samll, 一大塊 one_big, 一大塊兩小圖 half_big
+          // 文字對齊 data-text-align: left, right, center
+          // 區塊位置 data-float: left, right, center
+          // 文字顏色 data-color: white, black
+          // two_samll：data-float, data-text-align 不需設定
+          //
+          // 每個樣式如需共用請注意 picture source(media) 尺寸及建議圖片尺寸 !
+          // half_big 無文字敘述欄位 (p.text)
+          // half_big：可上圖片, 可選背景色, 背景預設白色
+          // two_samll, one_big 必上圖片 
+          // two_samll, one_big 按鈕至多兩顆 / half_big 按鈕至多一顆
+          .adblock-wrap.waypoint(data-type="two_samll" data-text-align="" data-float="" data-color="white")
+            .photo
+              // 圖片尺寸 PC 890*645(px) / RWD  700*935(px) 
+              picture
+                source(media="(max-width: 1260px)" srcset="../../../uploads/product/01_phone.jpg")
+                img(src="../../../uploads/product/01.jpg" alt="")
+            .content
+              .content-wrap
+                h2.title Bare-metal Sense.
+                p.subtitle Phone Case
+                p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                // 按鈕自訂文字、連結
+                .btn-group
+                  a.czbtn(href="product_series.html" data-text="more") more
+
+          .adblock-wrap.waypoint(data-type="two_samll" data-text-align="" data-float="" data-color="black")
+            .photo
+              // 圖片尺寸 PC 890*645(px) / RWD  700*935(px)
+              picture
+                source(media="(max-width: 1260px)" srcset="../../../uploads/product/02_phone.jpg")
+                img(src="../../../uploads/product/02.jpg" alt="")
+            .content
+              .content-wrap
+                h2.title No Distance
+                p.subtitle Charge Cables
+                p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                .btn-group
+                  a.czbtn(href="product_series.html" data-text="more") more
+
+          .adblock-wrap.waypoint(data-type="one_big" data-text-align="left" data-float="right" data-color="white")
+            .photo
+              // 圖片尺寸 PC 1800*700(px) / RWD  700*935(px)
+              picture
+                source(media="(max-width: 768px)" srcset="../../../uploads/product/03_phone.jpg")
+                img(src="../../../uploads/product/03.jpg" alt="")
+            .content
+              .content-wrap
+                h2.title Glass protective sticker also has a warranty
+                p.subtitle Glass Protection
+                p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                .btn-group
+                  a.czbtn(href="product_series.html" data-text="more") more
+
+          .adblock-wrap.waypoint(data-type="half_big" data-text-align="center" data-float="left" data-color="black")
+            .photo
+              // 圖片尺寸 PC 900*645(px) / RWD  700*560(px)
+              picture(style="background-color: #fff")
+                source(media="(max-width: 1024px)" srcset="../../../uploads/home/rwd_product_4.jpg")
+                img(src="../../../uploads/home/product_4.jpg" alt="")
+            .photo
+              // 圖片尺寸 PC 900*645(px) / RWD  700*560(px)
+              picture(style="background-color: #fff")
+                source(media="(max-width: 1024px)" srcset="../../../uploads/product/04_phone.jpg")
+                img(src="../../../uploads/product/04.jpg" alt="")
+            .content
+              .content-wrap
+                h2.title Fashion<br>and Compact Design
+                p.subtitle Chargers
+                .btn-group
+                  a.czbtn(href="product_series.html" data-text="more") more
+
+
+
+
+    style(type="text/css").
+      @media only screen and (max-width: 1200px){
+        .product_bg{
+          background-image: url('../../../uploads/product/pd_bn_pad.jpg') !important
+        }
+      }
+      @media only screen and (max-width: 767px){
+        .product_bg{
+          background-image: url('../../../uploads/product/pd_bn_phone.jpg') !important
+        }
+      }
+
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

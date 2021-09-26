@@ -1,0 +1,396 @@
+@import ../common/base/_variable
+@import ../common/base/_mixin
+
+.service
+  main
+    // padding-top: 100px
+    min-height: 100vh
+    // +rwdmax(767)
+    //   padding-top: 60px
+  .service_hd
+    
+    // +rwdmax(575)
+    //   margin-bottom: 500px 
+    .service_bg
+      position: relative
+      height: 980px
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: top center
+      +rwdmax(1200)
+        height: 800px
+      +rwdmax(575)
+        height: 520px
+    .hd_wrap
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      max-width: 1250px
+      width: 90%
+      margin: 0 auto
+      +rwdmax(575)
+        .hd_feature,.hd_btn
+          display: none
+      &.waypoint
+        .bn_title
+          transform: translateY(-50px)
+          opacity: 0
+        .hd_feature li
+          opacity: 0
+        .hd_btn
+          transform: translateY(50px)
+          opacity: 0
+      &.show
+        .bn_title
+          transform: translateY(0)
+          opacity: 1
+          transition: .8s
+        .hd_feature li
+          opacity: 1
+          transition: .8s
+          @for $i from 0 through 4
+            &:nth-child(#{$i + 1})
+              transition-delay: (($i + 1) * 0.3s)
+        .hd_btn
+          transform: translateY(0)
+          opacity: 1
+          transition: .8s 1.3s
+
+    .bn_title
+      text-align: center
+      .title_head
+        margin: auto
+        max-width: 700px
+      p
+        margin: 15px auto 0
+    .hd_feature
+      display: flex
+      flex-wrap: wrap
+      margin-top: 65px
+      +rwdmax(1200)
+        margin-top: 40px
+      li
+        position: relative
+        width: 250px
+        height: 250px
+        margin: auto
+        +flex(flex,center,center)
+        flex-direction: column
+        +rwdmax(1200)
+          width: 200px
+          height: 200px
+        +rwdmax(992)
+          width: 40%
+          height: 115px
+          margin-bottom: 20px
+          align-items: flex-start
+        +rwdmax(575)
+          width: 75%
+      .bg
+        position: absolute
+        content: ""
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        width: 250px
+        height: 250px
+        background-image: url('../../uploads/service/icon_bg.png')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: top center
+        // clip-path: url(#circle)
+        // background: linear-gradient(to left, #e2249d, #fb1616, #f8b500)
+        +rwdmax(1200)
+          width: 200px
+          height: 200px
+        +rwdmax(992)
+          width: 115px
+          height: 115px
+          background-image: url('../../uploads/service/icon_bg_phone.png')
+          // clip-path: url(#circle_b)
+          left: 0
+          transform: translate(0,-50%)
+      span
+        font-size: px(65)
+        color: #ffffff
+        +rwdmax(1200)
+          font-size: px(55)
+        +rwdmax(992)
+          position: absolute
+          left: 60px
+          top: 50%
+          transform: translate(-50%,-55%)
+          font-size: px(45)
+        +rwdmax(575)
+          color: #000000
+      p
+        font-size: px(16)
+        color: #ffffff
+        line-height: 2
+        max-width: 140px
+        text-align: center
+        margin-top: 20px
+        +rwdmax(1200)
+          margin-top: 10px
+        +rwdmax(992)
+          margin-left: 130px
+          margin-top: 0
+          text-align: left
+        +rwdmax(575)
+          color: #000000
+
+    .hd_btn
+      margin-top: 55px
+      display: flex
+      justify-content: center
+      +rwdmax(992)
+        margin-top: 20px
+      .czbtn
+        padding: 0 35px
+        color: #fff
+        border: 1px solid rgba(255, 255, 255, 0.2)
+        &:not(:last-child)
+          margin-right: 20px
+        +rwdmax(575)
+          color: #000
+          border: 1px solid rgba(0, 0, 0, 0.2)
+          &:not(:last-child)
+            margin-right: 10px
+    .hd_rwd
+      display: none
+      +rwdmax(575)
+        display: block
+        background: #f2f2f2
+        padding-top: 10px
+        padding-bottom: 80px
+      &.waypoint
+        .hd_feature li
+          opacity: 0
+        .hd_btn
+          transform: translateY(50px)
+          opacity: 0
+      &.show
+        .hd_feature li
+          opacity: 1
+          transition: .8s
+          @for $i from 0 through 4
+            &:nth-child(#{$i + 1})
+              transition-delay: (($i + 1) * 0.3s)
+        .hd_btn
+          transform: translateY(0)
+          opacity: 1
+          transition: .8s 1s
+  .service_ct
+    background: #000000
+    padding: 100px 0
+    +rwdmax(768)
+      padding: 60px 0 80px
+    .ct_title
+      color: #ffffff
+    .feature_ul
+      max-width: 1050px
+      width: 100%
+      margin: 0 auto
+      .feature_li
+        display: flex
+        align-items: center
+        margin-top: 50px
+        +rwdmin(993)
+          &:nth-child(odd)
+            .feature_icon
+              margin-right: 65px
+              +rwdmax(1200)
+                margin-right: 30px
+          &:nth-child(even)
+            flex-direction: row-reverse
+            .feature_icon
+              margin-left: 65px
+              +rwdmax(1200)
+                margin-left: 30px
+        +rwdmax(992)
+          flex-direction: column
+          margin-top: 60px
+        &.waypoint
+          opacity: 0
+          transform: translateY(50px)
+        &.show
+          transform: translateY(0)
+          opacity: 1
+          transition: .8s
+      .feature_icon
+        position: relative
+        width: 250px
+        min-width: 250px
+        height: 250px
+        margin: auto
+        +flex(flex,center,center)
+        flex-direction: column
+        +rwdmax(1200)
+          width: 200px
+          min-width: 200px
+          height: 200px
+        +rwdmax(992)
+          padding-left: 20px
+          min-width: 100%
+          padding-bottom: 20px
+          margin-bottom: 25px
+          height: auto
+          flex-direction: row
+          justify-content: flex-start
+          &:after
+            position: absolute
+            content: ""
+            width: 100%
+            height: 2px
+            background: linear-gradient(to left, #e2249d, #fb1616, #f8b500)
+            bottom: 0
+            left: 0
+        +rwdmax(575)
+          padding-left: 0px
+        .bg
+          position: absolute
+          content: ""
+          top: 50%
+          left: 50%
+          transform: translate(-50%,-50%)
+          width: 250px
+          height: 250px
+          background-image: url('../../uploads/service/icon_bg.png')
+          background-size: cover
+          background-repeat: no-repeat
+          background-position: top center
+          // clip-path: url(#circle)
+          // background: linear-gradient(to left, #e2249d, #fb1616, #f8b500)
+          +rwdmax(1200)
+            width: 200px
+            height: 200px
+          +rwdmax(992)
+            display: none
+        span
+          font-size: px(65)
+          color: #ffffff
+          +rwdmax(1200)
+            font-size: px(55)
+          +rwdmax(992)
+            min-width: 150px
+            text-align: center
+          +rwdmax(575)
+            font-size: px(45)
+            min-width: 110px
+        p
+          font-size: px(16)
+          color: #ffffff
+          line-height: 2
+          max-width: 140px
+          text-align: center
+          margin-top: 20px
+          +rwdmax(1200)
+            margin-top: 10px
+          +rwdmax(992)
+            max-width: 100%
+            text-align: left
+      .feature_word
+        color: #ffffff
+        +rwdmax(992)
+          width: 90%
+        .feature_title
+          font-size: px(24)
+          line-height: 1.33
+          + p
+            margin-top: 20px
+        p
+          opacity: 0.5
+          line-height: 1.79
+
+    .ad_pic
+      position: relative
+      margin-top: 100px
+      +rwdmax(768)
+        margin-top: 60px
+
+      .ad_word
+        padding: 100px
+        position: absolute
+        right: 0
+        bottom: 0
+        +rwdmax(1200)
+          padding: 50px
+        +rwdmax(767)
+          padding: 40px 30px
+          top: 0
+          left: 50%
+          transform: translate(-50%,0)
+          width: 100%
+          text-align: center
+      .word_subtitle
+        font-size: px(65)
+        font-family: $rwt
+        color: #ffffff
+        opacity: 0.7
+        line-height: 1.15
+        letter-spacing: 1.13px
+        text-align: right
+        +rwdmax(1200)
+          font-size: px(55)
+        +rwdmax(767)
+          font-size: px(48)
+          text-align: center
+      .word_btn
+        margin-top: 25px
+        text-align: right
+        +rwdmax(767)
+          text-align: center
+        .czbtn
+          padding: 0 35px
+          color: #fff
+          border: 1px solid rgba(255, 255, 255, 0.2)
+          &:not(:last-child)
+            margin-right: 20px
+            +rwdmax(767)
+              margin: 0px 10px 10px
+      &.waypoint
+        opacity: 0
+        transform: translateY(50px)
+      &.show
+        transform: translateY(0)
+        opacity: 1
+        transition: .8s
+
+
+  ///// 表單
+  .service_form_bn
+    background: #000000
+    padding-top: 200px
+    +rwdmax(768)
+      padding-top: 120px
+    .bn_title
+      text-align: left
+      margin-left: 0
+      +rwdmax(768)
+        width: 100%
+
+  .service_form_ct
+    background: #000000
+    padding-bottom: 100px
+    .type_select
+      width: 100%
+      .type_title
+        position: relative
+        font-size: px(14)
+        font-family: $rwr
+        &:before
+          position: absolute
+          content: ""
+          top: 50%
+          left: -15px
+          transform: translateY(-50%)
+          +circle(5)
+          background: $yellow
+      .type_list
+        margin: 0 25px 0 15px
+      .type_item
+        margin-left: 35px
+        margin-right: 35px
+        +rwdmax(575)
+          margin: 0 auto

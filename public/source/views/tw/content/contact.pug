@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/contact.css")
+  // 各頁面 CSS 分開
+  body.contact(data-page="contact")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.contact_bn
+        // 電腦 1920*450 // 平板 1200*400 // 手機 600*600 // 換圖結構在下面
+        .contact_bg(style="background-image: url(../../../uploads/contact/contact_bn.jpg)")
+        //- picture
+        //-   source(media="(max-width: 1260px)" srcset="../../../uploads/news/news_bn.jpg")
+        //-   img(src="../../../uploads/news/news_bn.jpg" alt="")
+        .bn_title.waypoint
+          h1.title_head CONTACT
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      section.contact_ct
+        .contact_ul
+          a(href="javascript:;").contact_li.active INFORMATION
+          a(href="javascript:;").contact_li SEND A MAIL
+        .contact_tab
+          .tab_obj.infor
+            .ct_title.waypoint
+              .title_head Find out a little more about us
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+            .contact_swiper.waypoint
+              .swiper-container.swiper4(
+                data-swiper-id="contact_sw"
+                data-swiper-num="1"
+                data-swiper-arrow="on"
+                data-swiper-arrow-name=".contact_sw"
+                data-swiper-nav="off"
+                data-swiper-autoplay="on"
+                data-swiper-loop="on")
+                .swiper-wrapper
+                  // banner 圖片尺寸 PC 1920*1080(px) / RWD  700*1245(px)
+                  .swiper-slide
+                    .hero-banner
+                      picture
+                        source(media="(max-width: 767px)" srcset="../../../uploads/contact/01.jpg")
+                        img(src="../../../uploads/contact/01.jpg" alt="banner")
+                  .swiper-slide
+                    .hero-banner
+                      picture
+                        source(media="(max-width: 767px)" srcset="../../../uploads/contact/01.jpg")
+                        img(src="../../../uploads/contact/01.jpg" alt="banner")
+              .contact_sw-Next.contact_sw.icon-arrow_right
+              .contact_sw-Prev.contact_sw.icon-arrow_left
+            .contact_way
+              .way_li.waypoint
+                .way_top
+                  span.icon-contact1
+                  .way_title Our Service Hours
+                .way_p Monday to Saterday 9:00 - 22:00<br>Closed on Sunday and National holiday.
+              .way_li.waypoint
+                .way_top
+                  span.icon-contact2
+                  .way_title Where we are
+                .way_p 2F, No. 1506, Section 2, Huanzhong Road, Xitun District, Taichung Taiwan.
+                a(href="javascript:;").icon-right
+              .way_li.waypoint
+                .way_top
+                  span.icon-contact3
+                  .way_title 04-2452-0306
+                .way_p If you have any questions about our services or products,<br> please feel free to call us during service hours.<br>Or call the Toll-free Services directly, and someone will serve you
+                a(href="javascript:;").icon-right
+          .tab_obj.form
+            .ct_title.waypoint
+              .title_head Send a mail to us
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+            .block.waypoint
+              .block_title
+                .num(num="1")
+                .block_name Your Detail
+              .form_ct
+                .form_line
+                  .form_list.must
+                    .form_input
+                      input(type="text" placeholder="Phone number     Ex : 0912345678")
+                .form_line
+                  .form_list.must
+                    .form_input
+                      input(type="text" placeholder="Name")
+                .form_line
+                  .form_list
+                    .form_input
+                      .formdd
+                        .formdd_click
+                          .formdd_title(data-reset="Gender") Gender
+                          .icon-arrow_right
+                        .formdd_select
+                          .formdd_opt.scroll.scrollbar-inner.theme-black
+                            ul
+                              li Men
+                              li Women
+                .form_line
+                  .form_list
+                    .form_input
+                      input(type="text" placeholder="E-mail")
+                .form_line
+                  .form_list.must.add
+                    .form_input
+                      .formdd
+                        .formdd_click
+                          .formdd_title(data-reset="Taiwan") Taiwan
+                          .icon-arrow_right
+                        .formdd_select
+                          .formdd_opt.scroll.scrollbar-inner.theme-black
+                            ul
+                              li Taipei
+                              li Yilan
+                              li Taoyuan
+                              li Hsinchu
+                              li Miaoli
+                              li Taichung
+                              li Changhua
+                              li Nantou
+                              li Yunlin
+                              li Chiayi
+                              li Tainan
+                              li Kaohsiung
+                              li Pingtung
+                              li Taitung
+                              li Hualien
+                      input(type="text" placeholder="address")
+            .block.waypoint
+              .block_title
+                .num(num="2")
+                .block_name Your Inquiry
+              .form_ct
+                .form_line
+                  .form_list.must
+                    .form_input
+                      .formdd
+                        .formdd_click
+                          .formdd_title(data-reset="Select maintanence type") Inquiry Subjection
+                          .icon-arrow_right
+                        .formdd_select
+                          .formdd_opt.scroll.scrollbar-inner.theme-black
+                            ul
+                              li Battery problem
+                              li Protection sticker problem
+                              li Screen problem
+                              li Camera problem
+                              li Built-in problem
+                              li Others
+                .form_line
+                  .form_list.must
+                    .form_input
+                      textarea(placeholder="Please provide a detailed description of the condition of your product failure, which will help the maintenance staff to solve your problem quickly.")
+                .form_line
+                  .form_list.must
+                    .form_input
+                      input(type="text" placeholder="Verification code")
+                      img(src="../../../uploads/service/code.jpg", alt="")
+            .form_btn
+              a.czbtn.clear(href="javascript:;" data-text="Clear") Clear
+              a.czbtn(href="javascript:;" data-text="Sumbit"
+                      data-ajax-route="ajax_contact_form_alert.html" 
+                      data-ajax-container=".lightbox" 
+                      data-ajax-callback="lightbox" 
+                      data-ajax) Sumbit
+
+
+
+
+
+    style(type="text/css").
+      @media only screen and (max-width: 1200px){
+        .product_bg{
+          background-image: url('../../../uploads/contact/contact_bn_pad.jpg') !important
+        }
+      }
+      @media only screen and (max-width: 767px){
+        .product_bg{
+          background-image: url('../../../uploads/contact/contact_bn_phone.jpg') !important
+        }
+      }
+
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

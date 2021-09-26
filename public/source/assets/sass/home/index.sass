@@ -1,0 +1,198 @@
+@import ../common/base/_variable
+@import ../common/base/_mixin
+
+.home
+  main
+    overflow: hidden
+    background: #000000
+    padding-top: 100px
+    +rwdmax(767)
+      padding-top: 60px
+    .event
+      background-image: linear-gradient(to right, rgba(#e2249d, 0.85), rgba(#fb1616, 0.85), rgba(#f8b500, 0.85))
+      &.waypoint
+        .event-wrap
+          opacity: 0
+          transform: translateY(30px)
+      &.show
+        .event-wrap
+          opacity: 1
+          transform: translateY(0)
+          transition: 1s
+      &-wrap
+        display: flex
+        margin: 0 auto
+        padding: 28px 60px
+        max-width: 1250px
+        width: 100%
+        +flex(flex, center, center)
+      &-date
+        flex-shrink: 0
+        margin-right: 55px
+        width: 130px
+        height: 130px
+        border-radius: 500px
+        background-color: rgba(#fff, 0.5)
+        +flex(flex, center, center)
+        flex-direction: column
+        color: #fff
+        p:first-child
+          margin-bottom: 12px
+          font-size: px(24)
+          letter-spacing: 0.84px
+        p:last-child
+          font-size: px(14)
+          letter-spacing: 0.7px
+      &-text
+        padding-right: 20px
+        margin-right: auto
+        color: #fff
+        line-height: px(30)
+        p:first-child
+          font-size: px(20)
+          letter-spacing: 0.7px
+        p:last-child
+          font-size: px(14)
+          letter-spacing: 0.49px
+      &-button
+        display: block
+        flex-shrink: 0
+        position: relative
+        border-radius: 25px
+        background-color: #000
+        width: 150px
+        height: 50px
+        color: #fff
+        font-size: px(14)
+        line-height: px(50)
+        letter-spacing: 0.49px
+        text-align: center
+        transition: color .2s, background-color .3s, border .3s
+        &:after
+          position: absolute
+          left: 50%
+          transform: translateX(-50%)
+          color: transparent
+          font-size: px(14)
+          line-height: px(50)
+          font-family: $rwr
+          text-transform: uppercase
+          white-space: nowrap
+          content: attr(data-text)
+          transition: .3s
+        &:hover
+          background-color: $yellow
+          color: transparent
+          &:after
+            color: #000
+      +rwdmax(768)
+        &-wrap
+          flex-wrap: wrap
+        &-date
+          margin: 0 0 20px
+        &-text
+          text-align: center
+          padding: 0
+          margin: 0 0 24px
+      +rwdmax(575)
+        &-wrap
+          padding: 28px 25px
+    .container
+      padding-bottom: 80px
+      background-image: linear-gradient(to top, #030000, #666666)
+      .recruit
+        position: relative
+        padding: 0 60px
+        &.waypoint
+          transform: translateY(50px)
+          opacity: 0
+        &.show
+          transform: translateY(0)
+          opacity: 1
+          transition: 1s
+        &-wrap
+          padding: 155px 60px
+          background-color: #fff
+          +flex(flex, center, center)
+        &-swiper
+          .swiper-wrapper
+            justify-content: space-between
+            // padding: 0 60px
+            margin: 0 auto
+            max-width: 1430px
+            width: 100%
+          .swiper-slide
+            flex-shrink: 1
+            margin-right: 440px
+            max-width: 385px
+            min-width: 300px
+            &:last-child
+              margin: 0
+        &-photo
+          width: 100%
+          padding-bottom: 100%
+          border-radius: 500px
+          background-position: center center
+          background-size: cover
+        &-content
+          position: absolute
+          z-index: 1
+          max-width: 360px
+          width: 100%
+          text-align: center
+          +ie11hack
+            +center()
+          .title
+            margin-bottom: 10px
+            font-size: px(36)
+            line-height: px(45)
+            letter-spacing: 1.23px
+          .subtitle
+            margin-bottom: 20px
+            font-size: px(24)
+            line-height: px(24)
+            letter-spacing: 0.84px
+          .text
+            font-size: px(14)
+            line-height: px(25)
+            letter-spacing: 0.49px
+          .btn-group
+            margin-top: 30px
+        +rwdmax(1366)
+          &-wrap
+            // justify-content: space-between
+          &-swiper
+            max-width: 385px
+            min-width: 300px
+            margin: 0 60px 0 0
+            .swiper-wrapper
+              justify-content: flex-start
+              margin: 0
+              max-width: none
+              .swiper-slide
+                flex-shrink: 0
+                margin: 0
+                max-width: none
+                min-width: auto
+          &-content
+            position: static
+            +ie11hack
+              transform: translate(0,0)
+        +rwdmax(1024)
+          padding: 0 20px
+        +rwdmax(900)
+          &-wrap
+            display: block
+            padding: 45px 25px
+          &-swiper
+            margin: 0 auto 25px
+            min-width: auto
+          &-content
+            margin: 0 auto
+        +rwdmax(575)
+          padding: 0
+          &-content
+            .title
+              font-size: px(30)
+
+

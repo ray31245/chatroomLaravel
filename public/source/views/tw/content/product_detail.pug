@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/product.css")
+  // 各頁面 CSS 分開
+  body.product(data-page="product_detail")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      .fixed_btn
+        .common_wrap
+          ul
+            li.active
+              a(href="javascript:;"
+                data-anchor-target=".productdt_ct"
+                data-anchor-margintop="20"
+                data-anchor-easing="swing"
+                data-anchor) FEATURES
+            li
+              a(href="javascript:;"
+                data-anchor-target=".productdt_spec"
+                data-anchor-margintop="20"
+                data-anchor-easing="swing"
+                data-anchor) SPECIFICATION
+            li
+              a(href="javascript:;"
+                data-anchor-target=".productdt_relate"
+                data-anchor-margintop="20"
+                data-anchor-easing="swing"
+                data-anchor) RELATED PRODUCTS
+          .btn_box
+            a.btn(href="javascript:;")
+              p Buy now
+              span.icon-cart
+            a.btn(href="javascript:;")
+              p share to
+              span.icon-share
+      section.productdt_bn
+        .swiper-container.swiper4(
+            data-swiper-direction="horizontal"
+            data-swiper-id=""
+            data-swiper-num="1"
+            data-swiper-arrow="off"
+            data-swiper-effect="fade"
+            data-swiper-breakpoints="{320: {autoplay: {delay: 5000,}, speed: 1000},1200: {autoplay: {delay: 5000,}, speed: 1000,direction: 'vertical'}}"
+            data-swiper-autoplay="on")
+          .swiper-wrapper
+            // banner 圖片尺寸 PC 1920*1080(px) / RWD  600*720(px)
+            .swiper-slide
+              .hero-banner
+                picture
+                  source(media="(max-width: 767px)" srcset="../../../uploads/product/pddt_bn_phone_01.jpg")
+                  img(src="../../../uploads/product/pddt_bn_01.jpg" alt="banner")
+            .swiper-slide
+              .hero-banner
+                picture
+                  source(media="(max-width: 767px)" srcset="../../../uploads/product/pddt_bn_phone_02.jpg")
+                  img(src="../../../uploads/home/banner.jpg" alt="banner")
+      section.productdt_name.waypoint
+        .common_wrap
+          .left
+            h1.pd_name IonGlass Screen Protector for iPhone 11/XR - Black (Clear/Glossy)
+            .pd_p Stronger than tempered glass, IonGlass ensures your touchscreen is protected thanks to this extremely durable screen protector for iPhone 11/XR.
+              br
+              | It offers complete, edge-to-edge protection, is equipped with an oleophobic coating to reduce fingerprints and smudges.
+          .right
+            .pd_price 1170
+            .pd_p the suggested selling price is a set of unit prices
+            .pd_color
+              .dropdown_in
+                .dropdown_click
+                  .dropdown_title Color
+                  .icon-arrow_right
+                .dropdown_select
+                  .dropdown_opt.scroll.scrollbar-inner.theme-black
+                    ul
+                      li(data-bgcolor='#0066cc' word-color='white') Blue
+                      li(data-bgcolor='#000000' word-color='white') Black
+                      li(data-bgcolor='#ffffff' word-color='black') White
+                      li(data-bgcolor='#808080' word-color='white') Gray
+                      
+            .pd_btn
+              a.czbtn_jq(href="javascript:;" data-text="Buy now")
+                p Buy now
+                span.icon-cart
+              a.czbtn_jq(href="javascript:;" data-text="share to")
+                p Share to
+                span.icon-share
+      //- section.productdt_type
+        .common_wrap
+          .type_select.one_select.waypoint
+            .type_list
+              .type_title Select model
+              span
+            ul.type_item
+              li
+                .type_li
+                  .type_pic
+                    img(src="../../../uploads/product/icon_01.png", alt="")
+                  .type_name iPhone 11 Pro
+              li
+                .type_li
+                  .type_pic
+                    img(src="../../../uploads/product/icon_02.png", alt="")
+                  .type_name iPhone 11
+              li
+                .type_li
+                  .type_pic
+                    img(src="../../../uploads/product/icon_02.png", alt="")
+                  .type_name iPhone XR
+              li
+                .type_li
+                  .type_pic
+                    img(src="../../../uploads/product/icon_01.png", alt="")
+                  .type_name iPhone X
+              li
+                .type_li
+                  .type_pic
+                    img(src="../../../uploads/product/icon_02.png", alt="")
+                  .type_name iPhone 11
+              li
+                .type_li
+                  .type_pic
+                    img(src="../../../uploads/product/icon_01.png", alt="")
+                  .type_name iPhone 11 Pro
+              li
+                .type_li
+                  .type_pic
+                    img(src="../../../uploads/product/icon_02.png", alt="")
+                  .type_name iPhone XR
+              li
+                .type_li
+                  .type_pic
+                    img(src="../../../uploads/product/icon_01.png", alt="")
+                  .type_name iPhone X
+            .type_icon
+              span
+          .type_select.one_select.waypoint
+            .type_list
+              .type_title Select color
+              span
+            ul.type_item
+              li
+                .type_li
+                  .type_pic
+                    .circle(data-bgcolor="#676767")
+                  .type_name Black Clear
+              li
+                .type_li
+                  .type_pic
+                    .circle(data-bgcolor="#1c1c1c")
+                  .type_name Black Glossy
+              li
+                .type_li
+                  .type_pic
+                    .circle(data-bgcolor="#cccccc")
+                  .type_name Clear
+              li
+                .type_li
+                  .type_pic
+                    .circle(data-bgcolor="#0030ff")
+                  .type_name Blue Glossy
+              li
+                .type_li
+                  .type_pic
+                    .circle(data-bgcolor="#676767")
+                  .type_name Black Clear
+              li
+                .type_li
+                  .type_pic
+                    .circle(data-bgcolor="#1c1c1c")
+                  .type_name Black Glossy
+              li
+                .type_li
+                  .type_pic
+                    .circle(data-bgcolor="#cccccc")
+                  .type_name Clear
+              li
+                .type_li
+                  .type_pic
+                    .circle(data-bgcolor="#0030ff")
+                  .type_name Blue Glossy
+            .type_icon
+              span
+
+      section.productdt_ct
+        .ct_title.waypoint
+          h2.title_head Features
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+        .common_wrap
+          // 文字排版方式有6種
+          // 左上left_top、左中left_center、左下left_bottom
+          // 右上right_top、右中right_center、右下right_bottom
+          // 圖片大小 PC RWD-600*1050
+          .ct_pic.waypoint(word-loc="left_center")
+            picture
+              source(media="(max-width: 767px)" srcset="../../../uploads/product/ct_phone_01.jpg")
+              img(src="../../../uploads/product/ct_01.jpg", alt="")
+            .ct_word
+              .word_title Bare-metal<br>sense
+              .word_p Lightweight<br>but cover
+          .ct_pic.waypoint(word-loc="right_bottom")
+            picture
+              source(media="(max-width: 767px)" srcset="../../../uploads/product/ct_phone_02.jpg")
+              img(src="../../../uploads/product/ct_02.jpg", alt="")
+            .ct_word
+              .word_p Patented<br>Dustproof Version
+          .ct_pic.waypoint(word-loc="right_bottom")
+            picture
+              source(media="(max-width: 767px)" srcset="../../../uploads/product/ct_phone_03.jpg")
+              img(src="../../../uploads/product/ct_03.jpg", alt="")
+            .ct_word
+              .word_title Patented<br>Dustproof Version
+          section._articleBlock
+            article._articleU.waypoint
+              ._contentWrap
+                ._wordWrap
+                  h4._H This is a text paragraph : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                  p._P Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+
+      section.productdt_spec
+        .ct_title.waypoint
+          h2.title_head Specification
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+        .spec_block.waypoint
+          .spec_list
+            .spec_title
+              p Product
+            .spec_p IonGlass Screen Protector for iPhone 11/XR - Black (Clear/Glossy)
+          .spec_list
+            .spec_title
+              p Product number
+            .spec_p 99MO076020
+          .spec_list
+            .spec_title
+              p Product Weight
+            .spec_p 0.35 oz (10 g)
+          .spec_list
+            .spec_title
+              p Package Weight<br>( include product )
+            .spec_p 2.25 oz (64 g)
+          .spec_list
+            .spec_title
+              p EAN
+            .spec_p 4713057255472
+
+      section.productdt_relate.waypoint
+        .ct_title.waypoint
+          h2.title_head More Related
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+        .common_wrap
+          .swiper-container.swiper4(
+            data-swiper-id=""
+            data-swiper-numgroup="1"
+            data-swiper-num="1"
+            data-swiper-arrow="off"
+            data-swiper-autoplay="off"
+            data-swiper-loop="on"
+            data-swiper-breakpoints="{320: { slidesPerGroup: 1, slidesPerView: 1, spaceBetween: 5 },768: { slidesPerGroup: 2, slidesPerView: 2, spaceBetween: 10 },993: { slidesPerGroup: 3, slidesPerView: 3, spaceBetween: 10 },1367: { slidesPerGroup: 4, slidesPerView: 4, spaceBetween: 10 }}")
+            .swiper-wrapper
+              .swiper-slide
+                a(href="javascript:void(0)").item
+                  .item_pic
+                    img(src="../../../uploads/news/news_relate1.jpg", alt="")
+                  .item_sort GLASS PROTECTION
+                  .item_title CHANGEi Ushers in Effortless Function-
+                  .item_btn
+                    .czbtn(data-text="view") view
+              .swiper-slide
+                a(href="javascript:void(0)").item
+                  .item_pic
+                    img(src="../../../uploads/news/news_relate2.jpg", alt="")
+                  .item_sort GLASS PROTECTION
+                  .item_title CHANGEi Ushers in Effortless Function-
+                  .item_btn
+                    .czbtn(data-text="view") view
+              .swiper-slide
+                a(href="javascript:void(0)").item
+                  .item_pic
+                    img(src="../../../uploads/news/news_relate1.jpg", alt="")
+                  .item_sort GLASS PROTECTION
+                  .item_title CHANGEi Ushers in Effortless Function-
+                  .item_btn
+                    .czbtn(data-text="view") view
+              .swiper-slide
+                a(href="javascript:void(0)").item
+                  .item_pic
+                    img(src="../../../uploads/news/news_relate2.jpg", alt="")
+                  .item_sort GLASS PROTECTION
+                  .item_title CHANGEi Ushers in Effortless Function-
+                  .item_btn
+                    .czbtn(data-text="view") view
+          
+
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

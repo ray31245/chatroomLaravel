@@ -1,0 +1,326 @@
+@import ../common/base/_variable
+@import ../common/base/_mixin
+
+.about
+  main
+    min-height: 100vh
+    background: #f2f2f2
+  .about_bn
+    position: relative
+    .about_bg
+      position: relative
+      display: block
+      height: 750px
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: top center
+      +rwdmax(1200)
+        height: 600px
+      +rwdmax(575)
+        height: 520px
+    .bn_title
+      position: absolute
+      max-width: 1250px
+      width: 85%
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+  .about_ct
+    padding-bottom: 100px
+    +rwdmax(767)
+      padding-bottom: 80px
+    .about_article
+      position: relative
+      display: flex
+      margin-top: -50px
+      +rwdmax(1023)
+        margin-top: -30px
+      +rwdmax(767)
+        flex-direction: column
+      .about_pic
+        width: 50%
+        +rwdmax(767)
+          width: 100%
+      .about_word
+        width: 50%
+        margin: auto
+        +allflex
+        +rwdmax(767)
+          width: 100%
+      .about_word_wrap
+        width: 90%
+        max-width: 400px
+        +rwdmax(767)
+          width: 100%
+          margin-top: 30px
+      &.waypoint
+        .about_pic
+          transform: translateX(50px)
+          opacity: 0
+        .about_word
+          transform: translateX(-50px)
+          opacity: 0
+      &.show
+        .about_pic
+          transform: translateX(0)
+          opacity: 1
+          transition: 1s
+        .about_word
+          transform: translateX(0)
+          opacity: 1
+          transition: 1s
+
+
+
+    .about_ul
+      margin-top: 100px
+      display: flex
+      counter-reset: num
+      +rwdmax(767)
+        flex-direction: column
+        margin-top: 80px
+        .about_li
+          &:not(:first-child)
+            margin-top: 50px
+      .about_li
+        width: 100%
+      .about_li_wrap
+        max-width: 350px
+        width: 95%
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        height: 100%
+        +rwdmax(767)
+          max-width: 100%
+      .li_pic
+        position: relative
+        display: flex
+        padding: 40px 0 30px
+        +rwdmax(575)
+          padding: 40px 0 20px
+        span
+          font-size: px(90)
+          color: #333333
+          margin: auto
+          +rwdmax(1200)
+            font-size: px(70)
+        &:before
+          position: absolute
+          content: "0" counter(num)
+          counter-increment: num
+          right: 0
+          top: -20px
+          font-size: px(100)
+          color: rgba(248, 181, 0, 0.2)
+          +rwdmax(1200)
+            font-size: px(80)
+      .li_word
+        padding: 50px 0
+        background: #ffffff
+        text-align: center
+        display: flex
+        flex-direction: column
+        height: 100%
+        +rwdmax(1023)
+          padding: 40px 0
+      .li_title
+        font-size: px(24)
+        max-width: 250px
+        width: 90%
+        margin: 0 auto
+      .li_p
+        max-width: 250px
+        width: 90%
+        margin: 0 auto
+        color: #666666
+        line-height: 1.8
+        margin-top: 15px
+      &.waypoint
+        .about_li
+          transform: scale3d(.8,.8,.8)
+          opacity: 0
+          
+      &.show
+        .about_li
+          transform: scale3d(1,1,1)
+          opacity: 1
+          transition: .8s
+          @for $i from 0 through 3
+            &:nth-child(#{$i + 1})
+              transition-delay: (($i + 1) * 0.3s)
+
+    .about_step
+      margin-top: 130px
+      +rwdmax(768)
+        margin-top: 80px
+      .step_head
+        max-width: 830px
+        width: 95%
+        margin: 0 auto
+        text-align: center
+      .step_img
+        position: relative
+        margin-top: 85px
+        +rwdmax(575)
+          margin-top: 70px
+        &:after
+          position: absolute
+          content: ""
+          top: -32.5px
+          left: 50%
+          transform: translate(-50%,0)
+          width: 3px
+          height: 65px
+          background: $yellow
+          +rwdmax(575)
+            height: 40px
+            top: -20px
+            width: 2px
+      .step_ul
+        display: flex
+        // justify-content: space-between
+        margin-top: 50px
+        margin-bottom: 20px
+        +rwdmax(767)
+          flex-direction: column
+        .step_li
+          position: relative
+          width: 100%
+          padding-bottom: 40px
+          +rwdmax(767)
+            padding-bottom: 80px
+          &:after
+            position: absolute
+            content: ""
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 2px
+            background: $yellow
+            +rwdmax(767)
+              content: none
+              // width: 2px
+              // height: 60px
+              // bottom: auto
+              // top: 0
+          &:not(:first-child):before
+            position: absolute
+            content: "\e906"
+            font-family: 'icomoon'
+            bottom: 0
+            left: 0
+            transform: translate(-50%,50%)
+            +circle(45)
+            +allflex
+            background: #000000
+            color: #ffffff
+            z-index: 1
+            +rwdmax(767)
+              width: 30px
+              height: 30px
+              font-size: px(10)
+              buttom: auto
+              top: -40px
+              left: 50%
+              transform: translate(-50%,-50%) rotate(90deg)
+        .step_li_wrap
+          width: 90%
+          max-width: 380px
+          margin: 0 auto
+        .step_title
+          font-size: px(24)
+        .step_p
+          color: #666666
+          line-height: 1.8
+          margin-top: 15px
+        &.waypoint
+          .step_li
+            &:after
+              +rwdmin(768)
+                width: 0
+              +rwdmax(767)
+                height: 0
+            &:not(:first-child):before
+              opacity: 0
+            .step_li_wrap
+              transform: translateY(50px)
+              opacity: 0
+
+
+        &.show
+          .step_li
+            @for $i from 0 through 3
+              &:nth-child(#{$i + 1})
+                transition-delay: (($i + 1) * 0.5s)
+                &:after
+                  +rwdmin(768)
+                    width: 100%
+                  // +rwdmax(767)
+                    // height: 100%
+                  transition: .8s
+                  transition-delay: (($i + 1) * 0.5s)
+                &:not(:first-child):before
+                  opacity: 1
+                  transition: .8s
+                  transition-delay: (($i + 1) * 0.4s)
+                .step_li_wrap
+                  transform: translateY(0)
+                  opacity: 1
+                  transition: 1s
+                  transition-delay: (($i + 1) * 0.5s)
+              
+
+
+      &.waypoint
+        .step_head
+          transform: translateY(50px)
+          opacity: 0
+        .step_img:after
+          height: 0
+        .step_img img
+          opacity: 0
+
+      &.show
+        .step_head
+          transform: translateY(0)
+          opacity: 1
+          transition: .8s
+        .step_img:after
+          height: 65px
+          transition: .8s .7s
+          +rwdmax(575)
+            height: 40px
+        .step_img img
+          opacity: 1
+          transition: .8s .8s
+
+
+
+
+
+
+    .about_subtitle
+      font-size: px(28)
+      font-family: $rwl
+      letter-spacing: 0.98px
+      & + .about_title
+        margin-top: 15px
+        +rwdmax(1023)
+          margin-top: 10px
+      +rwdmax(1023)
+        font-size: px(24)
+    .about_title
+      font-size: px(35)
+      line-height: 1.3
+      letter-spacing: 0.88px
+      +rwdmax(1023)
+        font-size: px(28)
+    .about_p
+      color: rgba(0,0,0,.8)
+      letter-spacing: 0.49px
+      line-height: 2
+      margin-top: 40px
+      +rwdmax(1023)
+        margin-top: 15px
+    

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/member.css")
+  // 各頁面 CSS 分開
+  body.member(data-page="member_account")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.mb_overview_hd.short.waypoint
+        .common_wrap
+          .mb_hd_top
+            .mb_hd_pic
+              img(src="../../../uploads/member/user_pic.jpg", alt="")
+            .mb_hd_ct
+              .hd_title 
+                p Emma
+                p ,Wellcome
+              .hd_p Manage your information, privacy and security and use your own services
+          .mb_hd_btn
+            a.czbtn(href="member.html" data-text="login out") login out
+            a.czbtn(href="member_home.html" data-text="home") home
+      
+      section.mb_ct
+        .common_wrap
+          .mb_ul
+            a(href="member_profile.html") profile
+            a.active(href="member_account.html") account
+            a(href="member_maintenance.html") maintenance
+          .account_ct.waypoint
+            .block
+              .block_title
+                .num
+                  span.icon-lock
+                h1.block_name Account Settings
+              .account_block
+                .form_line
+                  .form_list
+                    .form_title Account
+                    .form_input
+                      p 0930 123 456
+                .form_line
+                  .form_list
+                    .form_title Password
+                    .form_input
+                      p **********
+                      a.icon-pen.icon.lb_open(href="javascript:;" open-page="member_repassword" onclick="member.open_lb($(this))")
+              .account_del
+                .account_top
+                  .account_name Delete Account
+                  .account_p
+                    p When you confirm that your account is suspended, your activities will no longer be recorded,You can go back to the Member Center at any time to reactivate your ...
+                .account_btn
+                  // 刪除申請成功 加delete
+                  a.czbtn(href="javascript:;" data-text="learn more" open-page="member_accountdelete" onclick="member.open_lb($(this))") learn more
+
+
+      section.lb_step(page="member_repassword")
+        .lb_step_wrap
+          .mb_common.step
+            .lb_close.btn_close
+              span
+            .mb_left
+              .mb_left_wrap
+                .mb_head
+                  .mb_maintitle Renew my password.
+                  .mb_p Simple way to update password.
+                .mb_process
+                  .step_li.active
+                    span 1
+                    p Enter your old password.
+                  .step_li
+                    span 2
+                    p Setting the new one.
+
+            .mb_right
+              .mb_right_wrap(data-page='1')
+                .mb_head
+                  .mb_title Step 1 :<br>Enter the old password
+                .mb_block.block
+                  .form_line
+                    .form_list
+                      .form_input
+                        input(type="text" placeholder="Password")
+                .mb_bt
+                  a.czbtn(href="javascript:;" data-text="Next step" onclick="member.lb_step($(this))") Next step
+
+              .mb_right_wrap(data-page='2')
+                .mb_head
+                  .mb_title Step 2 :<br>We need to verify your identity.
+                .mb_block.block
+                  .form_line
+                    .form_list
+                      .form_input
+                        input(type="text" placeholder="New password")
+                  .form_line
+                    .form_list
+                      .form_input
+                        input(type="text" placeholder="Enter again")
+                .mb_btn
+                  a.czbtn(href="javascript:;"
+                    data-ajax-route="ajax_member_Repassword3.html" 
+                    data-ajax-container=".lightbox" 
+                    data-ajax-callback="lightbox" 
+                    data-ajax
+                    data-text="Next step") Next step
+
+
+
+      section.lb_step(page="member_accountdelete")
+        .lb_step_wrap
+          
+          .mb_common.step
+            .lb_close.btn_close
+              span
+            .mb_left
+              .mb_left_wrap
+                .mb_head
+                  .mb_maintitle Delete my account
+                  .mb_p Simple way to update password.
+                .mb_process
+                  .step_li.active
+                    span 1
+                    p Enter your password.
+                  .step_li
+                    span 2
+                    p Submit delete request.
+
+            .mb_right
+              .mb_right_wrap(data-page='1')
+                .mb_head
+                  .mb_title Step 1 :<br>Enter the your password
+                .mb_block.block
+                  .form_line
+                    .form_list
+                      .form_input
+                        input(type="text" placeholder="Password")
+                .mb_bt
+                  a.czbtn(href="javascript:;" data-text="Next step" onclick="member.lb_step($(this))") Next step
+
+              .mb_right_wrap(data-page='2')
+                .mb_head
+                  .mb_title Step 2 :<br>Submit Account Delete Request
+                  .mb_p Provide the right to delete the member's account.
+                    br
+                    | When applying for deletion, the member-related dynamics displayed on the website will be hidden. After the account is deleted, you will not be able to log in to the member
+                .mb_btn
+                  a.czbtn.lb_close.w185(href="javascript:;" data-text="Submit Request") Submit Request
+
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

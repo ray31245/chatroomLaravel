@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/member.css")
+  // 各頁面 CSS 分開
+  body.member(data-page="member_maintenance")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.mb_overview_hd.short.waypoint
+        .common_wrap
+          .mb_hd_top
+            .mb_hd_pic
+              img(src="../../../uploads/member/user_pic.jpg", alt="")
+            .mb_hd_ct
+              .hd_title 
+                p Emma
+                p ,Wellcome
+              .hd_p Manage your information, privacy and security and use your own services
+          .mb_hd_btn
+            a.czbtn(href="member.html" data-text="login out") login out
+            a.czbtn(href="member_home.html" data-text="home") home
+      
+      section.mb_ct
+        .common_wrap
+          .mb_ul
+            a(href="member_profile.html") profile
+            a(href="member_account.html") account
+            a.active(href="member_maintenance.html") maintenance
+          .maintenance_ct.waypoint
+            .block
+              .block_title
+                .num
+                  span.icon-repair
+                h1.block_name Maintenance Inquiry
+              .maintenance_table
+                .mt_tablehd
+                  .mt_id 
+                    p csae ID number.
+                  .mt_detail
+                  .mt_date
+                    .dropdown.member
+                      .dropdown_click
+                        .dropdown_title Select year
+                        .icon-arrow_right
+                      .dropdown_select
+                        .dropdown_opt.scroll.scrollbar-inner.theme-yellow
+                          ul
+                            li ALL
+                            li 2020
+                            li 2019
+                            li 2018
+                            li 2017
+                  .mt_status
+                    .dropdown.member
+                      .dropdown_click
+                        .dropdown_title Select status
+                        .icon-arrow_right
+                      .dropdown_select
+                        .dropdown_opt.scroll.scrollbar-inner.theme-yellow
+                          ul
+                            li ALL
+                            li Processing
+                            li Completed
+                            li Cancelled
+                
+                .mt_tablect
+                  .mt_list
+                    .mt_id
+                      a(href="javascript:;").mt_btn 20201023XXD
+                    .mt_detail
+                      .dt_list
+                        .dt_title Product :
+                        .dt_p iPhone X
+                      .dt_list
+                        .dt_title Maintenance Type :
+                        .dt_p Boot or power
+                      .dt_list
+                        .dt_p When charging it shows that the power is connected.But after a while, it is not charging.
+                      .dt_list
+                        .dt_title Contact Time :
+                        .dt_p 12:00 - 13:30
+                      .dt_list
+                        .dt_title Warranty Card No. :
+                        .dt_p afgghsdjk
+                    .mt_date
+                      p 2020 - 10 - 23  
+                    .mt_status
+                      p Processing
+                  .mt_list
+                    .mt_id
+                      a(href="javascript:;").mt_btn 20200923XXD
+                    .mt_detail
+                      .dt_list
+                        .dt_title Product :
+                        .dt_p iPhone XR
+                      .dt_list
+                        .dt_title Maintenance Type :
+                        .dt_p Maintenance and physical damage
+                      .dt_list
+                        .dt_p When charging it shows that the power is connected.But after a while, it is not charging.
+                      .dt_list
+                        .dt_title Contact Time :
+                        .dt_p 12:00 - 13:30
+                      .dt_list
+                        .dt_title Warranty Card No. :
+                        .dt_p afgghsdjk
+                    .mt_date
+                      p 2020 - 09 - 03
+                    .mt_status
+                      p Completed
+                  .mt_list.cancel
+                    .mt_id
+                      a(href="javascript:;").mt_btn 20200823XXD
+                    .mt_detail
+                      .dt_list
+                        .dt_title Product :
+                        .dt_p iPhone 11
+                      .dt_list
+                        .dt_title Maintenance Type :
+                        .dt_p Battery and charging
+                      .dt_list
+                        .dt_p When charging it shows that the power is connected.But after a while, it is not charging.
+                      .dt_list
+                        .dt_title Contact Time :
+                        .dt_p 12:00 - 13:30
+                      .dt_list
+                        .dt_title Warranty Card No. :
+                        .dt_p afgghsdjk
+                    .mt_date
+                      p 2020 - 08 - 23
+                    .mt_status
+                      p Cancelled
+                  .mt_list
+                    .mt_id
+                      a(href="javascript:;").mt_btn 20200703XXD
+                    .mt_detail
+                      .dt_list
+                        .dt_title Product :
+                        .dt_p iPhone X
+                      .dt_list
+                        .dt_title Maintenance Type :
+                        .dt_p Boot or power
+                    .mt_date
+                      p 2020 - 07 - 03
+                    .mt_status
+                      p Completed
+                  .mt_list
+                    .mt_id
+                      a(href="javascript:;").mt_btn 20200623XXD
+                    .mt_detail
+                      .dt_list
+                        .dt_title Product :
+                        .dt_p iPhone XR
+                      .dt_list
+                        .dt_title Maintenance Type :
+                        .dt_p Maintenance and physical damage
+                    .mt_date
+                      p 2020 - 06 - 23
+                    .mt_status
+                      p Completed
+                  .mt_list.cancel
+                    .mt_id
+                      a(href="javascript:;").mt_btn 20200503XXD
+                    .mt_detail
+                      .dt_list
+                        .dt_title Product :
+                        .dt_p iPhone 11
+                      .dt_list
+                        .dt_title Maintenance Type :
+                        .dt_p Battery and charging
+                    .mt_date
+                      p 2020 - 05 - 03
+                    .mt_status
+                      p Cancelled
+
+
+
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/news.css")
+  // 各頁面 CSS 分開
+  body.news(data-page="news")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.news_bn
+        // 電腦 1920*450 // 平板 1200*400 // 手機 600*600 // 換圖結構在下面
+        .news_bg(style="background-image: url(../../../uploads/news/news_bn.jpg)")
+        //- picture
+        //-   source(media="(max-width: 1260px)" srcset="../../../uploads/news/news_bn.jpg")
+        //-   img(src="../../../uploads/news/news_bn.jpg" alt="")
+        .bn_title.waypoint
+          h1.title_head NEWSROOM
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      section.news_ct
+        .common_wrap
+          .news_sort
+            .news_sort_ul
+              a(href="javascript:;").news_sort_li.active ALL
+              a(href="javascript:;").news_sort_li PROUDUCT RELEASE
+              a(href="javascript:;").news_sort_li EVENTS
+              a(href="javascript:;").news_sort_li PROMOTIONS
+            .dropdown
+              .dropdown_click
+                .dropdown_title CHOOSE CATEGORY
+                .icon-arrow_right
+              .dropdown_select
+                .dropdown_opt.scroll.scrollbar-inner.theme-yellow
+                  ul
+                    li ALL
+                    li PROUDUCT RELEASE
+                    li EVENTS
+                    li PROMOTIONS
+          .news_main
+            .ct_title.waypoint
+              .title_head Get In Touch
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+            .news_ul
+              //圖右 加.pic_r
+              a.news_li.waypoint(href="news_detail.html")
+                .news_pic
+                  .news_picfx
+                    img(src="../../../uploads/news/news_ct1.jpg", alt="")
+                .news_word
+                  .news_word_wrap
+                    .news_date
+                      span 2020-01-02
+                      p EVENTS
+                    h2.news_title CHANGEi’s Launches SnapTo™ Magnetic Car Mount with Wireless Charging for iPhone
+                    .p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+                    .czbtn(data-text="read more") read more
+              a.news_li.waypoint(href="news_detail.html")
+                .news_pic
+                  .news_picfx
+                    img(src="../../../uploads/news/news_ct2.jpg", alt="")
+                .news_word
+                  .news_word_wrap
+                    .news_date
+                      span 2020-01-02
+                      p EVENTS
+                    h2.news_title CHANGEi’s Launches SnapTo™ Magnetic Car Mount with Wireless Charging for iPhone
+                    .p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+                    .czbtn(data-text="read more") read more
+              a.news_li.waypoint.pic_r(href="news_detail.html")
+                .news_pic
+                  .news_picfx
+                    img(src="../../../uploads/news/news_ct3.jpg", alt="")
+                .news_word
+                  .news_word_wrap
+                    .news_date
+                      span 2020-01-02
+                      p EVENTS
+                    h2.news_title CHANGEi’s Launches SnapTo™ Magnetic Car Mount with Wireless Charging for iPhone
+                    .p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+                    .czbtn(data-text="read more") read more
+              a.news_li.waypoint.pic_r(href="news_detail.html")
+                .news_pic
+                  .news_picfx
+                    img(src="../../../uploads/news/news_ct4.jpg", alt="")
+                .news_word
+                  .news_word_wrap
+                    .news_date
+                      span 2020-01-02
+                      p EVENTS
+                    h2.news_title CHANGEi’s Launches SnapTo™ Magnetic Car Mount with Wireless Charging for iPhone
+                    .p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+                    .czbtn(data-text="read more") read more
+              a.news_li.waypoint(href="news_detail.html")
+                .news_pic
+                  .news_picfx
+                    img(src="../../../uploads/news/news_ct5.jpg", alt="")
+                .news_word
+                  .news_word_wrap
+                    .news_date
+                      span 2020-01-02
+                      p EVENTS
+                    h2.news_title CHANGEi’s Launches SnapTo™ Magnetic Car Mount with Wireless Charging for iPhone
+                    .p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+                    .czbtn(data-text="read more") read more
+              a.news_li.waypoint(href="news_detail.html")
+                .news_pic
+                  .news_picfx
+                    img(src="../../../uploads/news/news_ct6.jpg", alt="")
+                .news_word
+                  .news_word_wrap
+                    .news_date
+                      span 2020-01-02
+                      p EVENTS
+                    h2.news_title CHANGEi’s Launches SnapTo™ Magnetic Car Mount with Wireless Charging for iPhone
+                    .p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+                    .czbtn(data-text="read more") read more
+              a.news_li.waypoint(href="news_detail.html")
+                .news_pic
+                  .news_picfx
+                    img(src="../../../uploads/news/news_ct7.jpg", alt="")
+                .news_word
+                  .news_word_wrap
+                    .news_date
+                      span 2020-01-02
+                      p EVENTS
+                    h2.news_title CHANGEi’s Launches SnapTo™ Magnetic Car Mount with Wireless Charging for iPhone
+                    .p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+                    .czbtn(data-text="read more") read more
+            .page
+              a(href="javascript:;").page_icon.icon-arrow_left
+              .page_ul
+                a(href="javascript:;").page_li.active
+                a(href="javascript:;").page_li
+                a(href="javascript:;").page_li
+                a(href="javascript:;").page_li
+                a(href="javascript:;").page_li
+              a(href="javascript:;").page_icon.icon-arrow_right
+
+    style(type="text/css").
+      @media only screen and (max-width: 1200px){
+        .news_bg{
+          background-image: url('../../../uploads/news/news_bn_pad.jpg') !important
+        }
+      }
+      @media only screen and (max-width: 767px){
+        .news_bg{
+          background-image: url('../../../uploads/news/news_bn_phone.jpg') !important
+        }
+      }
+    
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

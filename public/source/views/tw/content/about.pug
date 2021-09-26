@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/about.css")
+  // 各頁面 CSS 分開
+  body.about(data-page="about")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.about_bn
+        // 電腦 1920*750 // 平板 1200*700 // 手機 600*825 // 換圖結構在下面
+        .about_bg(style="background-image: url(../../../uploads/about/about_bn.jpg)")
+        //- picture
+        //-   source(media="(max-width: 1260px)" srcset="../../../uploads/news/news_bn.jpg")
+        //-   img(src="../../../uploads/news/news_bn.jpg" alt="")
+        .bn_title.waypoint
+          h1.title_head ABOUT US
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      section.about_ct
+        .common_wrap
+          .about_article.waypoint
+            .about_pic
+              img(src="../../../uploads/about/about_ct1.jpg", alt="")
+            .about_word
+              .about_word_wrap
+                .about_subtitle We have both
+                .about_title TECHNOLOGY X IDEA
+                .about_p Changei, the same sound as "sincere love", we take honesty and love as the positioning of the company culture. Provide customers with peace of mind technical support based on integrity. The company's operation is based on "love", creating a happy working atmosphere and fostering positive common beliefs.
+          .about_ul.waypoint
+            .about_li
+              .about_li_wrap
+                .li_pic
+                  span.icon-icon4
+                .li_word
+                  .li_title Screen Protectors
+                  .li_p Development expert of screen protector for iPhone
+            .about_li
+              .about_li_wrap
+                .li_pic
+                  span.icon-icon5
+                .li_word
+                  .li_title Ci madhouse
+                  .li_p We are a group of product innovation and R & D teams.
+            .about_li
+              .about_li_wrap
+                .li_pic
+                  span.icon-icon6
+                .li_word
+                  .li_title Ci tech.
+                  .li_p A professional supplier of products and services.
+
+          .about_step.waypoint
+            .step_head
+              .about_subtitle Ci product design  Brand Woo
+              .about_title “ We continue and focus on doing one thing well, that is Woo ”
+            .step_img
+              img(src="../../../uploads/about/about_ct2.jpg", alt="")
+            .step_ul.waypoint
+              .step_li
+                .step_li_wrap
+                  .step_title Independent project team
+                  .step_p Each product project has a responsible project team to conduct research and development to ensure that the product can be designed and developed quickly and accurately without interference.
+              .step_li
+                .step_li_wrap
+                  .step_title Define strategy
+                  .step_p Project managers analyze market positioning and plan product marketing strategies.
+              .step_li
+                .step_li_wrap
+                  .step_title Published after review
+                  .step_p The brand leader conducts a final review of the project plan and releases it to the market.
+
+
+
+
+    style(type="text/css").
+      @media only screen and (max-width: 1200px){
+        .about_bg{
+          background-image: url('../../../uploads/about/about_bn_pad.jpg') !important
+        }
+      }
+      @media only screen and (max-width: 767px){
+        .about_bg{
+          background-image: url('../../../uploads/about/about_bn_phone.jpg') !important
+        }
+      }
+
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

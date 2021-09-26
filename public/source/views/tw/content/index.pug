@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/index.css")
+  // 各頁面 CSS 分開
+  body.home(data-page="home")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      .hero.waypoint
+        .hero-wrap
+          .hero-swiper.swiper-container.swiper4(
+              data-swiper-direction="horizontal"
+              data-swiper-id=""
+              data-swiper-num="1"
+              data-swiper-arrow="off"
+              data-swiper-effect="fade"
+              data-swiper-breakpoints="{320: {autoplay: {delay: 5000,}, speed: 1000},1200: {autoplay: {delay: 5000,}, speed: 1000,direction: 'vertical'}}"
+              data-swiper-autoplay="on")
+            .swiper-wrapper
+              // banner 圖片尺寸 PC 1920*1080(px) / RWD  700*1245(px)
+              .swiper-slide
+                .hero-banner
+                  picture
+                    source(media="(max-width: 767px)" srcset="../../../uploads/home/01_phone.jpg")
+                    img(src="../../../uploads/home/01.jpg" alt="banner")
+                  // 文字可選黑白兩色
+                  .detail(data-color="white")
+                    h2 Innovation is change
+                    p 創新就是改變
+                    // 可以新增按鈕, 至多兩個
+                    // 按鈕自訂文字、連結
+                    div
+                      a.czbtn(href="javascript:void(0)" data-text="more") more
+                      a.czbtn(href="javascript:void(0)" data-text="about us") about us
+              .swiper-slide
+                .hero-banner
+                  picture
+                    source(media="(max-width: 767px)" srcset="../../../uploads/home/rwd_banner.jpg")
+                    img(src="../../../uploads/home/banner.jpg" alt="banner")
+                  .detail(data-color="white")
+                    h2 CHANGE YOUR IMAGINATION
+                    p 改變你對手機保護的想像
+                    div
+                      a.czbtn(href="javascript:void(0)" data-text="more") more
+                      a.czbtn(href="javascript:void(0)" data-text="about us") about us
+      section.event.waypoint
+        .event-wrap
+          .event-date
+            p Jul. 01
+            p EVENTS
+          .event-text
+            p 2020 New image and new technical release !
+            p CHANGE i study more type technical for protect glass of Apple accessories.
+          a(href="javascript:void(0)" data-text="more").event-button more
+      article.container
+        section.adblock
+          // 廣告區塊樣式
+          // 樣式 data-type：兩小塊 two_samll, 一大塊 one_big, 一大塊兩小圖 half_big
+          // 文字對齊 data-text-align: left, right, center
+          // 區塊位置 data-float: left, right, center
+          // 文字顏色 data-color: white, black
+          // two_samll：data-float, data-text-align 不需設定
+          //
+          // 每個樣式如需共用請注意 picture source(media) 尺寸及建議圖片尺寸 !
+          // half_big 無文字敘述欄位 (p.text)
+          // half_big：可上圖片, 可選背景色, 背景預設白色
+          // two_samll, one_big 必上圖片 
+          // two_samll, one_big 按鈕至多兩顆 / half_big 按鈕至多一顆
+          .adblock-wrap.waypoint(data-type="two_samll" data-text-align="" data-float="" data-color="white")
+            .photo
+              // 圖片尺寸 PC 890*645(px) / RWD  700*935(px) 
+              picture
+                source(media="(max-width: 1260px)" srcset="../../../uploads/home/02_phone.jpg")
+                img(src="../../../uploads/home/02.jpg" alt="")
+            .content
+              .content-wrap
+                h3.title Earpiece protection
+                p.subtitle 聽筒防護網專利蜂槽網格,有效防止手機受潮故障
+                //- p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                // 按鈕自訂文字、連結
+                .btn-group
+                  a.czbtn(href="javascript:void(0)" data-text="more") more
+
+          .adblock-wrap.waypoint(data-type="two_samll" data-text-align="" data-float="" data-color="white")
+            .photo
+              // 圖片尺寸 PC 890*645(px) / RWD  700*935(px)
+              picture
+                source(media="(max-width: 1260px)" srcset="../../../uploads/home/03_phone.jpg")
+                img(src="../../../uploads/home/03.jpg" alt="")
+            .content
+              .content-wrap
+                h3.title Invisible
+                p.subtitle 隱形指紋科技,讓指紋殘留不在困擾你的手機
+                //- p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                .btn-group
+                  a.czbtn(href="javascript:void(0)" data-text="more") more
+
+          .adblock-wrap.waypoint(data-type="one_big" data-text-align="left" data-float="right" data-color="white")
+            .photo
+              // 圖片尺寸 PC 1800*700(px) / RWD  700*935(px)
+              picture
+                source(media="(max-width: 768px)" srcset="../../../uploads/home/04_phone.jpg")
+                img(src="../../../uploads/home/04.jpg" alt="")
+            .content
+              .content-wrap
+                h3.title Diamond grade hardening technology
+                p.subtitle 14H 極致抗刮黑科技
+                //- p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                .btn-group
+                  a.czbtn(href="javascript:void(0)" data-text="more") more
+
+          .adblock-wrap.waypoint(data-type="two_samll" data-text-align="" data-float="" data-color="black")
+            .photo
+              // 圖片尺寸 PC 890*645(px) / RWD  700*935(px) 
+              picture
+                source(media="(max-width: 1260px)" srcset="../../../uploads/home/05_phone.jpg")
+                img(src="../../../uploads/home/05.jpg" alt="")
+            .content
+              .content-wrap
+                h3.title Top Gamer only
+                p.subtitle 給你極致手遊體驗
+                //- p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                // 按鈕自訂文字、連結
+                .btn-group
+                  a.czbtn(href="javascript:void(0)" data-text="more") more
+
+          .adblock-wrap.waypoint(data-type="two_samll" data-text-align="" data-float="" data-color="white")
+            .photo
+              // 圖片尺寸 PC 890*645(px) / RWD  700*935(px)
+              picture
+                source(media="(max-width: 1260px)" srcset="../../../uploads/home/06_phone.jpg")
+                img(src="../../../uploads/home/06.jpg" alt="")
+            .content
+              .content-wrap
+                h3.title Prevent peeping
+                p.subtitle 安全隱私的最佳幫手
+                //- p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                .btn-group
+                  a.czbtn(href="javascript:void(0)" data-text="more") more
+
+          //- .adblock-wrap(data-type="half_big" data-text-align="center" data-float="left" data-color="black")
+          //-   .photo
+          //-     // 圖片尺寸 PC 900*945(px) / RWD  700*560(px)
+          //-     picture(style="background-color: #fff")
+          //-       source(media="(max-width: 1024px)" srcset="../../../uploads/home/rwd_product_4.jpg")
+          //-       img(src="../../../uploads/home/product_4.jpg" alt="")
+          //-   .photo
+          //-     // 圖片尺寸 PC 900*945(px) / RWD  700*560(px)
+          //-     picture(style="background-color: #fff")
+          //-       source(media="(max-width: 1024px)" srcset="../../../uploads/home/05_phone.jpg")
+          //-       img(src="../../../uploads/home/05.jpg" alt="")
+          //-   .content
+          //-     .content-wrap
+          //-       h3.title Top Gamer only
+          //-       p.subtitle 給你極致手遊體驗
+          //-       .btn-group
+          //-         a.czbtn(href="javascript:void(0)" data-text="more") more
+
+          .adblock-wrap.waypoint(data-type="one_big" data-text-align="left" data-float="left" data-color="black")
+            .photo
+              // 圖片尺寸 PC 1800*700(px) / RWD  700*935(px)
+              picture
+                source(media="(max-width: 768px)" srcset="../../../uploads/home/rwd_service_1.jpg")
+                img(src="../../../uploads/home/service_1.jpg" alt="")
+            .content
+              .content-wrap
+                h3.title The most convenience & fastest service
+                p.subtitle Ci repair service
+                //- p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                .btn-group
+                  a.czbtn(href="javascript:void(0)" data-text="more") more
+
+          .adblock-wrap.waypoint(data-type="half_big" data-text-align="center" data-float="right" data-color="black")
+            .photo
+              // 圖片尺寸 PC 900*645(px) / RWD  700*560(px)
+              picture(style="background-color: #fff")
+                source(media="(max-width: 1024px)" srcset="../../../uploads/home/rwd_member_1.jpg")
+                img(src="../../../uploads/home/member_1.jpg" alt="")
+            .photo
+              // 圖片尺寸 PC 900*645(px) / RWD  700*560(px)
+              picture(style="background-color: #fff")
+                source(media="(max-width: 1024px)" srcset="")
+                img(src="" alt="")
+            .content
+              .content-wrap
+                h3.title Join member for free repair warranty!
+                p.subtitle i-Member Recruit
+                .btn-group
+                  a.czbtn(href="javascript:void(0)" data-text="register") register
+
+        .recruit.waypoint
+          .recruit-wrap
+            .recruit-swiper.swiper-container.swiper4.swiper-no-swiping(data-swiper-direction="horizontal" data-swiper-id="" data-swiper-num="1" data-swiper-nav="off" data-swiper-arrow="off" data-swiper-loop="on" data-swiper-autoplay="on" )
+              // 圖片尺寸 385*385(px)
+              .swiper-wrapper
+                .swiper-slide
+                  .recruit-photo(style="background-image: url('../../../uploads/home/recruit_1.png')")
+                .swiper-slide
+                  .recruit-photo(style="background-image: url('../../../uploads/home/recruit_2.png')")
+            .recruit-content
+              p.title We Want You
+              p.subtitle Maintenance Engineer Recruit
+              //- p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+              div.btn-group
+                a.czbtn(href="javascript:void(0)" data-text="more") more
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug

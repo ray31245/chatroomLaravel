@@ -1,0 +1,101 @@
+.btn-group
+  +flex(flex, center, center)
+.czbtn
+  display: inline-block
+  position: relative
+  // margin: 0 10px
+  padding: 0 55px
+  border-radius: 25px
+  border: 1px solid rgba(#000, 0.2)
+  height: 50px
+  color: #000
+  font-size: px(14)
+  font-family: $rwr
+  line-height: px(48)
+  text-align: center
+  white-space: nowrap
+  transition: color .2s, background-color .3s, border .3s
+  &:after
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    color: transparent
+    font-size: px(14)
+    line-height: px(50)
+    font-family: $rwr
+    text-transform: uppercase
+    white-space: nowrap
+    content: attr(data-text)
+    transition: .3s
+  &:hover
+    border: 1px solid $yellow !important
+    background-color: $yellow !important
+    color: transparent !important
+    &:after
+      color: #000 !important
+  // color: #fff
+  // border: 1px solid rgba(#fff, 0.2)
+
+.czbtn_jq
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 150px
+  border-radius: 25px
+  border: 1px solid rgba(#fff, 0.2)
+  height: 50px
+  color: #ffffff
+  font-size: px(14)
+  font-family: $rwr
+  line-height: px(48)
+  text-align: center
+  transition: color .5s, background-color .3s, border .3s
+  span
+    margin-left: 10px
+  &:hover
+    border: 1px solid $yellow !important
+    background-color: $yellow !important
+    // color: transparent !important
+    text-transform: uppercase
+    color: #000000
+    span
+      font-size: px(16)
+      margin-left: 5px
+  &:not(:last-child)
+    margin-right: 20px
+    +rwdmax(768)
+      margin-right: 10px
+
+
+
+
+.square-close
+  position: relative
+  margin-left: auto
+  background-color: $yellow
+  width: 85px
+  height: 85px
+  cursor: pointer
+  span
+    display: block
+    background-color: #000
+    +center()
+    transform: translate(-50%, -50%) rotate(45deg)
+    transition: .5s
+    &:first-child
+      width: 34px
+      height: 1px
+    &:last-child
+      width: 1px
+      height: 34px
+  &:hover
+    span
+      transform: translate(-50%, -50%) rotate(315deg)
+  +rwdmax(575)
+    width: 55px
+    height: 55px
+    span
+      &:first-child
+        width: 24px
+      &:last-child
+        height: 24px

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+html(lang="en")
+  // head標籤 & 網站設定
+  head(itemscope='itemscope', itemtype='http://schema.org/WebSite')
+    //共用設定
+    include ../layouts/_head.pug
+    //獨立CSS
+    link(rel="stylesheet", href="../../../assets/css/news.css")
+  // 各頁面 CSS 分開
+  body.news(data-page="news_detail")
+    // 導覽列
+    include ../layouts/_navbar.pug
+    // 主要內容
+    main
+      section.newsdt_hd
+        .news_date.waypoint
+          span 2020-01-02
+          p Events
+        h1.news_title.waypoint CHANGEi Releases 2nd-generation USB-C Digital Audio Adapter with Charging, Certified by Google
+        .share
+          p SHARE TO
+          .share_icon
+            a(href="javascript:;").icon-share
+            a(href="javascript:;").icon-fb
+            a(href="javascript:;").icon-line
+            a(href="javascript:;").icon-ig
+            a(href="javascript:;").icon-twitter
+
+      section.newsdt_ct
+        section._articleBlock
+          article._articleSL.waypoint(img-row='x2')
+            ._contentWrap
+              ._imgCover
+                ._cover
+                  ._photo
+                    img(src='../../../uploads/news/news_dt1.jpg', alt='圖片描述')
+                  span._description Description
+                ._cover
+                  ._photo
+                    img(src='../../../uploads/news/news_dt2.jpg', alt='圖片描述')
+                  span._description Description
+              ._wordWrap
+                h4._H This is Paragraph 1 : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.ed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                h5._subH This is Paragraph 1 : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                p._P Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+          article._articleU.waypoint(img-row='x4')
+            ._contentWrap
+              ._imgCover
+                ._cover
+                  ._photo
+                    img(src='../../../uploads/news/news_dt3.jpg' alt='圖片描述')
+                  span._description Description
+                ._cover
+                  ._photo
+                    img(src='../../../uploads/news/news_dt4.jpg' alt='圖片描述')
+                  span._description Description
+                ._cover
+                  ._photo
+                    img(src='../../../uploads/news/news_dt5.jpg' alt='圖片描述')
+                  span._description Description
+                ._cover
+                  ._photo
+                    img(src='../../../uploads/news/news_dt6.jpg' alt='圖片描述')
+                  span._description Description
+              ._wordWrap
+                h4._H This is Paragraph 2 : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                p._P Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+          article._articleR.waypoint(img-row='x2' article-flex='center')
+            ._contentWrap
+              ._imgCover
+                ._cover
+                  ._photo
+                    img(src='../../../uploads/news/news_dt7.jpg' alt='圖片描述')
+                  span._description Description
+                ._cover
+                  ._photo
+                    img(src='../../../uploads/news/news_dt8.jpg' alt='圖片描述')
+                  span._description Description
+                ._cover
+                  ._photo
+                    img(src='../../../uploads/news/news_dt9.jpg' alt='圖片描述')
+                  span._description Description
+                ._cover
+                  ._photo
+                    img(src='../../../uploads/news/news_dt10.jpg' alt='圖片描述')
+                  span._description Description
+              ._wordWrap
+                h4._H This is Paragraph 2 : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                p._P Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+
+      section.newsdt_relate.waypoint
+        .ct_title.waypoint
+          .title_head More Related
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+        .swiper-container.swiper4.relate_main(
+          data-swiper-id=""
+          data-swiper-numgroup="1"
+          data-swiper-num="1"
+          data-swiper-arrow="off"
+          data-swiper-autoplay="off"
+          data-swiper-loop="on"
+          data-swiper-breakpoints="{320: { slidesPerGroup: 1, slidesPerView: 1, spaceBetween: 5 },768: { slidesPerGroup: 2, slidesPerView: 2, spaceBetween: 10 },993: { slidesPerGroup: 3, slidesPerView: 3, spaceBetween: 10 },1367: { slidesPerGroup: 4, slidesPerView: 4, spaceBetween: 10 }}")
+          .swiper-wrapper
+            .swiper-slide
+              a(href="javascript:void(0)").item
+                .item_pic
+                  img(src="../../../uploads/news/news_relate1.jpg", alt="")
+                .item_sort GLASS PROTECTION1
+                .item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .swiper-slide
+              a(href="javascript:void(0)").item
+                .item_pic
+                  img(src="../../../uploads/news/news_relate2.jpg", alt="")
+                .item_sort GLASS PROTECTION2
+                .item_title CHANGEi Ushers in Effortless Functionality for
+                .item_btn
+                  .czbtn(data-text="view") view
+            .swiper-slide
+              a(href="javascript:void(0)").item
+                .item_pic
+                  img(src="../../../uploads/news/news_relate1.jpg", alt="")
+                .item_sort GLASS PROTECTION3
+                .item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .swiper-slide
+              a(href="javascript:void(0)").item
+                .item_pic
+                  img(src="../../../uploads/news/news_relate2.jpg", alt="")
+                .item_sort GLASS PROTECTION4
+                .item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .swiper-slide
+              a(href="javascript:void(0)").item
+                .item_pic
+                  img(src="../../../uploads/news/news_relate1.jpg", alt="")
+                .item_sort GLASS PROTECTION5
+                .item_title CHANGEi Ushers in Effortless Function-
+                .item_btn
+                  .czbtn(data-text="view") view
+            .swiper-slide
+              a(href="javascript:void(0)").item
+                .item_pic
+                  img(src="../../../uploads/news/news_relate2.jpg", alt="")
+                .item_sort GLASS PROTECTION6
+                .item_title CHANGEi Ushers in Effortless Functionality for
+                .item_btn
+                  .czbtn(data-text="view") view
+      
+      section.newsdt_more
+        .swiper-container.swiper4(
+          data-swiper-id="news_sw"
+          data-swiper-num="1"
+          data-swiper-arrow="on"
+          data-swiper-arrow-name=".news_sw"
+          data-swiper-nav="off"
+          data-swiper-autoplay="off"
+          data-swiper-loop="on")
+          .swiper-wrapper
+            .swiper-slide
+              a.news_li.waypoint(href="javascript:void(0)")
+                .news_pic
+                  .news_picfx
+                    img(src="../../../uploads/news/news_ct1.jpg", alt="")
+                .news_word
+                  .news_word_wrap
+                    .news_date
+                      span 2020-01-02
+                      p EVENTS
+                    .news_title CHANGEi’s Launches SnapTo™ Magnetic Car Mount with Wireless Charging for iPhone
+                    .p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+                    .czbtn(data-text="read more") read more
+            .swiper-slide
+              a.news_li.waypoint(href="javascript:void(0)")
+                .news_pic
+                  .news_picfx
+                    img(src="../../../uploads/news/news_ct2.jpg", alt="")
+                .news_word
+                  .news_word_wrap
+                    .news_date
+                      span 2020-01-02
+                      p EVENTS
+                    .news_title CHANGEi’s Launches SnapTo™ Magnetic Car Mount with Wireless Charging for iPhone
+                    .p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+                    .czbtn(data-text="read more") read more
+            .swiper-slide
+              a.news_li.waypoint(href="javascript:void(0)")
+                .news_pic
+                  .news_picfx
+                    img(src="../../../uploads/news/news_ct3.jpg", alt="")
+                .news_word
+                  .news_word_wrap
+                    .news_date
+                      span 2020-01-02
+                      p EVENTS
+                    .news_title CHANGEi’s Launches SnapTo™ Magnetic Car Mount with Wireless Charging for iPhone
+                    .p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna animunde omnis iste natus error sit
+                    .czbtn(data-text="read more") read more
+        .news_sw-Next.news_sw.icon-arrow_right
+        .news_sw-Prev.news_sw.icon-arrow_left
+    // 頁尾
+    include ../layouts/_footer.pug
+
+  //引入的script
+  include ../layouts/_script.pug
